@@ -1,3 +1,27 @@
+import assetManifest from "../public/banana-assets/manifest.json";
+
+type Asset = {
+  category: string;
+  src: string | null;
+  title?: string;
+  original: string;
+};
+
+const allAssets = (assetManifest as Asset[]).filter(
+  (asset): asset is Asset & { src: string } => Boolean(asset.src),
+);
+
+const assetsByCategory = (category: string) =>
+  allAssets.filter((asset) => asset.category === category);
+
+const brandLogo = assetsByCategory("brand")[0]?.src ?? "/favicon.svg";
+const clientAssets = assetsByCategory("clients");
+const roomAssets = assetsByCategory("rooms");
+const peopleAssets = assetsByCategory("people");
+const workAssets = assetsByCategory("work");
+const studioGallery = workAssets.slice(0, 6);
+const posterAssets = workAssets.slice(6);
+
 const capabilities = [
   "Creative direction",
   "Original music composition",
@@ -16,6 +40,7 @@ const projects = [
     title: "Death Whisperer 2",
     year: "2024",
     type: "Feature Film",
+    image: posterAssets[48]?.src ?? posterAssets[0]?.src,
     description:
       "A dark, forceful theatrical score for a story driven by relentless supernatural tension.",
   },
@@ -23,6 +48,7 @@ const projects = [
     title: "Don't Come Home",
     year: "2024",
     type: "Netflix Series",
+    image: posterAssets[10]?.src ?? posterAssets[1]?.src,
     description:
       "Atmospheric music and sound for a mystery where family trauma and the paranormal fold into one another.",
   },
@@ -30,6 +56,7 @@ const projects = [
     title: "Bangkok Breaking: Heaven and Hell",
     year: "2024",
     type: "Netflix Film",
+    image: posterAssets[11]?.src ?? posterAssets[2]?.src,
     description:
       "High-pressure action textures for rescue, pursuit, and the raw movement of Bangkok at night.",
   },
@@ -37,6 +64,7 @@ const projects = [
     title: "Khun Pan 3",
     year: "2023",
     type: "Feature Film",
+    image: posterAssets[16]?.src ?? posterAssets[3]?.src,
     description:
       "Large-scale cinematic music for folklore, crime, magic, and a hero confronting his own beliefs.",
   },
@@ -44,6 +72,7 @@ const projects = [
     title: "Man Suang",
     year: "2023",
     type: "Feature Film",
+    image: posterAssets[20]?.src ?? posterAssets[4]?.src,
     description:
       "Period-inspired musical identity for intrigue, elegance, and secrets inside Siam's entertainment world.",
   },
@@ -51,6 +80,7 @@ const projects = [
     title: "Terror Tuesday: Extreme",
     year: "2024",
     type: "Series",
+    image: posterAssets[44]?.src ?? posterAssets[5]?.src,
     description:
       "Horror-forward soundscapes shaped from Thailand's beloved radio ghost-story culture.",
   },
@@ -62,48 +92,42 @@ const rooms = [
     name: "Batman Eat Banana",
     size: "6.70 x 6.50 x 2.4 m",
     format: "7.1 Surround Sound",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b1_1-48f87d00957a9ea55162d675f3b536771ede1f83b62568c88663b57ae1dae824.webp",
+    image: roomAssets[0]?.src,
   },
   {
     code: "B2",
     name: "Hans William",
     size: "4.20 x 4.45 x 4 m",
     format: "5.1 Surround Sound",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b2_1-fba501f3d0b7a2dbb1cba5563f2684722a9ee5eb763b7cdd0c89ee6e4b50eb38.webp",
+    image: roomAssets[1]?.src,
   },
   {
     code: "B3",
     name: "John Zimmer",
     size: "3.60 x 3.70 x 2.50 m",
     format: "5.1 Surround Sound",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b3_1-f61a49fa86586233904b859da7cbbe8bb9eeb5405d186db6319118a7f0787723.webp",
+    image: roomAssets[2]?.src,
   },
   {
     code: "B4",
     name: "Golden Banana",
     size: "4.20 x 4.45 x 4 m",
     format: "5.1 Surround Sound",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b4_1-b8c50c4dbc5e8b89e674ff004a201097a243a4ce7f80043aa59e454e45eb8a0d.webp",
+    image: roomAssets[3]?.src,
   },
   {
     code: "B5",
     name: "Silver Banana",
     size: "3.60 x 3.70 x 2.50 m",
     format: "Stereo",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b5_1-f1f96dc2b687e355572c7d823d69dcae4f46bd8e0fc1aeaed2375f700d280272.webp",
+    image: roomAssets[4]?.src,
   },
   {
     code: "B6",
     name: "Monkey Room",
     size: "3.60 x 3.70 x 2.50 m",
     format: "Stereo",
-    image:
-      "https://www.bananasoundstudio.com/assets/studio/b6_1-b464bf50a0abe9ded89af8b91c9aab3cfde7abaf17b944e34912074e2927b063.webp",
+    image: roomAssets[5]?.src,
   },
 ];
 
@@ -122,28 +146,18 @@ const teamGroups = [
   },
 ];
 
-const clientNames = [
-  "Netflix",
-  "Prime Video",
-  "Disney",
-  "HBO GO",
-  "iQIYI",
-  "Viu",
-  "WeTV",
-  "GMM Grammy",
-  "One31",
-  "Mono",
-];
+const assetLabel = (asset: Asset) =>
+  (asset.title ?? "Banana Sound Studio image")
+    .replace(/[-_][a-f0-9]{12,}.*/i, "")
+    .replace(/_/g, " ")
+    .trim();
 
 export default function Home() {
   return (
     <main>
       <header className="site-nav" aria-label="Main navigation">
         <a className="brand-lockup" href="#top" aria-label="Banana Sound Studio home">
-          <img
-            src="https://www.bananasoundstudio.com/assets/new_logo-ffc0b94742647793bcc7a50f8c031a0dc2ea6cd3b3a32835b9d088a71e715552.png"
-            alt=""
-          />
+          <img src={brandLogo} alt="" />
           <span>Banana Sound Studio</span>
         </a>
         <nav>
@@ -174,7 +188,11 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel" aria-label="Studio highlights">
-          <div className="hero-image" />
+          <img
+            className="hero-image"
+            src={roomAssets[0]?.src}
+            alt="Banana Sound Studio mixing room"
+          />
           <div className="studio-stats">
             <div>
               <strong>2003</strong>
@@ -226,6 +244,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section visual-section">
+        <div className="section-heading">
+          <p className="eyebrow">Studio gallery</p>
+          <h2>Rooms, workspaces and atmosphere from the original site.</h2>
+        </div>
+        <div className="studio-gallery">
+          {studioGallery.map((asset, index) => (
+            <img
+              key={asset.src}
+              src={asset.src}
+              alt={`Banana Sound Studio gallery image ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+
       <section className="section work-section" id="work">
         <div className="section-heading">
           <p className="eyebrow">Show Reel 2025</p>
@@ -234,6 +268,9 @@ export default function Home() {
         <div className="work-grid">
           {projects.map((project) => (
             <article className="work-card" key={project.title}>
+              {project.image ? (
+                <img src={project.image} alt={`${project.title} poster`} />
+              ) : null}
               <div>
                 <span>{project.type}</span>
                 <span>{project.year}</span>
@@ -241,6 +278,15 @@ export default function Home() {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </article>
+          ))}
+        </div>
+        <div className="poster-wall" aria-label="Additional work posters">
+          {posterAssets.slice(0, 24).map((asset, index) => (
+            <img
+              key={asset.src}
+              src={asset.src}
+              alt={`Banana Sound Studio work poster ${index + 1}`}
+            />
           ))}
         </div>
       </section>
@@ -251,8 +297,10 @@ export default function Home() {
           <h2>Proud to work with production houses, streamers and entertainment brands.</h2>
         </div>
         <div className="client-strip" aria-label="Selected clients">
-          {clientNames.map((client) => (
-            <span key={client}>{client}</span>
+          {clientAssets.map((client) => (
+            <span key={client.src}>
+              <img src={client.src} alt={assetLabel(client)} />
+            </span>
           ))}
         </div>
       </section>
@@ -283,15 +331,33 @@ export default function Home() {
           <h2>A multidisciplinary team for music, engineering, production and studio care.</h2>
         </div>
         <div className="people-grid">
-          {teamGroups.map((group) => (
-            <article className="people-card" key={group.label}>
-              <h3>{group.label}</h3>
-              <div>
-                {group.people.map((person) => (
-                  <span key={person}>{person}</span>
-                ))}
-              </div>
+          {peopleAssets.map((person) => (
+            <article className="person-card" key={person.src}>
+              <img src={person.src} alt={`${assetLabel(person)} portrait`} />
+              <span>{assetLabel(person)}</span>
             </article>
+          ))}
+        </div>
+        <div className="team-groups">
+          {teamGroups.map((group) => (
+            <p key={group.label}>
+              <strong>{group.label}</strong> {group.people.join(", ")}
+            </p>
+          ))}
+        </div>
+      </section>
+
+      <section className="section archive-section">
+        <div className="section-heading">
+          <p className="eyebrow">Full image archive</p>
+          <h2>All 87 images pulled from the original website.</h2>
+        </div>
+        <div className="archive-grid">
+          {allAssets.map((asset, index) => (
+            <figure key={asset.src}>
+              <img src={asset.src} alt={`Banana Sound Studio archive image ${index + 1}`} />
+              <figcaption>{asset.category}</figcaption>
+            </figure>
           ))}
         </div>
       </section>

@@ -1,0 +1,611 @@
+[
+  {
+    "category": "work",
+    "src": "/banana-assets/001-work-pic18.webp",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY2c9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6353dc7c800ead32d6582dc11c4b97c0be38beec/pic18.webp",
+    "bytes": 129342,
+    "title": "pic18"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/002-work-pic12.webp",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c121182273369c661c34c9997a2b74499d99514f/pic12.webp",
+    "bytes": 192034,
+    "title": "pic12"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/003-work-1561552599-16205-cv.jpg",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZE09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e34a6ebe2cff18bd43f4f2a4ad814dd738227e8/1561552599_16205_cv.jpg",
+    "bytes": 156205,
+    "title": "1561552599_16205_cv"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/004-work-f7e21d-37a60344adc849219b63302287923f2f-mv2.webp",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZEU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--03bb06f2f9f6f8ec2451023d26a73152863aa81d/f7e21d_37a60344adc849219b63302287923f2f~mv2.webp",
+    "bytes": 67326,
+    "title": "f7e21d_37a60344adc849219b63302287923f2f~mv2"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/005-work-pic24.webp",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZGM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--afdbff7b2c82b9184855063ff881772a5a68f627/pic24.webp",
+    "bytes": 111238,
+    "title": "pic24"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/006-work-f7e21d-1bd9dceba90045e5a26e67886cc17615-mv2.webp",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZHM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8cb22eda4daef5e1bd86df766733bd206883b252/f7e21d_1bd9dceba90045e5a26e67886cc17615~mv2.webp",
+    "bytes": 93044,
+    "title": "f7e21d_1bd9dceba90045e5a26e67886cc17615~mv2"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/007-work-bd84qwysqvwt7lc7by2ub87l32b8.jpg",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajBCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76e456d39a82661b7f3d540a10c8525f20496019/bd84qwysqvwt7lc7by2ub87l32b8.jpeg",
+    "bytes": 208785,
+    "title": "bd84qwysqvwt7lc7by2ub87l32b8"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/008-work-mv5byjfhytczywmtzmnlnc00mdjilwiyodutzgrkyzg3ntm4.jpg",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--51df0044da919541c77ab4bfca287a9b48b6f34a/MV5BYjFhYTczYWMtZmNlNC00MDJiLWIyODUtZGRkYzg3NTM4YTJkXkEyXkFqcGc@._V1_FMjpg_UX822_.jpg",
+    "bytes": 140929,
+    "title": "MV5BYjFhYTczYWMtZmNlNC00MDJiLWIyODUtZGRkYzg3NTM4YTJkXkEyXkFqcGc@._V1_FMjpg_UX822_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/009-work-mv5bntc4zdu4mjgtmznlmc00nzm0ltk3ogqtmtu2yjq4zjaz.jpg",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a843d9dafdaefc7283b43d77dad46901940cde2/MV5BNTc4ZDU4MjgtMzNlMC00NzM0LTk3OGQtMTU2YjQ4ZjAzZmU1XkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 83661,
+    "title": "MV5BNTc4ZDU4MjgtMzNlMC00NzM0LTk3OGQtMTU2YjQ4ZjAzZmU1XkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/010-work-f3ajrirbaaalneu-1434x2048-1.jpg",
+    "original": "https://banana-website-97cdbe6cc83d.herokuapp.com//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f9926198efaaa4a53a25a0fccbded0d09f76c2ac/F3AJrirbAAAlneu-1434x2048%20(1).jpeg",
+    "bytes": 345666,
+    "title": "F3AJrirbAAAlneu-1434x2048 (1)"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/011-people-joo.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder1/JOO.png",
+    "bytes": 597101,
+    "title": "JOO"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/012-people-ball.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/BALL.png",
+    "bytes": 586906,
+    "title": "BALL"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/013-people-es.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/ES.png",
+    "bytes": 462718,
+    "title": "ES"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/014-people-jadi.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/JADI.png",
+    "bytes": 521319,
+    "title": "JADI"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/015-people-jo.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/JO.png",
+    "bytes": 452123,
+    "title": "JO"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/016-people-job.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/JOB.png",
+    "bytes": 513438,
+    "title": "JOB"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/017-people-lek.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/LEK.png",
+    "bytes": 592519,
+    "title": "LEK"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/018-people-liew.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/LIEW.png",
+    "bytes": 484911,
+    "title": "LIEW"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/019-people-m2.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/M2.png",
+    "bytes": 488307,
+    "title": "M2"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/020-people-mean.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/MEAN.png",
+    "bytes": 450873,
+    "title": "MEAN"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/021-people-most.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/MOST.png",
+    "bytes": 645001,
+    "title": "MOST"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/022-people-nu.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/NU.png",
+    "bytes": 448919,
+    "title": "NU"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/023-people-nueng.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/Nueng.png",
+    "bytes": 474909,
+    "title": "Nueng"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/024-people-patt.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/PATT.png",
+    "bytes": 603618,
+    "title": "PATT"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/025-people-prem.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/PREM.png",
+    "bytes": 555492,
+    "title": "PREM"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/026-people-pro.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/PRO.png",
+    "bytes": 617424,
+    "title": "PRO"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/027-people-supa.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/SUPA.png",
+    "bytes": 579886,
+    "title": "SUPA"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/028-people-tarn.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/TARN.png",
+    "bytes": 516749,
+    "title": "TARN"
+  },
+  {
+    "category": "people",
+    "src": "/banana-assets/029-people-toy.png",
+    "original": "https://bananawebsite.s3.ap-southeast-1.amazonaws.com/people/folder3/TOY.png",
+    "bytes": 583052,
+    "title": "TOY"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/030-clients-disneylogo-3ae5f041bb09a907d4ba6c0ba2846b1d812f3.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/DisneyLogo-3ae5f041bb09a907d4ba6c0ba2846b1d812f3b557f0338c13b38b2bc1a9baa91.svg",
+    "bytes": 11837,
+    "title": "DisneyLogo-3ae5f041bb09a907d4ba6c0ba2846b1d812f3b557f0338c13b38b2bc1a9baa91"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/031-clients-gmm-grammy-logo-b68a858475d65bf901b4e7d7586f0d3e.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/GMM_Grammy_Logo-b68a858475d65bf901b4e7d7586f0d3e842f13b995461050ae8792081c29c1f3.svg",
+    "bytes": 5944,
+    "title": "GMM_Grammy_Logo-b68a858475d65bf901b4e7d7586f0d3e842f13b995461050ae8792081c29c1f3"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/032-clients-iqiyi-logo-fdbe7d1e08f61ea9191b74825a65e7c1b4d90.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/IQIYI_Logo-fdbe7d1e08f61ea9191b74825a65e7c1b4d90a270907c19fc15cf247109fa32d.svg",
+    "bytes": 4015,
+    "title": "IQIYI_Logo-fdbe7d1e08f61ea9191b74825a65e7c1b4d90a270907c19fc15cf247109fa32d"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/033-clients-netflix-logo-24fd3e2659c69dbe5761b69afbc86c00df5.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/Netflix_Logo-24fd3e2659c69dbe5761b69afbc86c00df546168f9f28cf9cd3d7dda64ad1ccb.svg",
+    "bytes": 1283,
+    "title": "Netflix_Logo-24fd3e2659c69dbe5761b69afbc86c00df546168f9f28cf9cd3d7dda64ad1ccb"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/034-clients-primevideo-logo-d49fa34f19bee958b16e4a685622802d.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/PrimeVideo_Logo-d49fa34f19bee958b16e4a685622802d1d6f30c57c4102cbdbc42f228af38dec.svg",
+    "bytes": 13986,
+    "title": "PrimeVideo_Logo-d49fa34f19bee958b16e4a685622802d1d6f30c57c4102cbdbc42f228af38dec"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/035-clients-viu-logo-9ad90360b7438ef6ba6c9c3593ce1bd8890f3f7.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/VIU_Logo-9ad90360b7438ef6ba6c9c3593ce1bd8890f3f726db1bd689f24e2a3319d867b.svg",
+    "bytes": 2703,
+    "title": "VIU_Logo-9ad90360b7438ef6ba6c9c3593ce1bd8890f3f726db1bd689f24e2a3319d867b"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/036-clients-wetv-logo-6ea68c23acec5378405fba2fb4108e05b1e025.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/WETV_Logo-6ea68c23acec5378405fba2fb4108e05b1e0252539cf40d56c4b073caac7ec94.svg",
+    "bytes": 4849,
+    "title": "WETV_Logo-6ea68c23acec5378405fba2fb4108e05b1e0252539cf40d56c4b073caac7ec94"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/037-clients-hbogo-2e1a6da4f611565fa70b31e951308331cbf12b8989.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/hbogo-2e1a6da4f611565fa70b31e951308331cbf12b89890115ce2a5d027b176fe467.svg",
+    "bytes": 2667,
+    "title": "hbogo-2e1a6da4f611565fa70b31e951308331cbf12b89890115ce2a5d027b176fe467"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/038-clients-mono-d14f773d8034b69d794f2129a740758ff98aeba12c1.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/mono-d14f773d8034b69d794f2129a740758ff98aeba12c1bf3d20b47d288e2329a61.svg",
+    "bytes": 3818,
+    "title": "mono-d14f773d8034b69d794f2129a740758ff98aeba12c1bf3d20b47d288e2329a61"
+  },
+  {
+    "category": "clients",
+    "src": "/banana-assets/039-clients-one31-faa0dc64150f410137d252082d73d929bab58176c7.svg",
+    "original": "https://www.bananasoundstudio.com/assets/clients/one31-faa0dc64150f410137d252082d73d929bab58176c7408138f95bdb17e96f3a1f.svg",
+    "bytes": 4039,
+    "title": "one31-faa0dc64150f410137d252082d73d929bab58176c7408138f95bdb17e96f3a1f"
+  },
+  {
+    "category": "brand",
+    "src": "/banana-assets/040-brand-new-logo-ffc0b94742647793bcc7a50f8c031a0dc2ea6cd.png",
+    "original": "https://www.bananasoundstudio.com/assets/new_logo-ffc0b94742647793bcc7a50f8c031a0dc2ea6cd3b3a32835b9d088a71e715552.png",
+    "bytes": 89429,
+    "title": "new_logo-ffc0b94742647793bcc7a50f8c031a0dc2ea6cd3b3a32835b9d088a71e715552"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/041-rooms-b1-1-48f87d00957a9ea55162d675f3b536771ede1f83b62.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b1_1-48f87d00957a9ea55162d675f3b536771ede1f83b62568c88663b57ae1dae824.webp",
+    "bytes": 89910,
+    "title": "b1_1-48f87d00957a9ea55162d675f3b536771ede1f83b62568c88663b57ae1dae824"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/042-rooms-b2-1-fba501f3d0b7a2dbb1cba5563f2684722a9ee5eb763.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b2_1-fba501f3d0b7a2dbb1cba5563f2684722a9ee5eb763b7cdd0c89ee6e4b50eb38.webp",
+    "bytes": 87712,
+    "title": "b2_1-fba501f3d0b7a2dbb1cba5563f2684722a9ee5eb763b7cdd0c89ee6e4b50eb38"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/043-rooms-b3-1-f61a49fa86586233904b859da7cbbe8bb9eeb5405d1.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b3_1-f61a49fa86586233904b859da7cbbe8bb9eeb5405d186db6319118a7f0787723.webp",
+    "bytes": 107736,
+    "title": "b3_1-f61a49fa86586233904b859da7cbbe8bb9eeb5405d186db6319118a7f0787723"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/044-rooms-b4-1-b8c50c4dbc5e8b89e674ff004a201097a243a4ce7f8.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b4_1-b8c50c4dbc5e8b89e674ff004a201097a243a4ce7f80043aa59e454e45eb8a0d.webp",
+    "bytes": 101332,
+    "title": "b4_1-b8c50c4dbc5e8b89e674ff004a201097a243a4ce7f80043aa59e454e45eb8a0d"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/045-rooms-b5-1-f1f96dc2b687e355572c7d823d69dcae4f46bd8e0fc.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b5_1-f1f96dc2b687e355572c7d823d69dcae4f46bd8e0fc1aeaed2375f700d280272.webp",
+    "bytes": 93988,
+    "title": "b5_1-f1f96dc2b687e355572c7d823d69dcae4f46bd8e0fc1aeaed2375f700d280272"
+  },
+  {
+    "category": "rooms",
+    "src": "/banana-assets/046-rooms-b6-1-b464bf50a0abe9ded89af8b91c9aab3cfde7abaf17b.webp",
+    "original": "https://www.bananasoundstudio.com/assets/studio/b6_1-b464bf50a0abe9ded89af8b91c9aab3cfde7abaf17b944e34912074e2927b063.webp",
+    "bytes": 81652,
+    "title": "b6_1-b464bf50a0abe9ded89af8b91c9aab3cfde7abaf17b944e34912074e2927b063"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/047-work-mv5bnzi1nmy1njytntmyzs00owq1ltkzzdmtyzmxntmynjyy.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDA9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ad1d053a6f565eadcb7b365c478dc57d5bbc2fa/MV5BNzI1NmY1NjYtNTMyZS00OWQ1LTkzZDMtYzMxNTMyNjYyZGU4XkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 45185,
+    "title": "MV5BNzI1NmY1NjYtNTMyZS00OWQ1LTkzZDMtYzMxNTMyNjYyZGU4XkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/048-work-mv5bndflywflodgtm2e4ni00yze4lwiyotgtotuwmgqyyjkw.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDg9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dd1cc16d2158b7f7d1110813411bdaaf7541a7d/MV5BNDFlYWFlODgtM2E4Ni00YzE4LWIyOTgtOTUwMGQyYjkwMzFhXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 99409,
+    "title": "MV5BNDFlYWFlODgtM2E4Ni00YzE4LWIyOTgtOTUwMGQyYjkwMzFhXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/049-work-mv5bymy4mjdmmmmtytq3yy00nmnlltg4yjktyzrioguynjuz.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWU09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e41388b884aab26b8660feb89f505bf95f7d2814/MV5BYmY4MjdmMmMtYTQ3Yy00NmNlLTg4YjktYzRiOGUyNjUzMjNlXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 101429,
+    "title": "MV5BYmY4MjdmMmMtYTQ3Yy00NmNlLTg4YjktYzRiOGUyNjUzMjNlXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/050-work-mv5by2uyyjg4ytmtztizoc00mjyxlwe0mtytyzvmmzhhywq5.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWUU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1b92baa20c2240a2ffacfc68dcb15ead145cffc9/MV5BY2UyYjg4YTMtZTIzOC00MjYxLWE0MTYtYzVmMzhhYWQ5MjI5XkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 86186,
+    "title": "MV5BY2UyYjg4YTMtZTIzOC00MjYxLWE0MTYtYzVmMzhhYWQ5MjI5XkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/051-work-mv5bnmnlngu1zjctothizi00yja3ltg0mjitodqwmtc1mtg1.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWVU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f596ac07560538345c6b9811787c92702c0152c1/MV5BNmNlNGU1ZjctOThiZi00YjA3LTg0MjItODQwMTc1MTg1MDAzXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 74382,
+    "title": "MV5BNmNlNGU1ZjctOThiZi00YjA3LTg0MjItODQwMTc1MTg1MDAzXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/052-work-mv5bzjlimtzjnwutnzu4mi00mty2lwi0y2mtymuzm2y5mmyw.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWWM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--821e24e337f3dbf79f77c40c3d35df3d389705f3/MV5BZjliMTZjNWUtNzU4Mi00MTY2LWI0Y2MtYmUzM2Y5MmYwMmRjXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 68071,
+    "title": "MV5BZjliMTZjNWUtNzU4Mi00MTY2LWI0Y2MtYmUzM2Y5MmYwMmRjXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/053-work-mv5bnme2ywy0ztmtmmfkzi00owjkltljogetzwzjymm2ymfl.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZTQ9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fc279da77c5f0c01779630603e722dbd13ea8ea2/MV5BNmE2YWY0ZTMtMmFkZi00OWJkLTljOGEtZWZjYmM2YmFlOWU3XkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+    "bytes": 101381,
+    "title": "MV5BNmE2YWY0ZTMtMmFkZi00OWJkLTljOGEtZWZjYmM2YmFlOWU3XkEyXkFqcGc@._V1_FMjpg_UX1080_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/054-work-mv5bm2y5zwe0ogytm2y2ni00ogvjltg0zjktm2fjzmm5mde0.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZXc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--164343fb7c1bfb55b238235321440f39f683977f/MV5BM2Y5ZWE0OGYtM2Y2Ni00OGVjLTg0ZjktM2FjZmM5MDE0ZTZlXkEyXkFqcGc@._V1_FMjpg_UX720_.jpg",
+    "bytes": 74940,
+    "title": "MV5BM2Y5ZWE0OGYtM2Y2Ni00OGVjLTg0ZjktM2FjZmM5MDE0ZTZlXkEyXkFqcGc@._V1_FMjpg_UX720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/055-work-mv5byzuxmjayowitzdczny00ytawlwfmzgitzjhjyza4zty1.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZkE9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--98a259e5a9b74a32d0f9d69a255bf675576e21db/MV5BYzUxMjAyOWItZDczNy00YTAwLWFmZGItZjhjYzA4ZTY1YjI4XkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 76082,
+    "title": "MV5BYzUxMjAyOWItZDczNy00YTAwLWFmZGItZjhjYzA4ZTY1YjI4XkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/056-work-screenshot-2567-11-08-at-20-40-21.png",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZlE9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e3f39c6393799ab1ff533317d24ca16f45f6fbf/Screenshot%202567-11-08%20at%2020.40.21.png",
+    "bytes": 1339115,
+    "title": "Screenshot 2567-11-08 at 20.40.21"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/057-work-mv5bndzhmjg3n2etzte0mi00mtkyltg1ndytzdu5mjqyytgy.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e4af374930b809781898ad270ad1a3564171174f/MV5BNDZhMjg3N2EtZTE0Mi00MTkyLTg1NDYtZDU5MjQyYTgyM2FkXkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 203760,
+    "title": "MV5BNDZhMjg3N2EtZTE0Mi00MTkyLTg1NDYtZDU5MjQyYTgyM2FkXkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/058-work-mv5bmtdkmda1mmetztlhyy00ywm4lwjlnmytzmm1y2m2yty5.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4058f5d1ed0003463d3feb975c4cac9c531378f2/MV5BMTdkMDA1MmEtZTlhYy00YWM4LWJlNmYtZmM1Y2M2YTY5ZWNkXkEyXkFqcGc@._V1_FMjpg_UX979_.jpg",
+    "bytes": 208785,
+    "title": "MV5BMTdkMDA1MmEtZTlhYy00YWM4LWJlNmYtZmM1Y2M2YTY5ZWNkXkEyXkFqcGc@._V1_FMjpg_UX979_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/059-work-f3ajrirbaaalneu-1434x2048.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7624174b0a664ee58c5f61213fea13889ce0d93/F3AJrirbAAAlneu-1434x2048.jpeg",
+    "bytes": 345666,
+    "title": "F3AJrirbAAAlneu-1434x2048"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/060-work-mv5byjuwmge1m2itngi0ni00ytfiltk2njatnduxogmzmwe3.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b7cf4c2d6b2ebea53e5c0bcca4fd30f133197875/MV5BYjUwMGE1M2ItNGI0Ni00YTFiLTk2NjAtNDUxOGMzMWE3MDExXkEyXkFqcGc@._V1_FMjpg_UX700_.jpg",
+    "bytes": 138447,
+    "title": "MV5BYjUwMGE1M2ItNGI0Ni00YTFiLTk2NjAtNDUxOGMzMWE3MDExXkEyXkFqcGc@._V1_FMjpg_UX700_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/061-work-mv5bzjq2ywy1ztctodblos00zjm0ltgwmzqtnjaznzvjmwy4.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4a7295826d156592467a1249c3cf65ecc8a6ac3c/MV5BZjQ2YWY1ZTctODBlOS00ZjM0LTgwMzQtNjAzNzVjMWY4NTI4XkEyXkFqcGc@._V1_FMjpg_UX770_.jpg",
+    "bytes": 110107,
+    "title": "MV5BZjQ2YWY1ZTctODBlOS00ZjM0LTgwMzQtNjAzNzVjMWY4NTI4XkEyXkFqcGc@._V1_FMjpg_UX770_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/062-work-mv5bmjizmjm2ndawnf5bml5banbnxkftztcwmdu0nju3mg-v.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f133fa06dd7b4f4f866cbd294c38ef075c4bca2/MV5BMjIzMjM2NDAwNF5BMl5BanBnXkFtZTcwMDU0NjU3Mg@@._V1_FMjpg_UX183_.jpg",
+    "bytes": 8787,
+    "title": "MV5BMjIzMjM2NDAwNF5BMl5BanBnXkFtZTcwMDU0NjU3Mg@@._V1_FMjpg_UX183_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/063-work-mv5byjfhn2y4mtetmtfjoc00ndg4lweyotktnmy4nwqyywy5.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--15026915f9b4280acd7d2726cd1ec0c152488289/MV5BYjFhN2Y4MTEtMTFjOC00NDg4LWEyOTktNmY4NWQyYWY5NmMwXkEyXkFqcGc@._V1_FMjpg_UX700_.jpg",
+    "bytes": 123130,
+    "title": "MV5BYjFhN2Y4MTEtMTFjOC00NDg4LWEyOTktNmY4NWQyYWY5NmMwXkEyXkFqcGc@._V1_FMjpg_UX700_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/064-work-mv5bmgm5nzfim2qtyze1ni00odaxltgzmzutzwqyztcxmtgw.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0646ccd0c2d69590a14b696caffda947e6818686/MV5BMGM5NzFiM2QtYzE1Ni00ODAxLTgzMzUtZWQyZTcxMTgwMGZhXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 78319,
+    "title": "MV5BMGM5NzFiM2QtYzE1Ni00ODAxLTgzMzUtZWQyZTcxMTgwMGZhXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/065-work-mv5bmwzingqxnzytmwu1yy00ota2lwe4mjytmdewodcwztq3.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ec7ebf1da730ee04ffe4a2bf711fcd3ceee8dc4a/MV5BMWZiNGQxNzYtMWU1Yy00OTA2LWE4MjYtMDEwODcwZTQ3ZDVhXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+    "bytes": 64441,
+    "title": "MV5BMWZiNGQxNzYtMWU1Yy00OTA2LWE4MjYtMDEwODcwZTQ3ZDVhXkEyXkFqcGc@._V1_FMjpg_UX1080_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/066-work-mv5by2yzmzu1otktnjfimy00owzilwewndutowy4zgrizjdk.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--01026f6c7163858d08545819b617ddbf68857a80/MV5BY2YzMzU1OTktNjFiMy00OWZiLWEwNDUtOWY4ZGRiZjdkMzU3XkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 61212,
+    "title": "MV5BY2YzMzU1OTktNjFiMy00OWZiLWEwNDUtOWY4ZGRiZjdkMzU3XkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/067-work-mv5bytbiodc2ntqtotk1oc00zte2ltllztitn2flmgyymgyz.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8211b88aa5578eb7bfefa38da11e93ee34c9e504/MV5BYTBiODc2NTQtOTk1OC00ZTE2LTllZTItN2FlMGYyMGYzZjIyXkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 178724,
+    "title": "MV5BYTBiODc2NTQtOTk1OC00ZTE2LTllZTItN2FlMGYyMGYzZjIyXkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/068-work-kakj8r-4f.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--922a337aa672acbb61ed02813111b4ed8a9d072e/kAkj8r_4f.jpg",
+    "bytes": 240602,
+    "title": "kAkj8r_4f"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/069-work-mv5bntc4zdu4mjgtmznlmc00nzm0ltk3ogqtmtu2yjq4zjaz.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1a3ebff1bf5fac53ed382ea86ea29d8f185fefc2/MV5BNTc4ZDU4MjgtMzNlMC00NzM0LTk3OGQtMTU2YjQ4ZjAzZmU1XkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 83661,
+    "title": "MV5BNTc4ZDU4MjgtMzNlMC00NzM0LTk3OGQtMTU2YjQ4ZjAzZmU1XkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/070-work-mv5bnwq5mwyxzmmtodjlyi00otvhltkznditzgniowezzdax.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b996e5c74bc8171f6234b4dc706b943ebb9ba27e/MV5BNWQ5MWYxZmMtODJlYi00OTVhLTkzNDItZGNiOWEzZDAxYWY0XkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 118041,
+    "title": "MV5BNWQ5MWYxZmMtODJlYi00OTVhLTkzNDItZGNiOWEzZDAxYWY0XkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/071-work-mv5byjfhytczywmtzmnlnc00mdjilwiyodutzgrkyzg3ntm4.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea0ce762021cf2d48f44841bb39305ba699f2833/MV5BYjFhYTczYWMtZmNlNC00MDJiLWIyODUtZGRkYzg3NTM4YTJkXkEyXkFqcGc@._V1_FMjpg_UX822_.jpg",
+    "bytes": 140929,
+    "title": "MV5BYjFhYTczYWMtZmNlNC00MDJiLWIyODUtZGRkYzg3NTM4YTJkXkEyXkFqcGc@._V1_FMjpg_UX822_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/072-work-xlooq-4f.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f681cfb558d637a47db46a0ef46daebae8e103d9/XlOOq_4f.jpg",
+    "bytes": 293923,
+    "title": "XlOOq_4f"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/073-work-mv5bndbhndm4nmityme1ms00njy2ltg4owytyjgwm2m3odfi.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7fabb99de86d3e3866d5914fd623fa3c7ebc8a41/MV5BNDBhNDM4NmItYmE1MS00NjY2LTg4OWYtYjgwM2M3ODFiZDAzXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 60479,
+    "title": "MV5BNDBhNDM4NmItYmE1MS00NjY2LTg4OWYtYjgwM2M3ODFiZDAzXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/074-work-mv5bmdk1ytc3ztutnwrlmy00yja5lwi0nmetmzazmme3otlk.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5f9bfeb5d1ff0cbb4b9aa85128eca88fe34a4c0/MV5BMDk1YTc3ZTUtNWRlMy00YjA5LWI0NmEtMzAzMmE3OTlkZDg4XkEyXkFqcGc@._V1_FMjpg_UX800_.jpg",
+    "bytes": 123935,
+    "title": "MV5BMDk1YTc3ZTUtNWRlMy00YjA5LWI0NmEtMzAzMmE3OTlkZDg4XkEyXkFqcGc@._V1_FMjpg_UX800_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/075-work-mv5byji5ndi0odytogrhzi00ztg0lwe0yjatzjixmmi4zjm0.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--de538bd59b97c494888188651a53d01486b9adff/MV5BYjI5NDI0ODYtOGRhZi00ZTg0LWE0YjAtZjIxMmI4ZjM0MDI3XkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 233723,
+    "title": "MV5BYjI5NDI0ODYtOGRhZi00ZTg0LWE0YjAtZjIxMmI4ZjM0MDI3XkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/076-work-mv5bnwjly2uzntytm2uzys00mzuzlwfjzwmtmjhiodg0otji.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--70bcb1f11a68ab205d4a984d38d3e0dda6ae1732/MV5BNWJlY2UzNTYtM2UzYS00MzUzLWFjZWMtMjhiODg0OTJiNTIwXkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 230791,
+    "title": "MV5BNWJlY2UzNTYtM2UzYS00MzUzLWFjZWMtMjhiODg0OTJiNTIwXkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/077-work-mv5bztc2odk1mmetnti4my00mdg0lwe3mjgtyzmzmzhkothk.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--62ebe954cd9338285c233d5dcfd07c68f0a9f9ce/MV5BZTc2ODk1MmEtNTI4My00MDg0LWE3MjgtYzMzMzhkOThkOTE4XkEyXkFqcGc@._V1_FMjpg_UX700_.jpg",
+    "bytes": 121128,
+    "title": "MV5BZTc2ODk1MmEtNTI4My00MDg0LWE3MjgtYzMzMzhkOThkOTE4XkEyXkFqcGc@._V1_FMjpg_UX700_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/078-work-mv5bmtg3zmq0ztatotkwmy00ndfkltg0ntmtytfinwfmnduy.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ac40fb91a07ee85857a9e3a064cea048f9b641c6/MV5BMTg3ZmQ0ZTAtOTkwMy00NDFkLTg0NTMtYTFiNWFmNDUyOTQ2XkEyXkFqcGc@._V1_FMjpg_UX900_.jpg",
+    "bytes": 123348,
+    "title": "MV5BMTg3ZmQ0ZTAtOTkwMy00NDFkLTg0NTMtYTFiNWFmNDUyOTQ2XkEyXkFqcGc@._V1_FMjpg_UX900_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/079-work-mv5bnmfin2q2mzatmdllyy00yze5ltgzzmityty5nzixnzg2.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--46cae1c2402f122475e2df1de3255e53cf688790/MV5BNmFiN2Q2MzAtMDllYy00YzE5LTgzZmItYTY5NzIxNzg2NTdiXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+    "bytes": 165210,
+    "title": "MV5BNmFiN2Q2MzAtMDllYy00YzE5LTgzZmItYTY5NzIxNzg2NTdiXkEyXkFqcGc@._V1_FMjpg_UX1080_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/080-work-mv5bzti3yjdhmgitzdcxzc00ndliltk5mtatogu4ntazyjcx.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c0965e6f60b5c55040611f6fadcf6971e3e21c01/MV5BZTI3YjdhMGItZDcxZC00NDliLTk5MTAtOGU4NTAzYjcxZWZhXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+    "bytes": 115331,
+    "title": "MV5BZTI3YjdhMGItZDcxZC00NDliLTk5MTAtOGU4NTAzYjcxZWZhXkEyXkFqcGc@._V1_FMjpg_UX1080_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/081-work-mv5bzdawm2q3zjitztkyos00zmiylwjlyjytztqwmtqynmmx.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bc631c6908f7624bc1f5dc1ca67be7882c0c599b/MV5BZDAwM2Q3ZjItZTkyOS00ZmIyLWJlYjYtZTQwMTQyNmMxNzNkXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+    "bytes": 233316,
+    "title": "MV5BZDAwM2Q3ZjItZTkyOS00ZmIyLWJlYjYtZTQwMTQyNmMxNzNkXkEyXkFqcGc@._V1_FMjpg_UX1080_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/082-work-2w3rpd-4f.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8847824759f4a12fef37aef395ab9cc45557791c/2w3rpd_4f.jpg",
+    "bytes": 102367,
+    "title": "2w3rpd_4f"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/083-work-mv5bmgq4njcymzqtn2mxoc00odzmlwfjnzitnwu2otc3mzdm.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--43437075b92714a42de64614a7782ec5797bf796/MV5BMGQ4NjcyMzQtN2MxOC00ODZmLWFjNzItNWU2OTc3MzdmMGM0XkEyXkFqcGc@._V1_FMjpg_UX800_.jpg",
+    "bytes": 92131,
+    "title": "MV5BMGQ4NjcyMzQtN2MxOC00ODZmLWFjNzItNWU2OTc3MzdmMGM0XkEyXkFqcGc@._V1_FMjpg_UX800_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/084-work-mv5bnjzlythhzdytyzazoc00ntewlwiyogytztawnjjlmzu4.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBlQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bda9c506ad3e11b8e0dc6216673c507b675477ee/MV5BNjZlYThhZDYtYzAzOC00NTEwLWIyOGYtZTAwNjJlMzU4NmQwXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 52042,
+    "title": "MV5BNjZlYThhZDYtYzAzOC00NTEwLWIyOGYtZTAwNjJlMzU4NmQwXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/085-work-mv5bnjbinjiymzitztmwyy00zwvilwe3ztmtm2zhowrkzji4.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBlZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--063a1b883d4eedd2217e547ab1717ae302493d1f/MV5BNjBiNjIyMzItZTMwYy00ZWViLWE3ZTMtM2ZhOWRkZjI4NjkxXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 93414,
+    "title": "MV5BNjBiNjIyMzItZTMwYy00ZWViLWE3ZTMtM2ZhOWRkZjI4NjkxXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/086-work-mv5botjjmjc4mwitndi1my00mtmwlwiwmjitmja3mdqwm2m0.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBmQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--636722c5f4b35d1379749966f6ab0d09a9ab99d6/MV5BOTJjMjc4MWItNDI1My00MTMwLWIwMjItMjA3MDQwM2M0YWI2XkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 61288,
+    "title": "MV5BOTJjMjc4MWItNDI1My00MTMwLWIwMjItMjA3MDQwM2M0YWI2XkEyXkFqcGc@._V1_FMjpg_UY720_"
+  },
+  {
+    "category": "work",
+    "src": "/banana-assets/087-work-mv5botm3ymfhn2etmmvhyi00mtdhlwe2otitzjrlzwvlzmnj.jpg",
+    "original": "https://www.bananasoundstudio.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBmZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--90518c81ddbd119620fe4fc173d2ddfdf8e5bc67/MV5BOTM3YmFhN2EtMmVhYi00MTdhLWE2OTItZjRlZWVlZmNjOTMwXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
+    "bytes": 63368,
+    "title": "MV5BOTM3YmFhN2EtMmVhYi00MTdhLWE2OTItZjRlZWVlZmNjOTMwXkEyXkFqcGc@._V1_FMjpg_UY720_"
+  }
+]

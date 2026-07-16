@@ -187,12 +187,11 @@ main {
 }
 
 .hero-image {
+  display: block;
+  width: 100%;
   min-height: 440px;
+  object-fit: cover;
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(16, 17, 18, 0.04), rgba(16, 17, 18, 0.7)),
-    url("https://www.bananasoundstudio.com/assets/studio/b1_1-48f87d00957a9ea55162d675f3b536771ede1f83b62568c88663b57ae1dae824.webp")
-      center / cover;
   border: 1px solid var(--line);
 }
 
@@ -304,6 +303,36 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.visual-section {
+  padding-top: 40px;
+}
+
+.studio-gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 1fr;
+  gap: 12px;
+}
+
+.studio-gallery img,
+.poster-wall img,
+.archive-grid img,
+.person-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.studio-gallery img {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.studio-gallery img:first-child {
+  grid-row: span 2;
+  aspect-ratio: auto;
+  height: 100%;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -315,8 +344,20 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
   overflow: hidden;
+}
+
+.work-card > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.work-card > div,
+.work-card h3,
+.work-card p {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .work-card:nth-child(4n + 1) {
@@ -339,6 +380,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+  margin-top: 18px;
   color: var(--banana);
   font-size: 12px;
   font-weight: 900;
@@ -346,17 +388,32 @@ main {
 }
 
 .work-card h3 {
-  margin: auto 0 16px;
+  margin-top: 28px;
+  margin-bottom: 16px;
   font-size: clamp(28px, 3vw, 43px);
   line-height: 1;
   letter-spacing: 0;
 }
 
 .work-card p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.55;
+}
+
+.poster-wall {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.poster-wall img {
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .clients {
@@ -382,6 +439,12 @@ main {
   font-size: 15px;
   font-weight: 900;
   text-align: center;
+}
+
+.client-strip img {
+  max-width: 138px;
+  max-height: 42px;
+  object-fit: contain;
 }
 
 .rooms {
@@ -472,6 +535,88 @@ main {
   color: var(--foreground);
 }
 
+.person-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.person-card img {
+  aspect-ratio: 1 / 1.08;
+  object-position: center top;
+  background: #262626;
+}
+
+.person-card span {
+  display: block;
+  padding: 12px;
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-groups {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.team-groups p {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.team-groups strong {
+  color: var(--banana);
+}
+
+.archive-section {
+  border-top: 1px solid var(--line);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.archive-grid figure {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.archive-grid img {
+  aspect-ratio: 1 / 1;
+}
+
+.archive-grid figcaption {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(16, 17, 18, 0.78);
+  color: var(--foreground);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .contact-section {
   border-top: 1px solid var(--line);
   padding-bottom: 44px;
@@ -547,14 +692,20 @@ main {
 
   .capability-grid,
   .work-grid,
+  .studio-gallery,
   .room-grid,
   .people-grid,
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .client-strip {
+  .client-strip,
+  .archive-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .poster-wall {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -598,11 +749,22 @@ main {
   .studio-stats,
   .capability-grid,
   .work-grid,
+  .studio-gallery,
   .room-grid,
   .people-grid,
   .contact-grid,
-  .client-strip {
+  .client-strip,
+  .archive-grid {
     grid-template-columns: 1fr;
+  }
+
+  .studio-gallery img:first-child {
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .poster-wall {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .intro h2,
