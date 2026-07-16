@@ -18,7 +18,21 @@ const assetsByCategory = (category: string) =>
 const brandLogo = assetsByCategory("brand")[0]?.src ?? "/favicon.svg";
 const clientAssets = assetsByCategory("clients");
 const roomAssets = assetsByCategory("rooms");
-const peopleAssets = assetsByCategory("people");
+const peopleAssets: Asset[] = [
+  ...assetsByCategory("people"),
+  {
+    category: "people",
+    src: "/people/william.webp",
+    original: "/people/william.webp",
+    title: "WILLIAM",
+  },
+  {
+    category: "people",
+    src: "/people/sandy.webp",
+    original: "/people/sandy.webp",
+    title: "SANDY",
+  },
+];
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
 const workspaceGallery = [
@@ -307,7 +321,20 @@ const peopleCategories = [
   {
     label: "Composer & Engineer",
     accent: "MOST",
-    people: ["TOY", "MEAN", "NUENG", "MOST", "JADI", "JOB", "PRO", "NU", "JO", "BALL"],
+    people: [
+      "TOY",
+      "MEAN",
+      "NUENG",
+      "MOST",
+      "JADI",
+      "JOB",
+      "PRO",
+      "NU",
+      "JO",
+      "BALL",
+      "WILLIAM",
+      "SANDY",
+    ],
   },
   {
     label: "Producer & Creative",
