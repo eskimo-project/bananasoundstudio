@@ -1236,6 +1236,10 @@ h3 {
   transform-origin: center bottom;
 }
 
+.person-portrait[data-person="JOO"] img {
+  transform: translateX(-50%) scale(0.82);
+}
+
 .person-portrait span {
   position: absolute;
   left: 12px;

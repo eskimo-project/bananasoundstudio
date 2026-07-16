@@ -568,7 +568,7 @@ export default function Home() {
                   if (!person) return null;
 
                   return (
-                    <article className="person-portrait" key={person.src}>
+                    <article className="person-portrait" data-person={personKey} key={person.src}>
                       <img src={person.src} alt={`${displayName(person)} portrait`} />
                       <span>{displayName(person)}</span>
                     </article>
