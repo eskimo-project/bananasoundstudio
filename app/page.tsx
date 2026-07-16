@@ -161,6 +161,14 @@ const labelHighlights = [
     body:
       "Full-scale idol production, from music composition and vocal direction through final mix for a fresh pop identity.",
   },
+  {
+    title: "Yoo Ha Jung",
+    subtitle: "Singer & influencer",
+    image: "/banana-assets/artist-yoo-ha-jung.jpg",
+    imagePosition: "center 24%",
+    body:
+      "Yoo Hajung (유하정) is a South Korean singer and influencer in Thailand.",
+  },
 ];
 
 const dubbingServices = [
