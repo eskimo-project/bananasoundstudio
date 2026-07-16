@@ -148,44 +148,24 @@ const labelHighlights = [
   {
     title: "JOKE iSCREAM",
     subtitle: "Viral content creator & artist",
+    image: showreelVideos[2]?.poster ?? workAssets[6]?.src,
     body:
       "Creative collaboration that blends humor, social energy, and polished production for songs built to travel online.",
   },
   {
     title: "QViNT",
     subtitle: "New generation T-POP",
+    image: showreelVideos[0]?.poster ?? workAssets[8]?.src,
     body:
       "Full-scale idol production, from music composition and vocal direction through final mix for a fresh pop identity.",
   },
   {
     title: "GOP POSTCARD",
-    subtitle: "OST and artist catalogue",
+    subtitle: "Artist catalogue",
+    image: showreelVideos[3]?.poster ?? workAssets[9]?.src,
     body:
-      "Original songs, soundtrack releases, and commercial music connected to drama, film, and branded projects.",
+      "Original songs, artist releases, and commercial music connected to drama, film, and branded projects.",
   },
-];
-
-const ostCatalog = [
-  "Paris x Pearwah - รักติดไซเรน (My Ambulance)",
-  "ยิปโซ - อยากเป็นคนสำคัญของเธอ",
-  "New Chayapak - เลิกกั๊กแล้วรักก่อน (Red Flag)",
-  "Keng Namping - ทุกชาติพบ (Never Apart)",
-  "ปลายฝัน มาร์กาเรต เฮง - อัศศะจอรอหัน",
-  "LOVEGELS - GELBOYS",
-  "Pond x Phuwin - แค่ในวันนั้น (Truth in the Eyes)",
-  "Waii x Koen - หากเธอเคยรักใคร (If You Love)",
-  "NuNew - ไอ้คนน่ารัก (My Cutie Pie)",
-  "โฟร์ - DreamTeam Cheer",
-  "แก้ว x โทโมะ - นี่คือรักใช่ไหม (Why R U?)",
-  "KLUAYTHAI feat. หงา คาราวาน - เทียน",
-  "วงใบไม้ - มะเมีย",
-  "JOKE iSCREAM - Chicken Eats Elephant",
-  "คาวบอย - รูปไม่หล่อมีสิทธิ์ไหมครับ",
-  "คาวบอย - เจ็บจุงเบย",
-  "JOKE iSCREAM - My Name is Brian",
-  "JOKE iSCREAM - MY iSCREAM IS CHECKEN",
-  "JOKE iSCREAM - ร้านปิดแล้วเจอกัน",
-  "อ้อมฟางร์ - วันที่ยังมีกัน",
 ];
 
 const dubbingServices = [
@@ -453,25 +433,20 @@ export default function Home() {
 
       <section className="section label-section" id="label">
         <div className="section-heading">
-          <p className="eyebrow">Music label & OST</p>
-          <h2>Commercial music, artist development and soundtrack releases.</h2>
+          <p className="eyebrow">Music label & artists</p>
+          <h2>Commercial music and artist development from concept to final master.</h2>
         </div>
         <div className="label-grid">
           {labelHighlights.map((item) => (
             <article className="label-card" key={item.title}>
-              <span>{item.subtitle}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
+              <img src={item.image} alt={`${item.title} artist visual`} />
+              <div>
+                <span>{item.subtitle}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
             </article>
           ))}
-        </div>
-        <div className="ost-panel">
-          <h3>Selected OST / catalogue</h3>
-          <div className="ost-list">
-            {ostCatalog.map((track) => (
-              <span key={track}>{track}</span>
-            ))}
-          </div>
         </div>
       </section>
 

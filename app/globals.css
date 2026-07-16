@@ -365,7 +365,6 @@ h3 {
 }
 
 .catalog-lead,
-.ost-panel,
 .dubbing-card {
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
@@ -432,12 +431,23 @@ h3 {
 }
 
 .label-card {
+  overflow: hidden;
   min-height: 240px;
-  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 16px 42px rgba(29, 29, 31, 0.06);
+}
+
+.label-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--panel-soft);
+}
+
+.label-card div {
+  padding: 22px;
 }
 
 .label-card:nth-child(1) {
@@ -461,8 +471,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.label-card h3,
-.ost-panel h3 {
+.label-card h3 {
   margin-bottom: 12px;
   font-size: clamp(28px, 3.4vw, 44px);
 }
@@ -476,22 +485,12 @@ h3 {
   line-height: 1.45;
 }
 
-.ost-panel {
-  margin-top: 16px;
-  padding: 24px;
-  background:
-    linear-gradient(125deg, rgba(255, 242, 168, 0.48), rgba(220, 248, 213, 0.44), rgba(220, 236, 255, 0.5)),
-    #ffffff;
-}
-
-.ost-list,
 .service-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
 }
 
-.ost-list span,
 .service-tags span {
   display: inline-flex;
   align-items: center;
