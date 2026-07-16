@@ -161,13 +161,6 @@ const labelHighlights = [
     body:
       "Full-scale idol production, from music composition and vocal direction through final mix for a fresh pop identity.",
   },
-  {
-    title: "GOP POSTCARD",
-    subtitle: "Artist catalogue",
-    image: showreelVideos[3]?.poster ?? workAssets[9]?.src,
-    body:
-      "Original songs, artist releases, and commercial music connected to drama, film, and branded projects.",
-  },
 ];
 
 const dubbingServices = [
