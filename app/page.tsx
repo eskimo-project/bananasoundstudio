@@ -46,6 +46,160 @@ const capabilities = [
   "Licensing and supervision",
 ];
 
+const filmography = [
+  "Dorm (2006)",
+  "The Letters of Death (2006)",
+  "Secret (2007)",
+  "Body #19 (2007)",
+  "4 BIA (2008)",
+  "Hormones (2008)",
+  "The Last Moment (2008)",
+  "Coming Soon (2008)",
+  "Summer Course (2008)",
+  "Ong Bak 2 (2008)",
+  "Best of Times (2009)",
+  "5 BIA (2009)",
+  "Cool Gel Attacks (2010)",
+  "Bangkok Knockout (2010)",
+  "Ong Bak 3 (2010)",
+  "The Billionaire (2011)",
+  "The Kick (2011)",
+  "Black & White 2 (2012)",
+  "Super Salaryman (2012)",
+  "My Name is Love (2012)",
+  "3 AM (2012)",
+  "Tom-Yum-Goong 2 (2013)",
+  "From A Pimple To Nirvana (2013)",
+  "King Naresuan (2013)",
+  "App Love (2014)",
+  "The One Ticket (2014)",
+  "Love H2O (2015)",
+  "Back to the 90s (2015)",
+  "The Black Death (2015)",
+  "Panthai Norasing (2015)",
+  "Cat a Wabb (2015)",
+  "Phi ha Ayothaya (2015)",
+  "King Naresuan (2015)",
+  "Khun Phan 1 (2016)",
+  "Take Me Home (2016)",
+  "Terd (2016)",
+  "Look Tung Signature (2016)",
+  "Summer's Desire (2016)",
+  "Song from Phatthalung (2017)",
+  "Xia tian 19 sui de Xiao xiang (2017)",
+  "Black & White: The Dawn of Justice (2017)",
+  "Khun Phan 2 (2018)",
+  "Norah (2018)",
+  "In Family We Trust (2018)",
+  "Aftershock (2018)",
+  "Secrets in the Hot Spring (2018)",
+  "Sisters (2019)",
+  "Love Battle (2019)",
+  "Luckily in Love (2020)",
+  "Seeda (2020)",
+  "Classic Again (2020)",
+  "Om! Crush on Me (2021)",
+  "Morning Glory Love Story (2021)",
+  "4 Kings (2021)",
+  "Go Away Mr. Tumor (2021)",
+  "Fearless Love (2022)",
+  "Monrak Wourchon (2022)",
+  "Haunted Universities 2 (2022)",
+  "Dark World (2022)",
+  "God Bless The Trainees Too! (2022)",
+  "Oops!.. There's Dad 5 (2022)",
+  "Sarasin Bridge of Love 2216 (2023)",
+  "Khun Phan 3 (2023)",
+  "Man Suang (2023)",
+  "Postman (2023)",
+  "Death Whisperer (2023)",
+  "The X-Treme Riders (2023)",
+  "The Elite of Devils (2024)",
+  "The Cursed (2024)",
+  "Moei: The Promised (2024)",
+  "The Cursed Land (2024)",
+  "Love You To Debt (2024)",
+  "Achilles Curse (2024)",
+  "Haunted Universities 3 (2024)",
+  "Terror Tuesday: Extreme (2024)",
+  "Bangkok Breaking (2024)",
+  "Death Whisperer 2 (2024)",
+  "Don't Come Home (2024)",
+  "Endpresso (2024)",
+  "Police Modify (2024)",
+  "Rider Movie (2024)",
+  "Start It Up (2024)",
+  "Isan Nikah (2024)",
+  "Will You Marry Monk? (2025)",
+  "Attack 13 (2025)",
+  "Nak Love Mak (2025)",
+  "Death Whisperer 3 (2025)",
+  "4 Tigers (2025)",
+  "Tha Rae: The Exorcist (2025)",
+  "Ghost Board (2026)",
+  "Kingkaew (2026)",
+  "Sarplihuan (2026)",
+  "The Stain (2026)",
+  "Elae Airy in Busan (2026)",
+  "Haunted Universities 4 (2026)",
+];
+
+const labelHighlights = [
+  {
+    title: "JOKE iSCREAM",
+    subtitle: "Viral content creator & artist",
+    body:
+      "Creative collaboration that blends humor, social energy, and polished production for songs built to travel online.",
+  },
+  {
+    title: "QViNT",
+    subtitle: "New generation T-POP",
+    body:
+      "Full-scale idol production, from music composition and vocal direction through final mix for a fresh pop identity.",
+  },
+  {
+    title: "GOP POSTCARD",
+    subtitle: "OST and artist catalogue",
+    body:
+      "Original songs, soundtrack releases, and commercial music connected to drama, film, and branded projects.",
+  },
+];
+
+const ostCatalog = [
+  "Paris x Pearwah - รักติดไซเรน (My Ambulance)",
+  "ยิปโซ - อยากเป็นคนสำคัญของเธอ",
+  "New Chayapak - เลิกกั๊กแล้วรักก่อน (Red Flag)",
+  "Keng Namping - ทุกชาติพบ (Never Apart)",
+  "ปลายฝัน มาร์กาเรต เฮง - อัศศะจอรอหัน",
+  "LOVEGELS - GELBOYS",
+  "Pond x Phuwin - แค่ในวันนั้น (Truth in the Eyes)",
+  "Waii x Koen - หากเธอเคยรักใคร (If You Love)",
+  "NuNew - ไอ้คนน่ารัก (My Cutie Pie)",
+  "โฟร์ - DreamTeam Cheer",
+  "แก้ว x โทโมะ - นี่คือรักใช่ไหม (Why R U?)",
+  "KLUAYTHAI feat. หงา คาราวาน - เทียน",
+  "วงใบไม้ - มะเมีย",
+  "JOKE iSCREAM - Chicken Eats Elephant",
+  "คาวบอย - รูปไม่หล่อมีสิทธิ์ไหมครับ",
+  "คาวบอย - เจ็บจุงเบย",
+  "JOKE iSCREAM - My Name is Brian",
+  "JOKE iSCREAM - MY iSCREAM IS CHECKEN",
+  "JOKE iSCREAM - ร้านปิดแล้วเจอกัน",
+  "อ้อมฟางร์ - วันที่ยังมีกัน",
+];
+
+const dubbingServices = [
+  "Localization",
+  "Subtitling",
+  "Dubbing and voice over",
+  "Video editing",
+  "Censorship",
+  "Dub directing",
+  "Quality control",
+  "Mixing",
+  "Over 10 Asian languages",
+];
+
 const projects = [
   {
     title: "Death Whisperer 2",
@@ -185,6 +339,9 @@ export default function Home() {
         </a>
         <nav>
           <a href="#studio">Studio</a>
+          <a href="#films">Films</a>
+          <a href="#label">Label</a>
+          <a href="#dubbing">Dubbing</a>
           <a href="#videos">Video</a>
           <a href="#work">Work</a>
           <a href="#rooms">Rooms</a>
@@ -273,6 +430,69 @@ export default function Home() {
               {capability}
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section catalog-section" id="films">
+        <div className="section-heading">
+          <p className="eyebrow">Complete filmography</p>
+          <h2>More than 90 film and series credits from 2006 to 2026.</h2>
+        </div>
+        <div className="filmography-panel">
+          <div className="catalog-lead">
+            <strong>{filmography.length}</strong>
+            <span>titles from the Banana company profile</span>
+          </div>
+          <ol className="filmography-list">
+            {filmography.map((title) => (
+              <li key={title}>{title}</li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="section label-section" id="label">
+        <div className="section-heading">
+          <p className="eyebrow">Music label & OST</p>
+          <h2>Commercial music, artist development and soundtrack releases.</h2>
+        </div>
+        <div className="label-grid">
+          {labelHighlights.map((item) => (
+            <article className="label-card" key={item.title}>
+              <span>{item.subtitle}</span>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </div>
+        <div className="ost-panel">
+          <h3>Selected OST / catalogue</h3>
+          <div className="ost-list">
+            {ostCatalog.map((track) => (
+              <span key={track}>{track}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section dubbing-section" id="dubbing">
+        <div className="dubbing-copy">
+          <p className="eyebrow">Dubbing by Studio K</p>
+          <h2>Voice localization for films, series, animation and games.</h2>
+          <p>
+            Studio K provides dubbing, voice over, translation, directing, engineering,
+            and post-production for content that needs to travel across languages with
+            natural emotion and cultural precision.
+          </p>
+        </div>
+        <div className="dubbing-card">
+          <div className="dubbing-number">10+</div>
+          <p>Asian languages supported through a team of voice actors, translators, directors, engineers and QC specialists.</p>
+          <div className="service-tags">
+            {dubbingServices.map((service) => (
+              <span key={service}>{service}</span>
+            ))}
+          </div>
         </div>
       </section>
 

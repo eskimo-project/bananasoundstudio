@@ -352,6 +352,200 @@ h3 {
   background: linear-gradient(180deg, #ffffff, var(--sky));
 }
 
+.catalog-section,
+.label-section {
+  position: relative;
+}
+
+.filmography-panel {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.26fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.catalog-lead,
+.ost-panel,
+.dubbing-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.catalog-lead {
+  display: grid;
+  align-content: end;
+  min-height: 260px;
+  padding: 24px;
+  background:
+    linear-gradient(155deg, rgba(255, 242, 168, 0.9), rgba(220, 248, 213, 0.8)),
+    #ffffff;
+}
+
+.catalog-lead strong {
+  display: block;
+  font-size: clamp(62px, 9vw, 118px);
+  line-height: 0.85;
+}
+
+.catalog-lead span {
+  max-width: 200px;
+  color: #5f6368;
+  font-size: 16px;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.filmography-list {
+  columns: 3 220px;
+  column-gap: 34px;
+  margin: 0;
+  padding: 24px 28px 24px 46px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(220, 236, 255, 0.42)),
+    #ffffff;
+  box-shadow: 0 14px 36px rgba(29, 29, 31, 0.05);
+}
+
+.filmography-list li {
+  break-inside: avoid;
+  margin: 0 0 10px;
+  padding-left: 3px;
+  color: #343437;
+  font-size: 15px;
+  line-height: 1.28;
+}
+
+.filmography-list li::marker {
+  color: #7b963e;
+  font-size: 12px;
+  font-weight: 820;
+}
+
+.label-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.label-card {
+  min-height: 240px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(29, 29, 31, 0.06);
+}
+
+.label-card:nth-child(1) {
+  background: linear-gradient(180deg, #ffffff, var(--banana));
+}
+
+.label-card:nth-child(2) {
+  background: linear-gradient(180deg, #ffffff, var(--mint));
+}
+
+.label-card:nth-child(3) {
+  background: linear-gradient(180deg, #ffffff, var(--sky));
+}
+
+.label-card span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: #668a35;
+  font-size: 12px;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.label-card h3,
+.ost-panel h3 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 3.4vw, 44px);
+}
+
+.label-card p,
+.dubbing-copy p,
+.dubbing-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.ost-panel {
+  margin-top: 16px;
+  padding: 24px;
+  background:
+    linear-gradient(125deg, rgba(255, 242, 168, 0.48), rgba(220, 248, 213, 0.44), rgba(220, 236, 255, 0.5)),
+    #ffffff;
+}
+
+.ost-list,
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ost-list span,
+.service-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #343437;
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.dubbing-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(320px, 0.72fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.dubbing-copy {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  min-height: 430px;
+  padding: 46px;
+  border-radius: 8px;
+  background:
+    linear-gradient(130deg, rgba(220, 236, 255, 0.72), rgba(220, 248, 213, 0.64)),
+    #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.dubbing-copy h2 {
+  max-width: 720px;
+}
+
+.dubbing-card {
+  display: grid;
+  align-content: end;
+  gap: 18px;
+  min-height: 430px;
+  padding: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 242, 168, 0.68)),
+    #ffffff;
+}
+
+.dubbing-number {
+  font-size: clamp(78px, 11vw, 132px);
+  font-weight: 860;
+  line-height: 0.82;
+}
+
 .visual-section {
   position: relative;
 }
@@ -888,6 +1082,15 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .filmography-panel,
+  .dubbing-section {
+    grid-template-columns: 1fr;
+  }
+
+  .label-grid {
+    grid-template-columns: 1fr;
+  }
+
   .studio-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -965,6 +1168,17 @@ h3 {
   .client-strip,
   .people-roster {
     grid-template-columns: 1fr;
+  }
+
+  .filmography-list {
+    columns: 1;
+    padding: 22px 24px 22px 42px;
+  }
+
+  .dubbing-copy,
+  .dubbing-card {
+    min-height: auto;
+    padding: 28px;
   }
 
   .featured-slider {
