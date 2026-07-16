@@ -44,6 +44,18 @@ const peopleAssets: Asset[] = [
     original: "/people/bear.webp",
     title: "BEAR",
   },
+  {
+    category: "people",
+    src: "/people/bao.webp",
+    original: "/people/bao.webp",
+    title: "BAO",
+  },
+  {
+    category: "people",
+    src: "/people/jaoneel.webp",
+    original: "/people/jaoneel.webp",
+    title: "JAONEEL",
+  },
 ];
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
@@ -356,7 +368,18 @@ const peopleCategories = [
   {
     label: "Office & Studio",
     accent: "TARN",
-    people: ["LEK", "TARN", "PATT", "SUPA", "M2", "PREM", "PANG", "BEAR"],
+    people: [
+      "LEK",
+      "TARN",
+      "PATT",
+      "SUPA",
+      "M2",
+      "PREM",
+      "PANG",
+      "BEAR",
+      "BAO",
+      "JAONEEL",
+    ],
   },
 ];
 
