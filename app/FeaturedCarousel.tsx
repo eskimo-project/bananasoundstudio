@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type FeaturedProject = {
   title: string;
@@ -19,15 +19,23 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
   const slideRefs = useRef<Array<HTMLElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const goToSlide = (nextIndex: number) => {
-    const boundedIndex = (nextIndex + projects.length) % projects.length;
-    setActiveIndex(boundedIndex);
-    slideRefs.current[boundedIndex]?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  };
+  useEffect(() => {
+    if (projects.length <= 1) return undefined;
+
+    const interval = window.setInterval(() => {
+      setActiveIndex((currentIndex) => {
+        const nextIndex = (currentIndex + 1) % projects.length;
+        slideRefs.current[nextIndex]?.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+        return nextIndex;
+      });
+    }, 4200);
+
+    return () => window.clearInterval(interval);
+  }, [projects.length]);
 
   const updateActiveSlide = () => {
     const slider = sliderRef.current;
@@ -51,33 +59,6 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
 
   return (
     <div className="featured-carousel">
-      <div className="featured-controls" aria-label="Show Reel slide controls">
-        <button
-          className="carousel-button"
-          type="button"
-          aria-label="Previous featured work"
-          onClick={() => goToSlide(activeIndex - 1)}
-        >
-          <span aria-hidden="true">‹</span>
-        </button>
-        <div className="featured-dots" aria-hidden="true">
-          {projects.map((project, index) => (
-            <span
-              className={index === activeIndex ? "is-active" : ""}
-              key={project.title}
-            />
-          ))}
-        </div>
-        <button
-          className="carousel-button"
-          type="button"
-          aria-label="Next featured work"
-          onClick={() => goToSlide(activeIndex + 1)}
-        >
-          <span aria-hidden="true">›</span>
-        </button>
-      </div>
-
       <div
         className="featured-slider"
         aria-label="Featured Banana Sound Studio posters"
