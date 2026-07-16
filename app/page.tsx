@@ -104,7 +104,6 @@ const filmography = [
   "Postman (2023)",
   "Death Whisperer (2023)",
   "The X-Treme Riders (2023)",
-  "The Guardian (2023)",
   "The Elite of Devils (2024)",
   "The Cursed (2024)",
   "Moei: The Promised (2024)",
@@ -127,6 +126,7 @@ const filmography = [
   "Death Whisperer 3 (2025)",
   "4 Tigers (2025)",
   "Tha Rae: The Exorcist (2025)",
+  "The Guardian (2025)",
   "Ghost Board (2026)",
   "Kingkaew (2026)",
   "Sarplihuan (2026)",
@@ -318,7 +318,7 @@ const youtubeTrailerUrl = (title: string) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} trailer`)}`;
 
 const filmographyUrl = (title: string) =>
-  title === "The Guardian (2023)"
+  title === "The Guardian (2025)"
     ? "https://www.facebook.com/reel/2937708573064770"
     : youtubeTrailerUrl(title);
 
