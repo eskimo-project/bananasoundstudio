@@ -148,14 +148,16 @@ const labelHighlights = [
   {
     title: "JOKE iSCREAM",
     subtitle: "Viral content creator & artist",
-    image: showreelVideos[2]?.poster ?? workAssets[6]?.src,
+    image: "/banana-assets/artist-joke-iscream.jpg",
+    imagePosition: "center 24%",
     body:
       "Creative collaboration that blends humor, social energy, and polished production for songs built to travel online.",
   },
   {
     title: "QViNT",
     subtitle: "New generation T-POP",
-    image: showreelVideos[0]?.poster ?? workAssets[8]?.src,
+    image: "/banana-assets/artist-qvint.jpg",
+    imagePosition: "center center",
     body:
       "Full-scale idol production, from music composition and vocal direction through final mix for a fresh pop identity.",
   },
@@ -439,7 +441,11 @@ export default function Home() {
         <div className="label-grid">
           {labelHighlights.map((item) => (
             <article className="label-card" key={item.title}>
-              <img src={item.image} alt={`${item.title} artist visual`} />
+              <img
+                src={item.image}
+                alt={`${item.title} artist visual`}
+                style={{ objectPosition: item.imagePosition }}
+              />
               <div>
                 <span>{item.subtitle}</span>
                 <h3>{item.title}</h3>
