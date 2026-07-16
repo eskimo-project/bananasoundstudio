@@ -428,12 +428,75 @@ h3 {
 .work-section {
   position: relative;
   width: 100%;
+  padding-top: 30px;
 }
 
 .work-section > .section-heading {
   width: min(var(--max), calc(100% - 32px));
   margin-left: auto;
   margin-right: auto;
+}
+
+.featured-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.featured-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto 14px;
+}
+
+.carousel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(29, 29, 31, 0.12);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: #1d1d1f;
+  cursor: pointer;
+  box-shadow: 0 12px 34px rgba(29, 29, 31, 0.08);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.carousel-button:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.carousel-button span {
+  display: block;
+  margin-top: -2px;
+  font-size: 34px;
+  font-weight: 520;
+  line-height: 1;
+}
+
+.featured-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 6px;
+}
+
+.featured-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(29, 29, 31, 0.22);
+  transition: width 180ms ease, background 180ms ease;
+}
+
+.featured-dots span.is-active {
+  width: 22px;
+  background: #1d1d1f;
 }
 
 .featured-slider {

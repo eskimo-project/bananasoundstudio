@@ -1,5 +1,6 @@
 import assetManifest from "../public/banana-assets/manifest.json";
 import videoManifest from "../public/banana-videos/manifest.json";
+import { FeaturedCarousel } from "./FeaturedCarousel";
 
 type Asset = {
   category: string;
@@ -50,7 +51,7 @@ const projects = [
     title: "Death Whisperer 2",
     year: "2024",
     type: "Feature Film",
-    image: posterAssets[48]?.src ?? posterAssets[0]?.src,
+    image: posterAssets[11]?.src,
     description:
       "A dark, forceful theatrical score for a story driven by relentless supernatural tension.",
   },
@@ -58,23 +59,15 @@ const projects = [
     title: "Don't Come Home",
     year: "2024",
     type: "Netflix Series",
-    image: posterAssets[10]?.src ?? posterAssets[1]?.src,
+    image: posterAssets[10]?.src,
     description:
       "Atmospheric music and sound for a mystery where family trauma and the paranormal fold into one another.",
-  },
-  {
-    title: "Bangkok Breaking: Heaven and Hell",
-    year: "2024",
-    type: "Netflix Film",
-    image: posterAssets[11]?.src ?? posterAssets[2]?.src,
-    description:
-      "High-pressure action textures for rescue, pursuit, and the raw movement of Bangkok at night.",
   },
   {
     title: "Khun Pan 3",
     year: "2023",
     type: "Feature Film",
-    image: posterAssets[16]?.src ?? posterAssets[3]?.src,
+    image: posterAssets[0]?.src,
     description:
       "Large-scale cinematic music for folklore, crime, magic, and a hero confronting his own beliefs.",
   },
@@ -82,7 +75,7 @@ const projects = [
     title: "Man Suang",
     year: "2023",
     type: "Feature Film",
-    image: posterAssets[20]?.src ?? posterAssets[4]?.src,
+    image: posterAssets[3]?.src,
     description:
       "Period-inspired musical identity for intrigue, elegance, and secrets inside Siam's entertainment world.",
   },
@@ -200,6 +193,14 @@ export default function Home() {
         </nav>
       </header>
 
+      <section className="section work-section" id="work">
+        <div className="section-heading">
+          <p className="eyebrow">Show Reel 2025</p>
+          <h2>Feature film and TV series work with emotional range.</h2>
+        </div>
+        <FeaturedCarousel projects={projects} />
+      </section>
+
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Bangkok sound studio & music label</p>
@@ -314,55 +315,6 @@ export default function Home() {
                 <h3>{video.title}</h3>
               </div>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section work-section" id="work">
-        <div className="section-heading">
-          <p className="eyebrow">Show Reel 2025</p>
-          <h2>Feature film and TV series work with emotional range.</h2>
-        </div>
-        <div className="featured-slider" aria-label="Featured Banana Sound Studio posters">
-          {projects.map((project, index) => (
-            <article className="featured-slide" key={project.title}>
-              {project.image ? (
-                <>
-                  <img
-                    className="featured-backdrop"
-                    src={project.image}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <img
-                    className="featured-poster"
-                    src={project.image}
-                    alt={`${project.title} poster`}
-                  />
-                </>
-              ) : null}
-              <div className="featured-content">
-                <div className="featured-meta">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <span>{project.type}</span>
-                  <span>{project.year}</span>
-                </div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a className="featured-pill" href="#contact">
-                  Talk to studio
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="poster-wall" aria-label="Additional work posters">
-          {posterAssets.slice(0, 24).map((asset, index) => (
-            <img
-              key={asset.src}
-              src={asset.src}
-              alt={`Banana Sound Studio work poster ${index + 1}`}
-            />
           ))}
         </div>
       </section>
