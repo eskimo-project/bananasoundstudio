@@ -1,19 +1,10 @@
 import assetManifest from "../public/banana-assets/manifest.json";
-import videoManifest from "../public/banana-videos/manifest.json";
 import { FeaturedCarousel } from "./FeaturedCarousel";
 
 type Asset = {
   category: string;
   src: string | null;
   title?: string;
-  original: string;
-};
-
-type VideoAsset = {
-  title: string;
-  src: string;
-  poster: string;
-  bytes: number;
   original: string;
 };
 
@@ -31,7 +22,6 @@ const peopleAssets = assetsByCategory("people");
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
 const posterAssets = workAssets.slice(6);
-const showreelVideos = videoManifest as VideoAsset[];
 
 const capabilities = [
   "Creative direction",
@@ -317,7 +307,6 @@ const navLinks = [
   { href: "#films", label: "Films" },
   { href: "#label", label: "Label" },
   { href: "#dubbing", label: "Dubbing" },
-  { href: "#videos", label: "Video" },
   { href: "#work", label: "Work" },
   { href: "#rooms", label: "Rooms" },
   { href: "#people", label: "People" },
@@ -515,33 +504,6 @@ export default function Home() {
               src={asset.src}
               alt={`Banana Sound Studio gallery image ${index + 1}`}
             />
-          ))}
-        </div>
-      </section>
-
-      <section className="section video-section" id="videos">
-        <div className="section-heading">
-          <p className="eyebrow">Original MP4 showreel</p>
-          <h2>Video clips pulled from the original website.</h2>
-        </div>
-        <div className="video-grid">
-          {showreelVideos.map((video, index) => (
-            <article className="video-card" key={video.src}>
-              <video
-                controls
-                muted
-                playsInline
-                preload="metadata"
-                poster={video.poster}
-                aria-label={`Banana Sound Studio showreel clip ${index + 1}`}
-              >
-                <source src={video.src} type="video/mp4" />
-              </video>
-              <div>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{video.title}</h3>
-              </div>
-            </article>
           ))}
         </div>
       </section>
