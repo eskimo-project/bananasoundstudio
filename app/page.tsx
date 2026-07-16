@@ -312,6 +312,18 @@ const peopleCategories = [
   },
 ];
 
+const navLinks = [
+  { href: "#studio", label: "Studio" },
+  { href: "#films", label: "Films" },
+  { href: "#label", label: "Label" },
+  { href: "#dubbing", label: "Dubbing" },
+  { href: "#videos", label: "Video" },
+  { href: "#work", label: "Work" },
+  { href: "#rooms", label: "Rooms" },
+  { href: "#people", label: "People" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -320,17 +332,23 @@ export default function Home() {
           <img src={brandLogo} alt="" />
           <span>Banana Sound Studio</span>
         </a>
-        <nav>
-          <a href="#studio">Studio</a>
-          <a href="#films">Films</a>
-          <a href="#label">Label</a>
-          <a href="#dubbing">Dubbing</a>
-          <a href="#videos">Video</a>
-          <a href="#work">Work</a>
-          <a href="#rooms">Rooms</a>
-          <a href="#people">People</a>
-          <a href="#contact">Contact</a>
+        <nav className="desktop-nav" aria-label="Desktop menu">
+          {navLinks.map((link) => (
+            <a href={link.href} key={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
+        <details className="mobile-menu">
+          <summary>Menu</summary>
+          <nav aria-label="Mobile menu">
+            {navLinks.map((link) => (
+              <a href={link.href} key={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </details>
       </header>
 
       <section className="hero" id="top">
