@@ -104,6 +104,7 @@ const filmography = [
   "Postman (2023)",
   "Death Whisperer (2023)",
   "The X-Treme Riders (2023)",
+  "The Guardian (2023)",
   "The Elite of Devils (2024)",
   "The Cursed (2024)",
   "Moei: The Promised (2024)",
