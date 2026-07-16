@@ -628,6 +628,59 @@ h3 {
     linear-gradient(45deg, transparent 0 52%, rgba(29, 29, 31, 0.72) 52% 58%, transparent 58%);
 }
 
+.capability-illustration {
+  position: static;
+  background-color: #fffdf7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.capability-illustration::before,
+.capability-illustration::after {
+  content: none;
+}
+
+.capability-card:nth-child(1) .capability-illustration {
+  background-image: url("/capabilities/01-creative-direction.webp");
+}
+
+.capability-card:nth-child(2) .capability-illustration {
+  background-image: url("/capabilities/02-music-composition.webp");
+}
+
+.capability-card:nth-child(3) .capability-illustration {
+  background-image: url("/capabilities/03-soundtracks.webp");
+}
+
+.capability-card:nth-child(4) .capability-illustration {
+  background-image: url("/capabilities/04-mixing-mastering.webp");
+}
+
+.capability-card:nth-child(5) .capability-illustration {
+  background-image: url("/capabilities/05-sound-design.webp");
+}
+
+.capability-card:nth-child(6) .capability-illustration {
+  background-image: url("/capabilities/06-editing-foley.webp");
+}
+
+.capability-card:nth-child(7) .capability-illustration {
+  background-image: url("/capabilities/07-immersive-audio.webp");
+}
+
+.capability-card:nth-child(8) .capability-illustration {
+  background-image: url("/capabilities/08-voice-over.webp");
+}
+
+.capability-card:nth-child(9) .capability-illustration {
+  background-image: url("/capabilities/09-audio-branding.webp");
+}
+
+.capability-card:nth-child(10) .capability-illustration {
+  background-image: url("/capabilities/10-licensing.webp");
+}
+
 .catalog-section,
 .label-section {
   position: relative;
