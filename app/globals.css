@@ -1215,7 +1215,7 @@ h3 {
 
 .person-portrait {
   position: relative;
-  min-height: 390px;
+  min-height: 195px;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(29, 29, 31, 0.08);
@@ -1226,9 +1226,9 @@ h3 {
 .person-portrait img {
   position: absolute;
   left: 50%;
-  bottom: 54px;
-  width: calc(100% + 110px);
-  height: calc(100% - 40px);
+  bottom: 38px;
+  width: 100%;
+  height: calc(100% - 28px);
   max-width: none;
   object-fit: cover;
   object-position: center bottom;
@@ -1242,20 +1242,20 @@ h3 {
 
 .person-portrait span {
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 54px;
-  padding: 0 12px;
+  min-height: 38px;
+  padding: 0 10px;
   border: 1px solid rgba(29, 29, 31, 0.1);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.92);
   color: #1d1d1f;
-  font-size: clamp(21px, 2.5vw, 34px);
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 840;
   line-height: 1;
   text-align: center;
@@ -1421,7 +1421,7 @@ h3 {
   }
 
   .person-portrait {
-    min-height: 360px;
+    min-height: 180px;
   }
 }
 
@@ -1469,9 +1469,12 @@ h3 {
   .capability-grid,
   .studio-gallery,
   .room-grid,
-  .client-strip,
-  .people-roster {
+  .client-strip {
     grid-template-columns: 1fr;
+  }
+
+  .people-roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .filmography-list {
@@ -1547,7 +1550,7 @@ h3 {
   }
 
   .person-portrait {
-    min-height: 430px;
+    min-height: 215px;
   }
 }
 
