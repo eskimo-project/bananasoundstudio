@@ -420,7 +420,8 @@ export default function Home() {
         <div className="capability-grid">
           {capabilities.map((capability) => (
             <div className="capability-card" key={capability}>
-              {capability}
+              <span className="capability-illustration" aria-hidden="true" />
+              <span className="capability-title">{capability}</span>
             </div>
           ))}
         </div>

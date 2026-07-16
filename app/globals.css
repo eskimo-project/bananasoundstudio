@@ -389,10 +389,12 @@ h3 {
 }
 
 .capability-card {
-  display: flex;
-  align-items: flex-end;
-  min-height: 154px;
-  padding: 18px;
+  display: grid;
+  align-content: space-between;
+  gap: 14px;
+  min-height: 252px;
+  overflow: hidden;
+  padding: 12px 14px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -401,6 +403,21 @@ h3 {
   font-weight: 720;
   line-height: 1.16;
   box-shadow: 0 14px 36px rgba(29, 29, 31, 0.05);
+}
+
+.capability-illustration {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9.5;
+  border-radius: 6px;
+  background-image: url("/service-capability-sketches.png");
+  background-repeat: no-repeat;
+  background-size: 500% 200%;
+  box-shadow: inset 0 0 0 1px rgba(29, 29, 31, 0.05);
+}
+
+.capability-title {
+  display: block;
 }
 
 .capability-card:nth-child(3n + 1) {
@@ -413,6 +430,46 @@ h3 {
 
 .capability-card:nth-child(3n) {
   background: linear-gradient(180deg, #ffffff, var(--sky));
+}
+
+.capability-card:nth-child(1) .capability-illustration {
+  background-position: 0% 0%;
+}
+
+.capability-card:nth-child(2) .capability-illustration {
+  background-position: 25% 0%;
+}
+
+.capability-card:nth-child(3) .capability-illustration {
+  background-position: 50% 0%;
+}
+
+.capability-card:nth-child(4) .capability-illustration {
+  background-position: 75% 0%;
+}
+
+.capability-card:nth-child(5) .capability-illustration {
+  background-position: 100% 0%;
+}
+
+.capability-card:nth-child(6) .capability-illustration {
+  background-position: 0% 100%;
+}
+
+.capability-card:nth-child(7) .capability-illustration {
+  background-position: 25% 100%;
+}
+
+.capability-card:nth-child(8) .capability-illustration {
+  background-position: 50% 100%;
+}
+
+.capability-card:nth-child(9) .capability-illustration {
+  background-position: 75% 100%;
+}
+
+.capability-card:nth-child(10) .capability-illustration {
+  background-position: 100% 100%;
 }
 
 .catalog-section,
