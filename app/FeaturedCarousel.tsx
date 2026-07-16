@@ -19,17 +19,27 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
   const slideRefs = useRef<Array<HTMLElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const scrollSliderTo = (index: number) => {
+    const slider = sliderRef.current;
+    const slide = slideRefs.current[index];
+    if (!slider || !slide) return;
+
+    const centeredLeft =
+      slide.offsetLeft - (slider.clientWidth - slide.offsetWidth) / 2;
+
+    slider.scrollTo({
+      left: centeredLeft,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     if (projects.length <= 1) return undefined;
 
     const interval = window.setInterval(() => {
       setActiveIndex((currentIndex) => {
         const nextIndex = (currentIndex + 1) % projects.length;
-        slideRefs.current[nextIndex]?.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        });
+        scrollSliderTo(nextIndex);
         return nextIndex;
       });
     }, 4200);
