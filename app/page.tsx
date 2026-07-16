@@ -193,20 +193,9 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="top-kicker" id="top">
-        <p className="eyebrow">Bangkok sound studio & music label</p>
-      </section>
-
-      <section className="section work-section" id="work">
-        <div className="section-heading">
-          <p className="eyebrow">Show Reel 2025</p>
-          <h2>Feature film and TV series work with emotional range.</h2>
-        </div>
-        <FeaturedCarousel projects={projects} />
-      </section>
-
-      <section className="hero">
+      <section className="hero" id="top">
         <div className="hero-copy">
+          <p className="eyebrow">Bangkok sound studio & music label</p>
           <h1>Music and sound that move stories forward.</h1>
           <p className="hero-text">
             Banana Sound Studio creates film scores, TV soundtracks, commercial music,
@@ -243,6 +232,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="section work-section" id="work">
+        <div className="section-heading">
+          <p className="eyebrow">Show Reel 2025</p>
+          <h2>Feature film and TV series work with emotional range.</h2>
+        </div>
+        <FeaturedCarousel projects={projects} />
       </section>
 
       <section className="intro band" id="studio">
