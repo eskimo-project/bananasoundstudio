@@ -324,6 +324,9 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
+const youtubeTrailerUrl = (title: string) =>
+  `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} trailer`)}`;
+
 export default function Home() {
   return (
     <main>
@@ -446,7 +449,11 @@ export default function Home() {
           </div>
           <ol className="filmography-list">
             {filmography.map((title) => (
-              <li key={title}>{title}</li>
+              <li key={title}>
+                <a href={youtubeTrailerUrl(title)} target="_blank" rel="noreferrer">
+                  {title}
+                </a>
+              </li>
             ))}
           </ol>
         </div>

@@ -481,6 +481,19 @@ h3 {
   line-height: 1.28;
 }
 
+.filmography-list a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(107, 143, 54, 0.34);
+  text-underline-offset: 3px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.filmography-list a:hover {
+  color: #2d5f77;
+  text-decoration-color: #2d5f77;
+}
+
 .filmography-list li::marker {
   color: #7b963e;
   font-size: 12px;
