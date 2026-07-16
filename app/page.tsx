@@ -298,7 +298,7 @@ const peopleCategories = [
   {
     label: "Composer & Engineer",
     accent: "MOST",
-    people: ["TOY", "MEAN", "NUENG", "MOST", "JADI", "LIEW", "JOB", "PRO", "NU", "JO", "BALL"],
+    people: ["TOY", "MEAN", "NUENG", "MOST", "JADI", "JOB", "PRO", "NU", "JO", "BALL"],
   },
   {
     label: "Producer & Creative",
