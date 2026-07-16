@@ -317,6 +317,11 @@ const navLinks = [
 const youtubeTrailerUrl = (title: string) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} trailer`)}`;
 
+const filmographyUrl = (title: string) =>
+  title === "The Guardian (2023)"
+    ? "https://www.facebook.com/reel/2937708573064770"
+    : youtubeTrailerUrl(title);
+
 export default function Home() {
   return (
     <main>
@@ -441,7 +446,7 @@ export default function Home() {
           <ol className="filmography-list">
             {filmography.map((title) => (
               <li key={title}>
-                <a href={youtubeTrailerUrl(title)} target="_blank" rel="noreferrer">
+                <a href={filmographyUrl(title)} target="_blank" rel="noreferrer">
                   {title}
                 </a>
               </li>
