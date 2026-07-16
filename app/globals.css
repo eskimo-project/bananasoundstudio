@@ -303,6 +303,10 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.video-section {
+  border-top: 1px solid var(--line);
+}
+
 .visual-section {
   padding-top: 40px;
 }
@@ -330,6 +334,49 @@ main {
   grid-row: span 2;
   aspect-ratio: auto;
   height: 100%;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.video-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  object-fit: cover;
+}
+
+.video-card div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px 16px;
+}
+
+.video-card span {
+  color: var(--banana);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.video-card h3 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 20px;
+  line-height: 1.1;
 }
 
 .work-grid {
@@ -655,6 +702,7 @@ main {
   .capability-grid,
   .work-grid,
   .studio-gallery,
+  .video-grid,
   .room-grid,
   .people-grid,
   .contact-grid {
@@ -711,6 +759,7 @@ main {
   .capability-grid,
   .work-grid,
   .studio-gallery,
+  .video-grid,
   .room-grid,
   .people-grid,
   .contact-grid,
