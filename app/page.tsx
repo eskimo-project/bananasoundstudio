@@ -56,6 +56,12 @@ const peopleAssets: Asset[] = [
     original: "/people/jaoneel.webp",
     title: "JAONEEL",
   },
+  {
+    category: "people",
+    src: "/people/prank.webp",
+    original: "/people/prank.webp",
+    title: "PRANK",
+  },
 ];
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
@@ -379,6 +385,7 @@ const peopleCategories = [
       "BEAR",
       "BAO",
       "JAONEEL",
+      "PRANK",
     ],
   },
 ];
