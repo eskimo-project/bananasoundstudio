@@ -21,6 +21,24 @@ const roomAssets = assetsByCategory("rooms");
 const peopleAssets = assetsByCategory("people");
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
+const workspaceGallery = [
+  ...studioGallery.map((asset, index) => ({
+    src: asset.src,
+    alt: `Banana Sound Studio workspace image ${index + 1}`,
+  })),
+  {
+    src: "/workspace/workspace-open-office.webp",
+    alt: "Open office workspace at Banana Sound Studio",
+  },
+  {
+    src: "/workspace/workspace-coffee-bar.webp",
+    alt: "Coffee bar workspace at Banana Sound Studio",
+  },
+  {
+    src: "/workspace/workspace-lounge.webp",
+    alt: "Lounge workspace at Banana Sound Studio",
+  },
+];
 const posterAssets = workAssets.slice(6);
 
 const capabilities = [
@@ -505,12 +523,8 @@ export default function Home() {
           <h2>Rooms, workspaces and atmosphere from the original site.</h2>
         </div>
         <div className="studio-gallery">
-          {studioGallery.map((asset, index) => (
-            <img
-              key={asset.src}
-              src={asset.src}
-              alt={`Banana Sound Studio gallery image ${index + 1}`}
-            />
+          {workspaceGallery.map((image) => (
+            <img key={image.src} src={image.src} alt={image.alt} />
           ))}
         </div>
       </section>

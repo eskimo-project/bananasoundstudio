@@ -893,13 +893,13 @@ h3 {
 
 .studio-gallery {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
 .studio-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--line);
@@ -907,7 +907,7 @@ h3 {
   box-shadow: 0 12px 30px rgba(29, 29, 31, 0.06);
 }
 
-.studio-gallery img:nth-child(2n) {
+.studio-gallery img:nth-child(3n + 2) {
   margin-top: 34px;
 }
 
@@ -1525,7 +1525,7 @@ h3 {
     font-size: 16px;
   }
 
-  .studio-gallery img:nth-child(2n) {
+  .studio-gallery img:nth-child(3n + 2) {
     margin-top: 0;
   }
 
