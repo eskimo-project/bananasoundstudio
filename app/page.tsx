@@ -595,8 +595,8 @@ export default function Home() {
           <article>
             <h3>Commercial & Music</h3>
             <a href="tel:+66945727899">(+66) 094-572-7899</a>
-            <a href="mailto:jeerapat@bananasoundstudio.com">jeerapat@bananasoundstudio.com</a>
-            <p>Joy</p>
+            <a href="mailto:bananasoundstudio@gmail.com">bananasoundstudio@gmail.com</a>
+            <p>Prank</p>
           </article>
           <article>
             <h3>Accounting</h3>
