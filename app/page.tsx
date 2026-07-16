@@ -418,13 +418,9 @@ export default function Home() {
                 {category.people.map((personKey) => {
                   const person = personByKey(personKey);
                   if (!person) return null;
-                  const featured = personKey === category.accent;
 
                   return (
-                    <article
-                      className={`person-portrait${featured ? " is-featured" : ""}`}
-                      key={person.src}
-                    >
+                    <article className="person-portrait" key={person.src}>
                       <img src={person.src} alt={`${displayName(person)} portrait`} />
                       <span>{displayName(person)}</span>
                     </article>
