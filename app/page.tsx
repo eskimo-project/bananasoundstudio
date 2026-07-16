@@ -141,26 +141,46 @@ const rooms = [
   },
 ];
 
-const teamGroups = [
-  {
-    label: "Composer & Engineer",
-    people: ["Toy", "Meen", "One", "Most", "Nu", "Jedi", "Job", "Pro", "Gio", "Ball"],
-  },
-  {
-    label: "Producer & Creative",
-    people: ["Es", "Joo"],
-  },
-  {
-    label: "Office & Studio",
-    people: ["Lek", "Tan", "Patt", "Supa", "M", "Elsa", "Prem"],
-  },
-];
-
 const assetLabel = (asset: Asset) =>
   (asset.title ?? "Banana Sound Studio image")
     .replace(/[-_][a-f0-9]{12,}.*/i, "")
     .replace(/_/g, " ")
     .trim();
+
+const displayName = (asset: Asset) => {
+  const label = assetLabel(asset).toUpperCase();
+  const names: Record<string, string> = {
+    JADI: "JEDI",
+    JO: "GIO",
+    M2: "M",
+    MEAN: "MEEN",
+    NUENG: "ONE",
+    TARN: "TAN",
+  };
+
+  return names[label] ?? label;
+};
+
+const personByKey = (key: string) =>
+  peopleAssets.find((person) => assetLabel(person).toUpperCase() === key);
+
+const peopleCategories = [
+  {
+    label: "Composer & Engineer",
+    accent: "MOST",
+    people: ["TOY", "MEAN", "NUENG", "MOST", "JADI", "LIEW", "JOB", "PRO", "NU", "JO", "BALL"],
+  },
+  {
+    label: "Producer & Creative",
+    accent: "JOO",
+    people: ["ES", "JOO"],
+  },
+  {
+    label: "Office & Studio",
+    accent: "TARN",
+    people: ["LEK", "TARN", "PATT", "SUPA", "M2", "PREM"],
+  },
+];
 
 export default function Home() {
   return (
@@ -363,24 +383,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section people" id="people">
-        <div className="section-heading">
-          <p className="eyebrow">People</p>
-          <h2>A multidisciplinary team for music, engineering, production and studio care.</h2>
-        </div>
-        <div className="people-grid">
-          {peopleAssets.map((person) => (
-            <article className="person-card" key={person.src}>
-              <img src={person.src} alt={`${assetLabel(person)} portrait`} />
-              <span>{assetLabel(person)}</span>
-            </article>
-          ))}
-        </div>
-        <div className="team-groups">
-          {teamGroups.map((group) => (
-            <p key={group.label}>
-              <strong>{group.label}</strong> {group.people.join(", ")}
-            </p>
+      <section className="people-section" id="people">
+        <div className="people-shell">
+          <div className="people-intro">
+            <p>People</p>
+            <h2>Meet the team behind the sound.</h2>
+          </div>
+          {peopleCategories.map((category) => (
+            <section
+              className="people-category"
+              data-bg={`${category.label} / Banana Sound Studio`}
+              key={category.label}
+            >
+              <h3>{category.label}</h3>
+              <div className="people-roster">
+                {category.people.map((personKey) => {
+                  const person = personByKey(personKey);
+                  if (!person) return null;
+                  const featured = personKey === category.accent;
+
+                  return (
+                    <article
+                      className={`person-portrait${featured ? " is-featured" : ""}`}
+                      key={person.src}
+                    >
+                      <img src={person.src} alt={`${displayName(person)} portrait`} />
+                      <span>{displayName(person)}</span>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
           ))}
         </div>
       </section>
