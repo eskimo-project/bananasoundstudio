@@ -7,12 +7,12 @@ type Asset = {
   original: string;
 };
 
-const allAssets = (assetManifest as Asset[]).filter(
+const displayAssets = (assetManifest as Asset[]).filter(
   (asset): asset is Asset & { src: string } => Boolean(asset.src),
 );
 
 const assetsByCategory = (category: string) =>
-  allAssets.filter((asset) => asset.category === category);
+  displayAssets.filter((asset) => asset.category === category);
 
 const brandLogo = assetsByCategory("brand")[0]?.src ?? "/favicon.svg";
 const clientAssets = assetsByCategory("clients");
@@ -343,21 +343,6 @@ export default function Home() {
             <p key={group.label}>
               <strong>{group.label}</strong> {group.people.join(", ")}
             </p>
-          ))}
-        </div>
-      </section>
-
-      <section className="section archive-section">
-        <div className="section-heading">
-          <p className="eyebrow">Full image archive</p>
-          <h2>All 87 images pulled from the original website.</h2>
-        </div>
-        <div className="archive-grid">
-          {allAssets.map((asset, index) => (
-            <figure key={asset.src}>
-              <img src={asset.src} alt={`Banana Sound Studio archive image ${index + 1}`} />
-              <figcaption>{asset.category}</figcaption>
-            </figure>
           ))}
         </div>
       </section>

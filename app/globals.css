@@ -315,7 +315,6 @@ main {
 
 .studio-gallery img,
 .poster-wall img,
-.archive-grid img,
 .person-card img {
   width: 100%;
   object-fit: cover;
@@ -580,43 +579,6 @@ main {
   color: var(--banana);
 }
 
-.archive-section {
-  border-top: 1px solid var(--line);
-}
-
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-}
-
-.archive-grid figure {
-  position: relative;
-  min-width: 0;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-}
-
-.archive-grid img {
-  aspect-ratio: 1 / 1;
-}
-
-.archive-grid figcaption {
-  position: absolute;
-  left: 6px;
-  bottom: 6px;
-  padding: 3px 7px;
-  border-radius: 999px;
-  background: rgba(16, 17, 18, 0.78);
-  color: var(--foreground);
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .contact-section {
   border-top: 1px solid var(--line);
   padding-bottom: 44px;
@@ -699,8 +661,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .client-strip,
-  .archive-grid {
+  .client-strip {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -753,8 +714,7 @@ main {
   .room-grid,
   .people-grid,
   .contact-grid,
-  .client-strip,
-  .archive-grid {
+  .client-strip {
     grid-template-columns: 1fr;
   }
 
