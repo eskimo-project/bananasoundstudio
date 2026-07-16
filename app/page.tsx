@@ -323,18 +323,36 @@ export default function Home() {
           <p className="eyebrow">Show Reel 2025</p>
           <h2>Feature film and TV series work with emotional range.</h2>
         </div>
-        <div className="work-grid">
-          {projects.map((project) => (
-            <article className="work-card" key={project.title}>
+        <div className="featured-slider" aria-label="Featured Banana Sound Studio posters">
+          {projects.map((project, index) => (
+            <article className="featured-slide" key={project.title}>
               {project.image ? (
-                <img src={project.image} alt={`${project.title} poster`} />
+                <>
+                  <img
+                    className="featured-backdrop"
+                    src={project.image}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <img
+                    className="featured-poster"
+                    src={project.image}
+                    alt={`${project.title} poster`}
+                  />
+                </>
               ) : null}
-              <div>
-                <span>{project.type}</span>
-                <span>{project.year}</span>
+              <div className="featured-content">
+                <div className="featured-meta">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span>{project.type}</span>
+                  <span>{project.year}</span>
+                </div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <a className="featured-pill" href="#contact">
+                  Talk to studio
+                </a>
               </div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
             </article>
           ))}
         </div>
