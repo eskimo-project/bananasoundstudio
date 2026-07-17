@@ -88,14 +88,16 @@ const posterAssets = workAssets.slice(6);
 const capabilities = [
   "Creative direction",
   "Original music composition",
-  "Film, TV and commercial soundtracks",
-  "Sound mixing and mastering",
+  "Soundtracks",
+  "Sound mixing & mastering",
   "Sound design",
-  "Dialogue, music, SFX editing and Foley",
+  "Dialogue, music, SFX editor / Foley",
   "Immersive audio / Dolby Atmos",
-  "Voice over casting and recording",
-  "Audio branding, logo and jingle",
-  "Licensing and supervision",
+  "Voice over / casting & recording",
+  "Audio branding",
+  "Audio logo / jingle",
+  "Musical identity",
+  "Licensing & supervision",
 ];
 
 const filmography = [
@@ -505,18 +507,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Capabilities</p>
-          <h2>From first creative direction to final master.</h2>
-        </div>
-        <div className="capability-grid">
-          {capabilities.map((capability) => (
-            <div className="capability-card" key={capability}>
-              <span className="capability-illustration" aria-hidden="true" />
-              <span className="capability-title">{capability}</span>
-            </div>
-          ))}
+      <section className="capabilities-section section">
+        <p className="capabilities-outline">Sound Studio & Music</p>
+        <h2>Igniting the audio experience through outstanding music</h2>
+        <div className="capabilities-layout">
+          <div className="capabilities-list">
+            <h3>Our capabilities:</h3>
+            <ul>
+              {capabilities.map((capability) => (
+                <li key={capability}>{capability}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="capabilities-copy">
+            <p>
+              Founded by film score composer Terdsak Janpan in 2003. Over 20 years,
+              Banana Sound Studio extends its expertise in music production, covering a
+              spectrum of services not only to feature films industry but also to
+              television programs, TV series & dramas, as well as brand and commercial
+              projects. We have helped film producers, storytellers, and content creators
+              delivering memorable experience contents through high-quality music and
+              sound design.
+            </p>
+            <p>
+              At Banana Sound Studio, we offers multidisciplinary audio production
+              service, including music composition and sound mixing, all under one roof.
+              Our studio provide inspired workspace, welcoming ambience, and coffee
+              corner. Our team combines creativity with technical expertise to consult
+              and deliver tailored audio experiences. From composing original scores to
+              crafting immersive soundscapes, we are dedicated to enhancing the emotional
+              impact of every project we work on.
+            </p>
+          </div>
         </div>
       </section>
 
