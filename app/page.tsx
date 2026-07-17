@@ -16,6 +16,7 @@ const assetsByCategory = (category: string) =>
   displayAssets.filter((asset) => asset.category === category);
 
 const brandLogo = assetsByCategory("brand")[0]?.src ?? "/favicon.svg";
+const heroOrchestraImage = "/banana-assets/orchestra-session.jpg";
 const clientAssets = assetsByCategory("clients");
 const roomAssets = assetsByCategory("rooms");
 const peopleAssets: Asset[] = [
@@ -438,7 +439,12 @@ export default function Home() {
         </details>
       </header>
 
-      <section className="hero" id="top">
+      <section className="hero" id="top" aria-label="Banana Sound Studio orchestra recording session">
+        <img
+          className="hero-image"
+          src={heroOrchestraImage}
+          alt="Orchestra recording session at Banana Sound Studio"
+        />
         <div className="hero-copy">
           <p className="eyebrow">Bangkok sound studio & music label</p>
           <h1>Music and sound that move stories forward.</h1>
@@ -456,25 +462,18 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-panel" aria-label="Studio highlights">
-          <img
-            className="hero-image"
-            src={roomAssets[0]?.src}
-            alt="Banana Sound Studio mixing room"
-          />
-          <div className="studio-stats">
-            <div>
-              <strong>2003</strong>
-              <span>Founded by film score composer Terdsak Janpan</span>
-            </div>
-            <div>
-              <strong>20+</strong>
-              <span>Years across film, television, series, brands and commercials</span>
-            </div>
-            <div>
-              <strong>6</strong>
-              <span>Production rooms for recording, editing, mixing and rental</span>
-            </div>
+        <div className="studio-stats" aria-label="Studio highlights">
+          <div>
+            <strong>2003</strong>
+            <span>Founded by film score composer Terdsak Janpan</span>
+          </div>
+          <div>
+            <strong>20+</strong>
+            <span>Years across film, television, series, brands and commercials</span>
+          </div>
+          <div>
+            <strong>6</strong>
+            <span>Production rooms for recording, editing, mixing and rental</span>
           </div>
         </div>
       </section>
