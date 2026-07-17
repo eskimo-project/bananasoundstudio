@@ -63,6 +63,12 @@ const peopleAssets: Asset[] = [
     original: "/people/prank.webp",
     title: "PRANK",
   },
+  {
+    category: "people",
+    src: "/people/best.jpg",
+    original: "/people/best.jpg",
+    title: "BEST",
+  },
 ];
 const workAssets = assetsByCategory("work");
 const studioGallery = workAssets.slice(0, 6);
@@ -381,7 +387,6 @@ const peopleCategories = [
       "LEK",
       "TARN",
       "PATT",
-      "SUPA",
       "M2",
       "PREM",
       "PANG",
@@ -390,6 +395,11 @@ const peopleCategories = [
       "JAONEEL",
       "PRANK",
     ],
+  },
+  {
+    label: "Business Development",
+    accent: "SUPA",
+    people: ["SUPA", "BEST"],
   },
 ];
 

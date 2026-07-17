@@ -1285,9 +1285,13 @@ h3 {
 .person-portrait {
   --portrait-scale: 1;
   --portrait-width: calc(100% + 90px);
+  --portrait-bottom: 38px;
+  --portrait-height: calc(100% - 42px);
+  --portrait-fit: contain;
+  --portrait-position: center bottom;
 
   position: relative;
-  min-height: 195px;
+  min-height: 225px;
   overflow: hidden;
   padding: 10px 12px 12px;
   border-radius: 8px;
@@ -1299,12 +1303,12 @@ h3 {
 .person-portrait img {
   position: absolute;
   left: 50%;
-  bottom: 38px;
+  bottom: var(--portrait-bottom);
   width: var(--portrait-width);
-  height: calc(100% - 42px);
+  height: var(--portrait-height);
   max-width: none;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: var(--portrait-fit);
+  object-position: var(--portrait-position);
   transform: translateX(-50%) scale(var(--portrait-scale));
   transform-origin: center bottom;
 }
@@ -1314,21 +1318,65 @@ h3 {
   --portrait-width: 100%;
 }
 
-.person-portrait[data-person="PRANK"],
-.person-portrait[data-person="JAONEEL"] {
-  --portrait-scale: 0.78;
+.person-portrait[data-person="SANDY"] {
+  --portrait-fit: cover;
+  --portrait-position: center 28%;
+  --portrait-scale: 1;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="PANG"] {
+  --portrait-scale: 1.34;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="BEAR"] {
+  --portrait-scale: 1.3;
   --portrait-width: 100%;
 }
 
 .person-portrait[data-person="BAO"] {
-  --portrait-scale: 0.9;
+  --portrait-scale: 1.18;
   --portrait-width: 100%;
 }
 
-.person-portrait[data-person="PANG"],
-.person-portrait[data-person="BEAR"] {
-  --portrait-scale: 0.94;
+.person-portrait[data-person="JAONEEL"] {
+  --portrait-scale: 1.16;
   --portrait-width: 100%;
+}
+
+.person-portrait[data-person="PRANK"] {
+  --portrait-scale: 1.14;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="SANDY"] img,
+.person-portrait[data-person="PANG"] img,
+.person-portrait[data-person="BEAR"] img,
+.person-portrait[data-person="BAO"] img,
+.person-portrait[data-person="JAONEEL"] img,
+.person-portrait[data-person="PRANK"] img {
+  top: 12px;
+  bottom: auto;
+  transform-origin: center top;
+}
+
+.person-portrait[data-person="BEST"] {
+  --portrait-width: 100%;
+  --portrait-height: calc(100% - 38px);
+  --portrait-fit: cover;
+  --portrait-position: center 22%;
+}
+
+.person-portrait[data-person="SUPA"] {
+  --portrait-scale: 1.25;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="SUPA"] img {
+  top: 12px;
+  bottom: auto;
+  transform-origin: center top;
 }
 
 .person-portrait span {
