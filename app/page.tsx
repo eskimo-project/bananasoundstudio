@@ -649,11 +649,12 @@ export default function Home() {
                 {category.people.map((personKey) => {
                   const person = personByKey(personKey);
                   if (!person) return null;
+                  const name = displayName(person);
 
                   return (
                     <article className="person-portrait" data-person={personKey} key={person.src}>
-                      <img src={person.src} alt={`${displayName(person)} portrait`} />
-                      <span>{displayName(person)}</span>
+                      <img src={person.src} alt={`${name} portrait`} />
+                      <span>{name}</span>
                     </article>
                   );
                 })}

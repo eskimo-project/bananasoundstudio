@@ -1214,9 +1214,13 @@ h3 {
 }
 
 .person-portrait {
+  --portrait-scale: 1;
+  --portrait-width: calc(100% + 90px);
+
   position: relative;
   min-height: 195px;
   overflow: hidden;
+  padding: 10px 12px 12px;
   border-radius: 8px;
   border: 1px solid rgba(29, 29, 31, 0.08);
   background: #ffffff;
@@ -1227,17 +1231,35 @@ h3 {
   position: absolute;
   left: 50%;
   bottom: 38px;
-  width: 100%;
-  height: calc(100% - 28px);
+  width: var(--portrait-width);
+  height: calc(100% - 42px);
   max-width: none;
-  object-fit: cover;
-  object-position: center 20%;
-  transform: translateX(-50%) scale(1.04);
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateX(-50%) scale(var(--portrait-scale));
   transform-origin: center bottom;
 }
 
-.person-portrait[data-person="JOO"] img {
-  transform: translateX(-50%) scale(0.82);
+.person-portrait[data-person="JOO"] {
+  --portrait-scale: 0.9;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="PRANK"],
+.person-portrait[data-person="JAONEEL"] {
+  --portrait-scale: 0.78;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="BAO"] {
+  --portrait-scale: 0.9;
+  --portrait-width: 100%;
+}
+
+.person-portrait[data-person="PANG"],
+.person-portrait[data-person="BEAR"] {
+  --portrait-scale: 0.94;
+  --portrait-width: 100%;
 }
 
 .person-portrait span {
@@ -1592,7 +1614,7 @@ h3 {
   }
 
   .person-portrait img {
-    width: calc(100% + 84px);
+    width: var(--portrait-width);
   }
 
   .person-portrait span {
