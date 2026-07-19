@@ -1361,13 +1361,6 @@ h3 {
   transform-origin: center top;
 }
 
-.person-portrait[data-person="BEST"] {
-  --portrait-width: 100%;
-  --portrait-height: calc(100% - 38px);
-  --portrait-fit: cover;
-  --portrait-position: center 22%;
-}
-
 .person-portrait[data-person="SUPA"] {
   --portrait-scale: 1.25;
   --portrait-width: 100%;
