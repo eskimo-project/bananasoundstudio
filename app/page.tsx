@@ -700,30 +700,35 @@ export default function Home() {
           <p className="eyebrow">Create all sound as a piece of cake</p>
           <h2>Tell us what you are making. We will shape the sound around it.</h2>
         </div>
-        <div className="contact-grid">
-          <article>
-            <h3>General</h3>
-            <a href="mailto:hello@bananasoundstudio.com">hello@bananasoundstudio.com</a>
-            <p>Banana Record Limited Partnership</p>
-            <p>625 14FL. Tasniya Building, Wang Thonglang, Bangkok, Thailand 10310</p>
-          </article>
-          <article>
-            <h3>Feature Film & TV Series</h3>
-            <a href="tel:+66949596256">(+66) 094-959-6256</a>
-            <a href="mailto:pimmata@bananasoundstudio.com">pimmata@bananasoundstudio.com</a>
-            <p>Tan</p>
-          </article>
-          <article>
-            <h3>Commercial & Music</h3>
-            <a href="tel:+66945727899">(+66) 094-572-7899</a>
-            <a href="mailto:bananasoundstudio@gmail.com">bananasoundstudio@gmail.com</a>
-            <p>Prank</p>
-          </article>
-          <article>
-            <h3>Accounting</h3>
-            <a href="tel:+66948894448">(+66) 094-889-4448</a>
-            <a href="mailto:account@bananasoundstudio.com">account@bananasoundstudio.com</a>
-          </article>
+        <div className="contact-details">
+          <div className="contact-grid">
+            <article>
+              <h3>General</h3>
+              <a href="mailto:hello@bananasoundstudio.com">hello@bananasoundstudio.com</a>
+              <p>Banana Record Limited Partnership</p>
+              <p>625 14FL. Tasniya Building, Wang Thonglang, Bangkok, Thailand 10310</p>
+            </article>
+            <article>
+              <h3>Feature Film & TV Series</h3>
+              <a href="tel:+66949596256">(+66) 094-959-6256</a>
+              <a href="mailto:pimmata@bananasoundstudio.com">pimmata@bananasoundstudio.com</a>
+              <p>Tan</p>
+            </article>
+            <article>
+              <h3>Commercial & Music</h3>
+              <a href="tel:+66945727899">(+66) 094-572-7899</a>
+              <a href="mailto:bananasoundstudio@gmail.com">bananasoundstudio@gmail.com</a>
+              <p>Prank</p>
+            </article>
+            <article>
+              <h3>Accounting</h3>
+              <a href="tel:+66948894448">(+66) 094-889-4448</a>
+              <a href="mailto:account@bananasoundstudio.com">account@bananasoundstudio.com</a>
+            </article>
+          </div>
+          <figure className="contact-map">
+            <img src="/contact-map-eng.png" alt="Map to Banana Sound Studio at Tasniya Building" />
+          </figure>
         </div>
         <div className="social-links" aria-label="Social links">
           <a href="https://www.linkedin.com/company/banana-sound-studio/">LinkedIn</a>
