@@ -84,7 +84,6 @@ const workspaceGallery = [
     alt: "Lounge workspace at Banana Sound Studio",
   },
 ];
-const posterAssets = workAssets.slice(6);
 
 const capabilities = [
   "Creative direction",
@@ -241,44 +240,44 @@ const dubbingServices = [
 
 const projects = [
   {
-    title: "Death Whisperer 2",
-    year: "2024",
+    title: "4 Tigers",
+    year: "2025",
     type: "Feature Film",
-    image: posterAssets[11]?.src,
+    trailerId: "5eZW7w928Zk",
     description:
-      "A dark, forceful theatrical score for a story driven by relentless supernatural tension.",
+      "A large-scale action fantasy built around legendary outlaws, mythic stakes, and high-impact cinematic sound.",
   },
   {
-    title: "Don't Come Home",
-    year: "2024",
-    type: "Netflix Series",
-    image: posterAssets[10]?.src,
-    description:
-      "Atmospheric music and sound for a mystery where family trauma and the paranormal fold into one another.",
-  },
-  {
-    title: "Khun Pan 3",
-    year: "2023",
+    title: "Haunted Universities 4",
+    year: "2026",
     type: "Feature Film",
-    image: posterAssets[0]?.src,
+    trailerId: "Vjj39G4E2qA",
     description:
-      "Large-scale cinematic music for folklore, crime, magic, and a hero confronting his own beliefs.",
+      "The fourth chapter of the campus horror anthology, shaped around regional ghost stories and escalating dread.",
   },
   {
-    title: "Man Suang",
-    year: "2023",
+    title: "The Stain",
+    year: "2026",
     type: "Feature Film",
-    image: posterAssets[3]?.src,
+    trailerId: "2PcdIYB32AI",
     description:
-      "Period-inspired musical identity for intrigue, elegance, and secrets inside Siam's entertainment world.",
+      "A polished Thai horror drama where glamour, secrets, and supernatural pressure leave a mark.",
   },
   {
-    title: "Terror Tuesday: Extreme",
-    year: "2024",
-    type: "Series",
-    image: posterAssets[44]?.src ?? posterAssets[5]?.src,
+    title: "รินรดา THE INFLUENCER",
+    year: "2026",
+    type: "Feature Film",
+    trailerId: "ONLXgOJR9v4",
     description:
-      "Horror-forward soundscapes shaped from Thailand's beloved radio ghost-story culture.",
+      "A cyber-supernatural thriller about online judgment, a second chance after death, and a 28-day countdown.",
+  },
+  {
+    title: "Death Whisperer 3",
+    year: "2025",
+    type: "Feature Film",
+    trailerId: "DXV3x2Htbyg",
+    description:
+      "A brutal supernatural return into cursed territory, family fear, and the next chapter of the Tee Yod saga.",
   },
 ];
 
@@ -484,8 +483,8 @@ export default function Home() {
 
       <section className="section work-section" id="work">
         <div className="section-heading">
-          <p className="eyebrow">Show Reel 2025</p>
-          <h2>Feature film and TV series work with emotional range.</h2>
+          <p className="eyebrow">Featured releases 2025-2026</p>
+          <h2>New film work with trailer motion and cinematic energy.</h2>
         </div>
         <FeaturedCarousel projects={projects} />
       </section>

@@ -7,6 +7,7 @@ type FeaturedProject = {
   year: string;
   type: string;
   image?: string;
+  trailerId?: string;
   description: string;
 };
 
@@ -67,6 +68,12 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
     }
   };
 
+  const trailerThumbnail = (trailerId: string) =>
+    `https://img.youtube.com/vi/${trailerId}/maxresdefault.jpg`;
+
+  const trailerEmbed = (trailerId: string) =>
+    `https://www.youtube-nocookie.com/embed/${trailerId}?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=${trailerId}&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`;
+
   return (
     <div className="featured-carousel">
       <div
@@ -83,7 +90,23 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
               slideRefs.current[index] = element;
             }}
           >
-            {project.image ? (
+            {project.trailerId ? (
+              <div className="featured-video-frame" aria-hidden="true">
+                <img
+                  className="featured-backdrop"
+                  src={trailerThumbnail(project.trailerId)}
+                  alt=""
+                />
+                {activeIndex === index ? (
+                  <iframe
+                    src={trailerEmbed(project.trailerId)}
+                    title={`${project.title} trailer background`}
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    tabIndex={-1}
+                  />
+                ) : null}
+              </div>
+            ) : project.image ? (
               <>
                 <img
                   className="featured-backdrop"
@@ -106,8 +129,17 @@ export function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <a className="featured-pill" href="#contact">
-                Talk to studio
+              <a
+                className="featured-pill"
+                href={
+                  project.trailerId
+                    ? `https://www.youtube.com/watch?v=${project.trailerId}`
+                    : "#contact"
+                }
+                target={project.trailerId ? "_blank" : undefined}
+                rel={project.trailerId ? "noreferrer" : undefined}
+              >
+                {project.trailerId ? "Watch trailer" : "Talk to studio"}
               </a>
             </div>
           </article>
