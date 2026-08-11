@@ -485,7 +485,7 @@ footer a{color:var(--yellow);text-decoration:none}
    2) คัดลอก Form ID (เช่น 'xkgwqyzb') มาใส่ด้านล่าง
    ถ้าเว้นว่างไว้ ระบบจะ fallback ไปเปิดแอปอีเมล (mailto) แทน
    ============================================================ */
-const FORMSPREE_ID='mwvgkvjw';               // Form ID จาก formspree.io
+const FORMSPREE_ID='';                       // ปิด Formspree ID เก่าที่ผูกกับอีเมลเดิม
 const EMAIL='bananasoundstudio@gmail.com';   // อีเมลสำรองสำหรับ mailto
 const STORAGE='banana-mfb-live-v2';
 
@@ -742,7 +742,7 @@ async function send(){
 
   if(!FORMSPREE_ID){
     location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(textBrief())}`;
-    toast('เปิดแอปอีเมลเพื่อส่งบรีฟ (ยังไม่ได้ตั้งค่า Formspree)');
+    toast('เปิดแอปอีเมลเพื่อส่งบรีฟไปที่ bananasoundstudio@gmail.com');
     return;
   }
 
