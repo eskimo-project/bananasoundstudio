@@ -19,7 +19,7 @@ const brandLogo = assetsByCategory("brand")[0]?.src ?? "/favicon.svg";
 const heroOrchestraImage = "/banana-assets/orchestra-session.jpg";
 const clientAssets = assetsByCategory("clients");
 const roomAssets = assetsByCategory("rooms");
-const peopleAssets: Asset[] = [
+const peopleAssets: (Asset & { src: string })[] = [
   ...assetsByCategory("people"),
   {
     category: "people",
