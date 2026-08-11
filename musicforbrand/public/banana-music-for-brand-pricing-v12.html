@@ -481,12 +481,11 @@ footer a{color:var(--yellow);text-decoration:none}
 'use strict';
 /* ============================================================
    ตั้งค่าการรับบรีฟ
-   1) สมัครฟรีที่ https://formspree.io  →  New Form
-   2) คัดลอก Form ID (เช่น 'xkgwqyzb') มาใส่ด้านล่าง
-   ถ้าเว้นว่างไว้ ระบบจะ fallback ไปเปิดแอปอีเมล (mailto) แทน
+   ใช้ FormSubmit AJAX เพื่อให้ลูกค้ากดส่งจากหน้าเว็บได้ทันที
+   โดยไม่ต้องเปิดแอปอีเมลบนเครื่องของลูกค้า
    ============================================================ */
-const FORMSPREE_ID='';                       // ปิด Formspree ID เก่าที่ผูกกับอีเมลเดิม
-const EMAIL='bananasoundstudio@gmail.com';   // อีเมลสำรองสำหรับ mailto
+const EMAIL='bananasoundstudio@gmail.com';
+const SUBMIT_ENDPOINT=`https://formsubmit.co/ajax/${EMAIL}`;
 const STORAGE='banana-mfb-live-v2';
 
 const state={genre:'Pop',moods:['สนุก ร่าเริง'],keywords:['อร่อย','สดใหม่'],usages:['TikTok / Reels'],editMode:false};
@@ -739,21 +738,17 @@ function validate(){
 async function send(){
   if(!validate())return;
   const subject='Music For Brand Brief — '+(val('brandName')||'New Brand');
-
-  if(!FORMSPREE_ID){
-    location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(textBrief())}`;
-    toast('เปิดแอปอีเมลเพื่อส่งบรีฟไปที่ bananasoundstudio@gmail.com');
-    return;
-  }
-
   const btns=[$('sendBrief')];
   btns.forEach(b=>{b.disabled=true;b.innerHTML='<span class="spin"></span>กำลังส่ง…'});
   try{
-    const res=await fetch(`https://formspree.io/f/${FORMSPREE_ID}`,{
+    const res=await fetch(SUBMIT_ENDPOINT,{
       method:'POST',
       headers:{'Accept':'application/json','Content-Type':'application/json'},
       body:JSON.stringify({
         _subject:subject,
+        _template:'table',
+        _captcha:'false',
+        _replyto:val('contactEmail')||EMAIL,
         brand:val('brandName'),
         contact_name:val('contactName'),
         phone_line:val('contactPhone'),
@@ -761,12 +756,12 @@ async function send(){
         brief:textBrief()
       })
     });
-    if(!res.ok)throw new Error('send failed');
+    const result=await res.json().catch(()=>({}));
+    if(!res.ok||result.success===false)throw new Error(result.message||'send failed');
     $('successOverlay').classList.add('show');
     try{localStorage.removeItem(STORAGE)}catch(e){}
   }catch(e){
-    toast('ส่งไม่สำเร็จ กำลังเปิดแอปอีเมลสำรองให้…');
-    location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(textBrief())}`;
+    toast('ส่งไม่สำเร็จ กรุณาลองใหม่อีกครั้ง หรือติดต่อ Banana โดยตรง');
   }finally{
     btns.forEach(b=>{b.disabled=false;b.textContent='ส่งบรีฟให้ Banana →'});
   }
