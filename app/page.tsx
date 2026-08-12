@@ -101,6 +101,7 @@ const capabilities = [
 ];
 
 const filmography = [
+  "Land of the Lost (1997)",
   "Dorm (2006)",
   "The Letters of Death (2006)",
   "Secret (2007)",
@@ -122,6 +123,7 @@ const filmography = [
   "Super Salaryman (2012)",
   "My Name is Love (2012)",
   "3 AM (2012)",
+  "An Ordinary Love Story (2012)",
   "Tom-Yum-Goong 2 (2013)",
   "From A Pimple To Nirvana (2013)",
   "King Naresuan (2013)",
@@ -132,7 +134,7 @@ const filmography = [
   "The Black Death (2015)",
   "Panthai Norasing (2015)",
   "Cat a Wabb (2015)",
-  "Phi ha Ayothaya (2015)",
+  "Keetaraja (2015)",
   "King Naresuan (2015)",
   "Khun Phan 1 (2016)",
   "Take Me Home (2016)",
@@ -149,6 +151,7 @@ const filmography = [
   "Secrets in the Hot Spring (2018)",
   "Sisters (2019)",
   "Love Battle (2019)",
+  "Khun Phaen Begins (2019)",
   "Luckily in Love (2020)",
   "Seeda (2020)",
   "Classic Again (2020)",
@@ -167,9 +170,9 @@ const filmography = [
   "Man Suang (2023)",
   "Postman (2023)",
   "Death Whisperer (2023)",
+  "Siam Curse (2023)",
   "The X-Treme Riders (2023)",
   "The Elite of Devils (2024)",
-  "The Cursed (2024)",
   "Moei: The Promised (2024)",
   "The Cursed Land (2024)",
   "Love You To Debt (2024)",
@@ -411,10 +414,18 @@ const navLinks = [
 const youtubeTrailerUrl = (title: string) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} trailer`)}`;
 
+const filmographyDirectLinks: Record<string, string> = {
+  "Luckily in Love (2020)": "https://www.youtube.com/watch?v=URTKZNG74pM",
+  "Morning Glory Love Story (2021)": "https://www.youtube.com/watch?v=LtvEfGrE1a8",
+  "Siam Curse (2023)": "https://www.youtube.com/watch?v=41kr2cQSJNs",
+  "Terror Tuesday: Extreme (2024)": "https://www.youtube.com/watch?v=2H1OJFwaXrI",
+  "Bangkok Breaking (2024)": "https://www.youtube.com/watch?v=ObLf5KH465A",
+  "Don't Come Home (2024)": "https://www.youtube.com/watch?v=z6mVoeKgN7M",
+  "The Guardian (2025)": "https://www.facebook.com/KasroThaiMaster/videos/1657796461598038",
+};
+
 const filmographyUrl = (title: string) =>
-  title === "The Guardian (2025)"
-    ? "https://www.facebook.com/KasroThaiMaster/videos/1657796461598038"
-    : youtubeTrailerUrl(title);
+  filmographyDirectLinks[title] ?? youtubeTrailerUrl(title);
 
 export default function Home() {
   return (
@@ -548,7 +559,7 @@ export default function Home() {
       <section className="section catalog-section" id="films">
         <div className="section-heading">
           <p className="eyebrow">Complete filmography</p>
-          <h2>More than 90 film and series credits from 2006 to 2026.</h2>
+          <h2>More than 90 film and series credits from 1997 to 2026.</h2>
         </div>
         <div className="filmography-panel">
           <div className="catalog-lead">
