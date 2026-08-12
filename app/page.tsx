@@ -200,9 +200,9 @@ const filmography = [
   "The Stain (2026)",
   "Elae Airy in Busan (2026)",
   "Haunted Universities 4 (2026)",
-  "The Influencer (2026) (รินรดา)",
-  "00:00 Midnight Incense (2026) (ธูป เที่ยงคืน วิญญาณ)",
-  "DEATH WHISPERER : Saing Khao Khwang (2026) (ธี่หยด : สมิงเขาขวาง)",
+  "The Influencer (2026)",
+  "00:00 Midnight Incense (2026)",
+  "DEATH WHISPERER : Saing Khao Khwang (2026)",
 ];
 
 const labelHighlights = [
