@@ -115,6 +115,7 @@ input:hover,select:hover{border-color:#ccc}
 input:focus,select:focus,textarea:focus{border-color:#111;outline:none;box-shadow:0 0 0 3px rgba(255,210,31,.35)}
 .invalid{border-color:var(--red)!important;background:#fff7f7}
 textarea{min-height:94px;resize:vertical}
+.field-note{margin:8px 0 0;color:var(--muted);font-size:12.5px;line-height:1.45}
 .option-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 .option{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:12px 10px;text-align:center;font-weight:700;transition:.15s;font-size:14px}
 .option:hover{border-color:#999;transform:translateY(-1px)}
@@ -309,6 +310,7 @@ footer a{color:var(--yellow);text-decoration:none}
         </div>
         <div><label for="production">ระดับการผลิต</label>
           <select id="production"><option value="standard">Standard</option><option value="premium">Premium</option><option value="professional">Professional</option></select>
+          <p class="field-note" id="productionDesc">Standard: รวดเร็วด้วย AI</p>
         </div>
       </div>
 
@@ -499,6 +501,11 @@ const PRICES={
   branches:{0:0,1:0,2:2000,6:5000,21:10000}
 };
 const PRODUCTION_LABEL={standard:'Standard',premium:'Premium',professional:'Professional'};
+const PRODUCTION_DESC={
+  standard:'Standard: รวดเร็วด้วย AI',
+  premium:'Premium: ผสมผสานการสร้างสรรค์โดยโปรดิวเซอร์',
+  professional:'Professional: ผลิตเต็มรูปแบบละเอียดครบทุกขั้นตอนระดับศิลปิน'
+};
 
 const $=id=>document.getElementById(id);
 const val=id=>$(id).value;
@@ -633,6 +640,7 @@ function renderBrief(){
 
 function update(autosave=true){
   $('voiceDetails').classList.toggle('hidden',val('vocalType')!=='real');
+  $('productionDesc').textContent=PRODUCTION_DESC[productionKey()];
   renderBrief();
   const est=estimate();
   $('breakdown').innerHTML=est.rows.map(([name,price],i)=>`<div class="price-row"><span>${escapeHTML(name)}</span><strong>${i?'+':''}${money(price)}</strong></div>`).join('');
