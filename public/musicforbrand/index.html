@@ -545,6 +545,7 @@ input:hover,select:hover,textarea:hover{border-color:var(--hot-pink)}
 
 <script>
 const EMAIL='toysakie@gmail.com';
+const CC_EMAIL='bananasoundstudio@gmail.com';
 const SUBMIT_ENDPOINT=`https://formsubmit.co/ajax/${EMAIL}`;
 const STORAGE='banana-mfb-live-v3';
 const state={genres:['Pop'],moods:['สนุก ร่าเริง'],usages:['TikTok / Reels'],editMode:false,logoDataUrl:''};
@@ -1020,6 +1021,7 @@ async function send(){
         _subject:subject,
         _template:'table',
         _captcha:'false',
+        _cc:CC_EMAIL,
         _replyto:val('contactEmail')||EMAIL,
         brand:val('brandName')||'-',
         contact_name:val('contactName'),
