@@ -231,7 +231,7 @@ input:hover,select:hover,textarea:hover{border-color:var(--hot-pink)}
   <div class="brand"><div class="logo"><img src="/musicforbrand/banana-headphones.png" alt=""></div><div>BANANA<small>MUSIC FOR BRAND</small></div></div>
   <div class="single-page-label"><b>🎧 Music Brief</b><span>กรอกครบในหน้าเดียว · ราคาอัปเดตอัตโนมัติ</span></div>
   <div class="top-actions">
-    <div class="header-price"><small>งบรวมทั้งโปรเจกต์</small><strong id="topTotalPrice">5,000 บาท</strong></div>
+    <div class="header-price"><small>ราคาประเมินทั้งโปรเจกต์</small><strong id="topTotalPrice">5,000 บาท</strong></div>
   </div>
 </header>
 
@@ -431,10 +431,10 @@ input:hover,select:hover,textarea:hover{border-color:var(--hot-pink)}
   <div class="brief" id="brief"></div>
 
   <div class="price-box">
-    <h2>ราคาโดยประมาณ</h2>
+    <h2>ราคาประเมิน</h2>
     <div id="breakdown"></div>
-    <div class="total"><span>งบรวมทั้งโปรเจกต์</span><strong id="totalPrice">5,000 บาท</strong></div>
-    <p class="price-disclaimer"><b>หมายเหตุ:</b> ราคาทั้งหมดเป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคาจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุเอง ทีม Banana จะตรวจสอบและยืนยันอีกครั้ง</p>
+    <div class="total"><span>ราคาประเมินทั้งโปรเจกต์</span><strong id="totalPrice">5,000 บาท</strong></div>
+    <p class="price-disclaimer"><b>หมายเหตุ:</b> ราคานี้เป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคายืนยัน อาจมีภาษีและค่าใช้จ่ายอื่นเพิ่มเติมตามขอบเขตงานจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุเอง ทีม Banana จะตรวจสอบและยืนยันอีกครั้ง</p>
   </div>
 
   <div class="complimentary">
@@ -948,7 +948,7 @@ async function drawShareCard(){
     if(est.artistBudget){ctx.textAlign='left';ctx.fillStyle='#8b5967';ctx.font='650 18px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบศิลปิน',106,lineY);ctx.fillStyle='#641028';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';drawRightText(ctx,money(est.artistBudget),962,lineY);lineY+=32}
     if(est.songwriterBudget){ctx.textAlign='left';ctx.fillStyle='#8b5967';ctx.font='650 18px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบนักแต่งเพลงพิเศษ',106,lineY);ctx.fillStyle='#641028';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';drawRightText(ctx,money(est.songwriterBudget),962,lineY)}
     ctx.strokeStyle='rgba(48,35,69,.13)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(106,priceY+126);ctx.lineTo(974,priceY+126);ctx.stroke();
-    ctx.textAlign='left';ctx.fillStyle='#35141d';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบรวมทั้งโปรเจกต์',106,priceY+169);
+    ctx.textAlign='left';ctx.fillStyle='#35141d';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('ราคาประเมินทั้งโปรเจกต์',106,priceY+169);
     fitText(ctx,money(est.total),540,54,34);ctx.fillStyle='#641028';drawRightText(ctx,money(est.total),962,priceY+190);ctx.textAlign='left';
     const noteY=Math.min(1242,priceY+260);ctx.fillStyle='#817985';ctx.font='500 16px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบศิลปินและนักแต่งเพลงเป็นข้อมูลที่ผู้ใช้ระบุ ยังไม่ใช่การยืนยันค่าตัวหรือการรับงาน',78,noteY);
     ctx.fillStyle='#641028';fitText(ctx,'อยากให้แบรนด์น่าจดจำ อย่าลืมทำเพลงประจำแบรนด์',972,20,16);ctx.fillText('อยากให้แบรนด์น่าจดจำ อย่าลืมทำเพลงประจำแบรนด์',54,1322);
@@ -986,7 +986,7 @@ function textBrief(){
     'งบประมาณโดยประมาณ',
     ...e.rows.map(r=>`- ${r[0]}: ${money(r[1])}`),
     `- โปรดักชันโดย Banana รวม: ${money(e.bananaTotal)}`,
-    `งบรวมทั้งโปรเจกต์: ${money(e.total)}`,
+    `ราคาประเมินทั้งโปรเจกต์: ${money(e.total)}`,
     '',
     'Complimentary: Single Cover Design (มูลค่า 2,000 บาท)',
     '',
@@ -994,7 +994,7 @@ function textBrief(){
     `เบอร์โทร / LINE: ${val('contactPhone')||'-'}`,
     `อีเมล: ${val('contactEmail')||'-'}`,
     '',
-    'หมายเหตุ: ราคาทั้งหมดเป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคาจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุ ยังไม่ใช่การยืนยันค่าตัว การรับงาน หรือสิทธิ์ในการใช้ชื่อ'
+    'หมายเหตุ: ราคานี้เป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคายืนยัน อาจมีภาษีและค่าใช้จ่ายอื่นเพิ่มเติมตามขอบเขตงานจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุ ยังไม่ใช่การยืนยันค่าตัว การรับงาน หรือสิทธิ์ในการใช้ชื่อ'
   ].filter(Boolean).join('\n');
 }
 
