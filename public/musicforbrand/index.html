@@ -1,1051 +1,293 @@
 <!doctype html>
-<html lang="th">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ffd21f'/%3E%3Cpath d='M20 43c13 1 23-7 25-23-6 10-14 15-25 15-3 0-5 2-5 4s2 4 5 4Z' fill='%235b3fd8'/%3E%3C/svg%3E">
-<title>Banana Music For Brand</title>
-<style>
-/* LINE Seed Sans TH © LY Corporation — SIL Open Font License 1.1 */
-@font-face{font-family:"LINE Seed Sans TH";font-style:normal;font-weight:400;font-display:swap;src:url("https://cdn.jsdelivr.net/gh/Parn-saneh/fonts@main/LINESeedSansTH_W_Rg.woff2") format("woff2")}
-@font-face{font-family:"LINE Seed Sans TH";font-style:normal;font-weight:700 950;font-display:swap;src:url("https://cdn.jsdelivr.net/gh/Parn-saneh/fonts@main/LINESeedSansTH_W_XBd.woff2") format("woff2")}
-:root{
-  --yellow:#ffd21f;--lemon:#fff6a8;--purple:#5b3fd8;--pink:#ff5c9f;--sky:#55c9ff;--mint:#63ddb0;
-  --black:#111116;--ink:#17171d;--muted:#6e6e79;--line:#e8e8ef;--soft:#fffceb;--card:#fff;--bg:#f5f5f7;
-  --green:#34b67a;--shadow:0 20px 60px rgba(24,24,36,.08);--radius:24px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif;background:
-  radial-gradient(circle at 12% 7%,rgba(255,210,31,.16),transparent 24%),
-  radial-gradient(circle at 88% 11%,rgba(91,63,216,.10),transparent 22%),var(--bg);color:var(--ink)}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer;color:var(--ink)}
-button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(255,210,31,.55);outline-offset:2px}
-.hidden{display:none!important}
-.topbar{
-  position:sticky;top:0;z-index:30;display:grid;grid-template-columns:280px 1fr 280px;
-  align-items:center;background:rgba(255,255,255,.84);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);color:var(--ink);padding:12px 22px;border-bottom:1px solid rgba(17,17,22,.08);box-shadow:0 8px 30px rgba(24,24,36,.05)
-}
-.brand{display:flex;align-items:center;gap:12px;font-weight:950}
-.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#fff,#f4f4f6);display:grid;place-items:center;overflow:hidden;border:1px solid #ececf1;box-shadow:0 8px 22px rgba(17,17,22,.08)}
-.logo img{width:92%;height:92%;object-fit:contain}
-.brand small{display:block;font-size:10px;letter-spacing:1.5px}
-.single-page-label{text-align:center;line-height:1.25}
-.single-page-label b{display:block;color:var(--purple);font-size:15px}
-.single-page-label span{color:#695b72;font-size:12px}
-.top-actions{display:flex;justify-content:flex-end}
-.header-price{text-align:right;line-height:1.2}
-.header-price small{display:block;color:var(--hot-pink);font-size:15px;font-weight:900;margin-bottom:3px}.header-price strong{color:var(--hot-pink);font-size:26px;font-weight:950}
-.btn{border:0;border-radius:14px;padding:11px 15px;font-weight:900;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 rgba(91,63,216,.13)}
-.btn-dark{background:#15151a;color:#fff}.btn-yellow{background:linear-gradient(110deg,#ffd21f,#ffe875);color:#17171d}.btn-light{background:rgba(255,255,255,.88);border:1px solid var(--line);color:var(--ink)}
-.campaign-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr .92fr;align-items:center;min-height:360px;max-width:1400px;margin:24px auto 0;padding:42px 54px;overflow:hidden;border:1px solid rgba(255,255,255,.9);border-radius:36px;background:linear-gradient(118deg,#fff 4%,#f5f3f2 49%,#e8e5e2 100%);box-shadow:0 30px 80px rgba(24,24,36,.10)}
-.campaign-hero:before,.campaign-hero:after{content:"";position:absolute;z-index:-1;border-radius:34px;border:1px solid rgba(255,255,255,.72);background:rgba(255,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.7);backdrop-filter:blur(12px)}
-.campaign-hero:before{width:250px;height:210px;right:24px;top:24px;transform:rotate(-5deg)}.campaign-hero:after{width:220px;height:120px;right:300px;bottom:18px;transform:rotate(5deg)}
-.hero-copy{position:relative;z-index:2}.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;font-weight:900;letter-spacing:.1em}.hero-eyebrow:before{content:"";width:26px;height:5px;border-radius:99px;background:var(--yellow)}
-.campaign-hero h1{font-size:clamp(42px,5.1vw,76px);line-height:.98;margin:0;color:#09090c;letter-spacing:-.055em}.campaign-hero h1 span{background:linear-gradient(90deg,#ffd21f,#ffca31 28%,#6b45ec 67%,#ff5c9f);-webkit-background-clip:text;background-clip:text;color:transparent}.campaign-hero p{max-width:520px;margin:20px 0 0;color:#6f6f78;font-size:18px;line-height:1.55}.hero-note{display:block;margin-top:15px;color:#292932;font-weight:850;letter-spacing:.08em;font-size:13px}
-.hero-art{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-height:285px}.hero-art:after{content:"";position:absolute;z-index:-1;width:78%;height:28%;bottom:6%;border-radius:50%;background:rgba(17,17,22,.17);filter:blur(24px)}.hero-art img{display:block;width:min(520px,112%);max-height:330px;object-fit:contain;filter:drop-shadow(0 24px 28px rgba(20,20,24,.16))}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:22px;padding:24px 18px;max-width:1440px;margin:auto}
-.main,.right{background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.96);border-radius:30px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
-.main{padding:26px}.right{padding:22px;align-self:start;position:sticky;top:88px}
-.section{border:1px solid #ececf1;background:rgba(255,255,255,.88);border-radius:22px;padding:20px;margin:0 0 16px;box-shadow:0 8px 28px rgba(24,24,36,.04)}
-.section:last-child{margin-bottom:0}
-h1{font-size:32px;margin:0 0 6px;color:#17171d;letter-spacing:-.035em}.lead{color:var(--muted);margin:0 0 24px}
-h2{font-size:18px;margin:0 0 12px;color:#202027}
-.grid{display:grid;gap:12px}.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}
-label{display:block;font-weight:800;margin:0 0 7px}
-input,select,textarea{width:100%;border:1px solid var(--line);border-radius:14px;padding:12px 13px;background:#fbfbfd;color:var(--ink);transition:border-color .16s ease,box-shadow .16s ease}
-input:hover,select:hover,textarea:hover{border-color:#cfc0e2}
-textarea{min-height:94px;resize:vertical}
-.option-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.option{
-  appearance:none;-webkit-appearance:none;color:var(--ink);border:1.5px solid var(--line);background:linear-gradient(145deg,#fff,#fafafd);border-radius:16px;padding:13px;text-align:left;
-  min-height:74px;font-weight:850
-}
-.option small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
-.option{transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.option:hover{transform:translateY(-2px);border-color:var(--sky)}
-.option.selected{border-color:#7453ef;background:linear-gradient(135deg,#fff2a3,#fffdf1);box-shadow:0 6px 16px rgba(91,63,216,.12)}
-.compact .option{min-height:auto;padding:10px 12px;text-align:center}
-.genre-custom{margin-top:12px;padding:14px;border:1px solid var(--line);border-radius:16px;background:#faf8ff}
-.genre-custom small{display:block;color:var(--muted);margin-top:6px;line-height:1.45}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{appearance:none;-webkit-appearance:none;color:var(--ink);border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:800;transition:transform .15s ease,background .15s ease}.tag:hover{transform:rotate(-1deg) translateY(-1px)}
-.tag.selected{background:var(--purple);color:#fff;border-color:var(--purple);box-shadow:0 4px 0 rgba(85,201,255,.28)}
-.inline-add{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px}
-.voice-details{padding:16px;border:1px solid var(--line);border-radius:14px;background:#fafafa;margin-top:12px}
-.package-title{margin:18px 0 10px}
-.package-picker{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.package-card{appearance:none;-webkit-appearance:none;color:var(--ink);border:1.5px solid var(--line);background:linear-gradient(145deg,#fff,#fafafd);border-radius:18px;padding:15px;text-align:left;min-height:112px}
-.package-card b{display:block;font-size:17px;margin-bottom:5px}.package-card small{display:block;color:var(--muted);line-height:1.45}
-.package-card{transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.package-card:hover{transform:translateY(-3px);border-color:var(--pink)}
-.package-card.selected{border-color:var(--purple);background:linear-gradient(145deg,#fff7b8,#fff);box-shadow:0 6px 0 rgba(91,63,216,.15)}
-.package-card .badge{display:inline-block;margin-top:9px;padding:4px 8px;border-radius:999px;background:#e9e2ff;color:var(--purple);font-size:11px;font-weight:850}
-.package-detail{margin-top:10px;padding:13px 14px;border-radius:13px;background:#f7f2ff;color:#584b66;line-height:1.6;font-size:14px;border-left:4px solid var(--purple)}
-.addons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.addon{
-  display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff
-}
-.addon input{width:auto;margin-top:3px}
-.addon b{display:block}.addon small{color:var(--muted);display:block;margin-top:3px}
-.special-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.special-card{border:1px solid #e7dcf4;border-radius:20px;padding:16px;background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(247,243,255,.9));box-shadow:0 7px 0 rgba(91,63,216,.07)}
-.special-card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,247,210,.9));box-shadow:0 7px 0 rgba(255,210,31,.16)}
-.special-card h3{margin:0 0 5px;font-size:17px;color:var(--purple)}.special-card p{margin:0 0 13px;color:var(--muted);font-size:13px;line-height:1.5}
-.budget-input{position:relative}.budget-input input{padding-right:52px}.budget-input span{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:800}
-.note{background:#fff8df;border:1px solid #f1dd9b;padding:12px;border-radius:12px;color:#5f512a;font-size:13px;line-height:1.5}
-.logo-upload{display:flex;align-items:center;gap:18px;border:1px dashed #cfcfcf;border-radius:20px;padding:16px;background:linear-gradient(135deg,#fff 0%,#fafafa 56%,#f5f1ff 100%);transition:.2s ease}
-.logo-upload.has-logo{border:2px solid rgba(91,63,216,.42);background:linear-gradient(135deg,#fff 0%,#f8f5ff 62%,#fff7c9 100%);box-shadow:0 14px 30px rgba(91,63,216,.10)}
-.logo-preview{width:118px;height:118px;flex:0 0 118px;border-radius:28px;background:linear-gradient(145deg,#fff,#f1f1f4);color:#fff;display:grid;place-items:center;font-weight:950;font-size:22px;overflow:hidden;border:1px solid #ececf1;box-shadow:0 14px 34px rgba(24,24,36,.12);position:relative}
-.logo-preview img{width:100%;height:100%;object-fit:contain;background:#fff}
-.logo-upload.has-logo .logo-preview:after{content:'ใช้บนการ์ด';position:absolute;right:7px;bottom:7px;border-radius:999px;padding:4px 7px;background:#5b3fd8;color:#fff;font-size:10px;font-weight:850;box-shadow:0 4px 10px rgba(91,63,216,.25)}
-.logo-upload-copy{min-width:0;flex:1}.logo-upload-copy b{display:block;margin-bottom:5px}.logo-upload-copy small{display:block;color:var(--muted);line-height:1.5}
-.logo-buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.logo-buttons .btn{padding:8px 11px;font-size:13px}
-.share-callout{margin-top:14px;border:1px solid #e9e9ef;border-radius:20px;padding:15px;background:linear-gradient(135deg,#fff1a0 0%,#fff 54%,#f2efff 100%);box-shadow:0 12px 28px rgba(24,24,36,.06)}
-.share-callout b{display:block;margin-bottom:4px}.share-callout p{margin:0 0 10px;color:#5d5d5d;font-size:13px;line-height:1.5}.share-callout .btn{width:100%}
-.share-modal{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:18px}
-.share-dialog{width:min(520px,100%);max-width:100%;max-height:94vh;overflow-y:auto;overflow-x:hidden;background:#fff;border-radius:20px;padding:15px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-.share-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.share-dialog-head h2{margin:0;font-size:18px}
-.icon-button{border:0;background:#eee;border-radius:50%;width:36px;height:36px;font-size:20px;line-height:1}
-#shareCanvas{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;background:var(--purple);box-shadow:0 10px 30px rgba(91,63,216,.18)}
-.share-dialog-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.share-dialog-note{margin:10px 2px 0;text-align:center;color:var(--muted);font-size:12px}
-.summary-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.summary-title h2{font-size:22px;margin:0}
-.edit-toggle{border:0;background:none;font-weight:850;color:#555}
-.brief{margin-top:12px}
-.brief-row{display:grid;grid-template-columns:125px 1fr;gap:12px;align-items:center;padding:7px 0}
-.brief-row span{color:var(--muted);font-size:14px}
-.brief-row b{text-align:right}
-.brief-row select,.brief-row input{padding:8px 9px;font-size:14px}
-.price-box{border-top:1px solid var(--line);margin-top:15px;padding-top:15px}
-.price-row{display:flex;justify-content:space-between;gap:12px;margin:9px 0;font-size:14px}
-.price-row em{font-style:normal;color:var(--muted)}
-.price-group-title{margin:14px 0 7px;padding-top:12px;border-top:1px solid var(--line);color:var(--purple);font-size:13px;font-weight:900;letter-spacing:.02em}
-.price-group-title:first-child{margin-top:0;padding-top:0;border-top:0}
-.total{display:flex;justify-content:space-between;align-items:end;border-top:1px solid #aaa;margin-top:13px;padding-top:13px}
-.total span{color:var(--hot-pink);font-size:18px;font-weight:950}.total strong{color:var(--hot-pink);font-size:clamp(24px,5.5vw,34px);font-weight:950;text-align:right;min-width:0}
-.price-disclaimer{margin:12px 0 0;padding:11px;border-radius:11px;background:#fff8df;color:#5f512a;font-size:13px;line-height:1.5}
-.complimentary{margin-top:14px;border:1px solid #f0d474;background:linear-gradient(135deg,#fff9cf,#fff);border-radius:16px;padding:12px}
-.readiness{margin-top:14px;background:#f4efff;border-radius:16px;padding:12px}
-.track{height:8px;background:#e8e8e8;border-radius:99px;overflow:hidden;margin-top:8px}.track i{display:block;height:100%;background:linear-gradient(90deg,var(--yellow),var(--green))}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
-.actions .wide{grid-column:1/-1}
-.bottom-submit{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:18px}
-.bottom-submit .btn{padding:14px 18px}.bottom-submit .status{grid-column:1/-1;text-align:center}
-.package-guide{max-width:1404px;margin:0 auto 24px;padding:30px;background:rgba(255,255,255,.9);color:var(--ink);border-radius:30px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.96)}
-.guide-head{max-width:780px;margin-bottom:20px}.guide-head small{color:var(--purple);font-weight:900;letter-spacing:.08em}.guide-head h2{font-size:28px;margin:7px 0;color:var(--purple)}.guide-head p{margin:0;color:#675b70;line-height:1.65}
-.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.guide-card{background:#fff;color:var(--ink);border-radius:20px;padding:18px;border:1px solid #e7dcf4;box-shadow:0 8px 0 rgba(91,63,216,.08)}
-.guide-card:nth-child(1){border-top:5px solid var(--yellow)}.guide-card:nth-child(2){border-top:5px solid var(--sky)}.guide-card:nth-child(3){border-top:5px solid var(--pink)}
-.guide-card .level{font-size:12px;font-weight:900;color:#6d5a00;text-transform:uppercase;letter-spacing:.06em}.guide-card h3{font-size:21px;margin:5px 0 6px}.guide-card>p{color:var(--muted);line-height:1.55;margin:0 0 12px}
-.guide-card ul{margin:0;padding-left:20px}.guide-card li{margin:8px 0;line-height:1.5}
-.studio-included{margin-top:14px;padding:10px 12px;border-radius:11px;background:#fff4b8;font-weight:850;line-height:1.45}
-.guide-factors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;border-top:1px solid rgba(91,63,216,.15);margin-top:20px;padding-top:20px}
-.guide-factor{background:rgba(255,255,255,.76);border:1px solid #e7dcf4;border-radius:16px;padding:13px}.guide-factor b{display:block;color:var(--purple);margin-bottom:4px}.guide-factor span{color:#675b70;font-size:14px;line-height:1.45}
-.guide-note{margin:16px 0 0;color:#756c80;font-size:13px;line-height:1.55}
-.status{font-size:12px;color:var(--muted);margin-top:8px;min-height:18px}
-.mobile-price-bar{display:none}
-.toast{
-  position:fixed;right:20px;bottom:20px;background:var(--purple);color:#fff;padding:12px 15px;border-radius:14px;
-  opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:60
-}
-.toast.show{opacity:1;transform:none}
-@media(max-width:1050px){
-  .topbar{grid-template-columns:240px 1fr}.top-actions{display:none}
-  .campaign-hero{margin:16px 14px 0;padding:34px 38px;grid-template-columns:1fr .8fr;min-height:330px}
-  .layout{grid-template-columns:1fr}.right{position:static}
-  .option-grid{grid-template-columns:repeat(3,1fr)}
-  .guide-grid{grid-template-columns:1fr}.guide-factors{grid-template-columns:1fr 1fr}
-}
-@media(max-width:680px){
-  body{padding-bottom:88px}.topbar{grid-template-columns:minmax(0,1fr) auto;padding:11px 14px;gap:10px}.single-page-label{display:none}
-  .top-actions{display:flex}.header-price small{font-size:12px}.header-price strong{font-size:19px;white-space:nowrap}
-  .brand{gap:9px}.logo{width:40px;height:40px}.brand small{font-size:9px;letter-spacing:1.2px}
-  .campaign-hero{grid-template-columns:1fr;margin:10px 9px 0;padding:28px 24px 18px;border-radius:24px;min-height:0}.campaign-hero h1{font-size:45px}.campaign-hero p{font-size:16px;margin-top:14px}.hero-art{min-height:190px;margin-top:-4px}.hero-art img{max-height:215px;width:94%}.campaign-hero:before{width:150px;height:140px;right:-12px}.campaign-hero:after{width:130px;height:80px;right:140px}
-  .layout{padding:9px}.main,.right{border-radius:20px}.main{padding:15px}.section{padding:16px;border-radius:18px}
-  .grid-2,.grid-3,.addons,.package-picker,.special-options{grid-template-columns:1fr}
-  .option-grid{grid-template-columns:repeat(2,1fr)}
-  .brief-row{grid-template-columns:110px 1fr}
-  .actions,.bottom-submit{grid-template-columns:1fr 1fr}
-  .logo-upload{align-items:center;gap:12px;padding:12px}.logo-preview{width:92px;height:92px;flex-basis:92px;border-radius:22px}.share-modal{padding:8px}.share-dialog{padding:11px;border-radius:18px}.share-dialog-actions{grid-template-columns:1fr}
-  .package-guide{margin:0 9px 18px;padding:20px 16px;border-radius:14px}.guide-head h2{font-size:24px}.guide-factors{grid-template-columns:1fr}
-  .mobile-price-bar{position:fixed;display:flex;left:0;right:0;bottom:0;z-index:55;align-items:center;justify-content:flex-end;gap:14px;padding:11px 14px calc(11px + env(safe-area-inset-bottom));background:rgba(255,255,255,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);color:var(--ink);border-top:1px solid rgba(17,17,22,.08);box-shadow:0 -8px 28px rgba(24,24,36,.10)}
-  .mobile-price-bar small{display:block;color:#e9e1ff;font-size:12px}.mobile-price-bar strong{display:block;color:var(--yellow);font-size:22px}.mobile-price-bar .btn{white-space:nowrap}
-}
-@media print{
-  .topbar,.campaign-hero,.main,.actions,.bottom-submit,.edit-toggle,.toast,.mobile-price-bar{display:none!important}
-  body{background:#fff}.layout{display:block;padding:0}.right{position:static;box-shadow:none;border:0}
-}
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ประเมินราคาทำเพลงกับ Banana</title><meta name="description" content="ประเมินราคาทำเพลง เพลงส่วนตัว เพลงแบรนด์ และ Cover พร้อมการ์ดสรุปบรีฟ"><style>
+@font-face{font-display:swap;font-family:Line;src:url('https://cdn.jsdelivr.net/gh/Parn-saneh/fonts@main/LINESeedSansTH_W_Rg.woff2')}@font-face{font-display:swap;font-family:Line;src:url('https://cdn.jsdelivr.net/gh/Parn-saneh/fonts@main/LINESeedSansTH_W_XBd.woff2');font-weight:700 950}
+:root{--ink:#411323;--muted:#87747b;--pink:#f73c7a;--yellow:#ffda32;--line:#ecdee3;--bg:#fbf7f6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Line,system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #f73c7a;outline-offset:3px}button{color:inherit}a{color:inherit}h1,h2,h3,p{margin:0}p{line-height:1.75}button,input,select{min-height:44px}.hidden,[hidden]{display:none!important}.demo{background:#411323;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.2px}.top{display:flex;justify-content:space-between;align-items:center;padding:18px max(24px,calc((100vw - 1280px)/2));background:#fff;border-bottom:1px solid var(--line);gap:20px}.brand{font-weight:950;font-size:26px;line-height:1}.brand small{display:block;font-size:10px;letter-spacing:3px;margin-top:6px}.top-right{display:flex;align-items:center;gap:24px;font-size:13px}.pill{border:1px solid var(--line);padding:8px 13px;border-radius:30px;font-size:12px}.hero{max-width:1280px;margin:32px auto 28px;background:var(--pink);border-radius:28px;display:grid;grid-template-columns:1.3fr .7fr;overflow:hidden;color:#fff;min-height:310px}.hero-copy{padding:38px 42px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700}.hero h1{font-size:clamp(32px,4vw,55px);line-height:1.25;margin:14px 0}.hero h1 span{color:var(--yellow)}.hero p{max-width:560px;font-size:15px}.hero-art{background:var(--yellow);display:flex;justify-content:center;align-items:center;position:relative}.hero-art img{width:85%;max-width:330px;mix-blend-mode:multiply}.hero-art b{position:absolute;bottom:20px;right:22px;color:#411323;font-size:11px;letter-spacing:1px}.layout{max-width:1280px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 368px;gap:24px;align-items:start;padding-bottom:80px}.section{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:18px}.section-head{display:flex;gap:13px;align-items:flex-start;margin-bottom:22px}.num{font-size:13px;background:#fff0f5;color:var(--pink);border-radius:12px;display:grid;place-items:center;flex:0 0 35px;height:35px;font-weight:800}.section h2{font-size:23px;line-height:1.3}.sub{color:var(--muted);font-size:13px;margin-top:6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin-top:16px}.grid>.field{margin-top:0}label,.label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}label small,.label small{color:var(--muted);font-weight:400;font-size:12px}input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea{display:block;width:100%;border:1px solid #e5d8de;border-radius:11px;background:#fff;padding:11px 12px;color:var(--ink)}textarea{min-height:92px;resize:vertical}.note{font-size:12px;color:var(--muted);line-height:1.7;margin-top:10px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1.5px solid var(--line);background:#fff;border-radius:15px;text-align:left;padding:17px;position:relative}.choice b{font-size:18px;display:block}.choice small{font-size:12px;color:var(--muted);display:block;line-height:1.6;margin-top:5px}.choice.selected{border-color:var(--pink);background:#fff3f7;box-shadow:0 0 0 1px var(--pink)}.choice .tag{font-size:10px;color:var(--pink);font-weight:700;margin-bottom:7px;display:block;letter-spacing:1px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);border-radius:30px;background:#fff;padding:8px 14px;font-size:13px;min-height:40px}.chip.selected{background:var(--ink);color:#fff;border-color:var(--ink)}.selected-list{display:flex;gap:8px;flex-wrap:wrap;min-height:10px;margin-bottom:12px}.selected-chip{border:0;background:#fff0b0;border-radius:8px;padding:6px 10px;font-size:12px;min-height:32px}.selected-chip span{margin-left:8px}.link-btn{background:none;border:0;color:var(--pink);font-weight:700;font-size:13px;padding:8px 0;text-align:left}.catalog{background:#fcf8f9;border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}.catalog h3{font-size:12px;color:var(--muted);margin:18px 0 9px}.catalog input{background:#fff!important}.inline-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.inline-heading .label{margin:0}.counter{color:var(--muted);font-size:12px}.divider{border:0;border-top:1px solid var(--line);margin:22px 0}.recommend{margin-top:10px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}input[type=checkbox]{accent-color:var(--pink);width:16px;height:16px;flex-shrink:0}.recommend label{font-weight:400;margin:0;font-size:12px}.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.packages .choice{padding:13px}.packages .choice b{font-size:15px}.packages .choice strong{display:block;font-size:17px;margin-top:10px}.package-detail{border-radius:13px;background:#fff9db;padding:17px;margin-top:15px;font-size:13px;line-height:1.8}.campaign{border-radius:17px;background:var(--yellow);padding:23px}.campaign small{font-weight:700;letter-spacing:1px;font-size:11px}.campaign strong{display:block;font-size:34px;margin:6px 0}.campaign p{font-size:13px}.includes{display:grid;grid-template-columns:1fr 1fr;gap:7px;font-size:12px;padding:0;list-style:none;margin:16px 0 0}.includes li::before{content:'✓';margin-right:7px;color:var(--pink);font-weight:800}details{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}summary{font-size:13px;font-weight:700;cursor:pointer;padding:5px 0}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check-option{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:11px;padding:12px;font-weight:400;font-size:13px;margin:0}.summary-panel{position:sticky;top:18px;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}.summary-header{padding:24px 24px 18px;display:flex;justify-content:space-between;align-items:center}.summary-header h2{font-size:21px}.live-dot{width:7px;height:7px;background:var(--pink);display:inline-block;border-radius:50%;margin-right:6px}.summary-body{padding:0 24px 24px}.summary-title{font-size:23px;line-height:1.4;margin-bottom:6px;overflow-wrap:anywhere}.summary-type{color:var(--muted);font-size:12px;margin-bottom:15px}.brief-row{display:flex;justify-content:space-between;align-items:start;gap:18px;font-size:12px;padding:9px 0;border-bottom:1px solid #f5edf0}.brief-row span{color:var(--muted);flex:0 0 70px}.brief-row b{text-align:right;font-weight:500;overflow-wrap:anywhere}.price-lines{margin:18px 0}.price-line{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin:10px 0}.price-line.zero{color:var(--muted)}.total{padding:20px;background:#fff6c2;border-radius:15px}.total span{font-size:12px;display:block}.total strong{font-size:35px;display:block;margin-top:4px}.total small{font-size:11px;color:#806323}.pending{font-size:12px;margin-top:14px;color:var(--muted);line-height:1.7}.btn{border:0;border-radius:11px;min-height:46px;padding:12px 16px;font-weight:700;font-size:13px;background:#f5edf0}.btn.primary{background:var(--pink);color:#fff}.btn.dark{background:var(--ink);color:#fff}.btn.outline{background:#fff;border:1px solid var(--line)}.wide{width:100%}.summary-actions{display:grid;gap:9px;margin-top:18px}.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}.footer-note{text-align:center;color:var(--muted);font-size:12px;padding:15px 20px 30px}.modal{position:fixed;inset:0;z-index:100;background:#29131dbb;display:grid;place-items:center;padding:16px}.modal-box{background:#fff;border-radius:22px;width:min(540px,100%);max-height:94dvh;overflow:auto;padding:17px}.modal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-top h2{font-size:18px}.close{border:0;border-radius:50%;width:36px;height:36px;min-height:36px;background:#f6f0f2;font-size:22px}canvas{width:100%;height:auto;border-radius:14px;display:block}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 20px;border-radius:12px;z-index:200;max-width:90vw;font-size:13px}.mobile-bar{display:none}.singer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.upload-row{display:flex;align-items:center;gap:15px}.upload-row img{width:52px;height:52px;object-fit:contain;border-radius:10px;background:#fff6b0}.upload-row label{margin:0}.clear{font-size:12px;color:var(--muted);text-decoration:underline;border:0;background:none}dialog::backdrop{background:#29131dbb}@media(max-width:1320px){.hero,.layout{margin-left:24px;margin-right:24px}}@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr) 320px;gap:16px}.section{padding:22px}.hero h1{font-size:42px}.packages{grid-template-columns:1fr}.packages .choice{display:grid;grid-template-columns:1fr auto;column-gap:12px}.packages .choice strong{grid-column:2;grid-row:1/3;margin:0;align-self:center}.packages .choice small{grid-column:1}.summary-body{padding:0 18px 18px}}@media(max-width:760px){.top{padding:17px 20px}.top-right .pill{display:none}.top-right{font-size:11px}.brand{font-size:23px}.hero{margin:18px 16px;grid-template-columns:1fr 110px;min-height:230px;border-radius:22px}.hero-copy{padding:25px 20px}.hero h1{font-size:30px}.hero p{font-size:12px}.hero-art img{width:170px;max-width:none}.hero-art b{display:none}.eyebrow{font-size:9px;letter-spacing:1px}.layout{display:block;margin:0 16px;padding-bottom:100px}.section{padding:20px 17px;border-radius:18px}.section h2{font-size:20px}.grid,.singer-grid{grid-template-columns:1fr}.choices .choice{padding:13px}.choice b{font-size:16px}.choice small{font-size:11px}.summary-panel{position:static;margin-top:20px}.check-grid{gap:8px}.check-option{padding:10px;font-size:12px}.mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:40;background:#fff;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);justify-content:space-between;align-items:center;box-shadow:0 -8px 30px #4113230a}.mobile-bar small{font-size:10px;color:var(--muted);display:block}.mobile-bar strong{font-size:22px}.modal-box{padding:12px}.includes{font-size:11px}.demo{font-size:10px}.total strong{font-size:32px}}@media print{.demo,.top,.hero,main,.footer-note,.mobile-bar,.summary-actions,.modal,.toast{display:none!important}.layout{display:block;max-width:900px;margin:auto}.summary-panel{position:static;border:0}.summary-body{padding:10px}.summary-panel .total{background:#fff6c2!important;print-color-adjust:exact}}
+.select-box{display:block;width:100%;border:1px solid #e5d8de;border-radius:11px;background:#fff;padding:12px 15px;text-align:left;font-weight:500;font-size:14px;min-height:50px;margin:6px 0 12px}.select-box[aria-expanded="true"]{border-color:var(--pink);background:#fff7fa}.catalog .chips,.option-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.catalog .chip{border-radius:10px;text-align:left;padding:10px 12px;line-height:1.5}.option-grid .chip{border-radius:10px;text-align:left;padding:12px;min-height:48px}.catalog .chip.selected::after,.option-grid .chip.selected::after{content:' ✓';float:right}.selected-list:empty{display:none}.catalog{max-height:420px;overflow:auto}.catalog h3:first-of-type{margin-top:15px}@media(max-width:760px){.catalog .chips,.option-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog{max-height:360px}.catalog .chip,.option-grid .chip{font-size:12px}}
+.top{position:sticky;top:0;z-index:60;box-shadow:0 4px 22px #41132308}.header-price{text-align:right;white-space:nowrap}.header-price small{display:block;color:var(--muted);font-size:11px}.header-price strong{display:block;font-size:27px;line-height:1.35;color:var(--pink)}.summary-panel{top:110px}.picker-box{width:min(760px,100%);display:flex;flex-direction:column;max-height:88dvh;padding:23px}.picker-box .modal-top{gap:18px}.picker-box .modal-top h2{font-size:24px}.picker-box .catalog{border:0;background:none;padding:0;margin:0;max-height:none;overflow:visible}.picker-content{overflow:auto;min-height:0;padding:0 3px 10px;flex:1}.picker-sub{font-size:13px;color:var(--muted);margin-bottom:12px}.picker-selected{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 16px}.picker-footer{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:15px;align-items:center;flex-shrink:0}.picker-footer small{font-size:12px;color:var(--muted)}.picker-price{font-size:14px;font-weight:700;margin-left:auto;white-space:nowrap;color:var(--pink)}.picker-box #genreSearch{position:sticky;top:0;background:#fff;z-index:1}.picker-box .option-grid{padding:0}.picker-box .recommend{margin:14px 0}.picker-box .catalog h3{margin-top:20px}.picker-footer .btn{min-width:140px}@media(max-width:760px){.header-tagline{display:none}.header-price strong{font-size:22px}.header-price small{font-size:10px}.top{padding:12px 18px}.picker-box{padding:18px 14px;max-height:88dvh}.picker-box .modal-top h2{font-size:20px}.picker-price{font-size:12px}.picker-footer .btn{min-width:115px}.picker-footer{padding-top:12px}.summary-panel{position:static}}
+.rate-table-wrap{overflow-x:auto;margin-top:14px}.rate-table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}.rate-table th,.rate-table td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:right}.rate-table th:first-child{text-align:left}.rate-table thead{background:#fff6c2}.rate-table tbody th{font-weight:500}.rate-table tbody tr:last-child{background:#fff4f8}
+.rate-heading{font-size:14px;margin:20px 0 6px}
+.studio-plan{background:#fff9df;border:1px solid #f0e5ba;padding:18px;border-radius:13px;margin-top:20px}.studio-plan b{font-size:14px}.studio-plan p{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.8}
+.header-price{padding:12px 20px;background:#fff0a8;border:2px solid #f73c7a;border-radius:15px;box-shadow:0 4px 16px #f73c7a12;text-align:right}.estimate-label{display:block;color:#411323;font-size:15px;font-weight:900;line-height:1.4}.header-price strong{font-size:35px;line-height:1.25}.header-price .estimate-disclaimer{font-size:11px;color:#641028;font-weight:700;margin-top:4px}.header-tagline{display:none}.summary-panel{top:155px}.total span{font-size:15px;font-weight:800}.total small{display:block;font-size:12px;font-weight:700;color:#641028;line-height:1.6;margin-top:8px}.btn:disabled{opacity:.45;cursor:not-allowed}.top{padding-top:10px;padding-bottom:10px}@media(max-width:760px){.header-price{padding:9px 11px;border-radius:12px;max-width:calc(100vw - 145px);white-space:normal}.estimate-label{font-size:12px}.header-price strong{font-size:28px}.header-price .estimate-disclaimer{font-size:9px;line-height:1.4}.top{gap:12px;padding-left:15px;padding-right:15px}.brand{font-size:21px}.summary-panel{position:static}}
+.btn.primary{background:#ca235c}.header-price strong{color:#bd1951}.note,.sub{font-size:13px}.summary-type,.brief-row,.price-line{font-size:13px}.hero{min-height:260px}.hero-copy{padding-top:32px;padding-bottom:32px}.hero h1{font-size:46px}.hero-art img{max-width:270px}.rate-table{font-size:13px}@media(max-width:760px){input,select,textarea{font-size:16px}.hero{min-height:190px}.hero-copy{padding:23px 18px}.hero h1{font-size:28px}.hero-art img{max-width:none;width:145px}.brief-row,.price-line{font-size:12px}}
+:root{--muted:#77636c}.service-guide{max-width:1280px;margin:0 auto 32px;border:1px solid var(--line);border-radius:25px;overflow:hidden;background:#fff}.guide-manifesto{background:#fff3c8;text-align:center;padding:42px 28px}.guide-manifesto h2{font-size:56px;line-height:1.2;margin:15px 0}.guide-manifesto h2 span{color:#bd1951}.guide-manifesto p{font-size:15px;max-width:750px;margin:auto;color:#695059}.guide-content{padding:32px}.guide-section-title{margin:16px 0 24px}.guide-section-title h2{font-size:27px;margin:8px 0}.guide-section-title p{font-size:14px;color:var(--muted)}.guide-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.guide-levels article{padding:23px;border:1px solid var(--line);border-radius:17px}.level-index{color:#bd1951;font-size:12px;font-weight:800}.guide-levels h3{font-size:23px;margin:8px 0}.guide-levels b{font-size:14px}.guide-levels p{font-size:13px;color:var(--muted);margin-top:12px}.guide-levels .guide-small{padding-top:12px;border-top:1px solid var(--line);font-size:12px}.package-detail p{margin:10px 0 0;line-height:1.8}.package-detail .production-scope{font-size:12px;color:var(--muted);padding-top:10px;border-top:1px solid #e8dbc4}.level-details{margin:20px 0 0}.level-details>div{padding:15px 0;border-top:1px solid var(--line)}.level-details dt{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:7px}.level-details dd{font-size:14px;line-height:1.8;color:var(--muted);margin:0}.level-scope-note{background:#fff8e8;border:1px solid #f0dfb8;border-radius:14px;padding:20px 23px;margin-top:18px}.level-scope-note b{font-size:15px}.level-scope-note p{font-size:13px;line-height:1.8;color:var(--muted);margin:9px 0 0}.guide-package{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;background:#fff4db;border-radius:18px;padding:28px;margin:28px 0 36px}.guide-package h3{font-size:25px;margin:10px 0}.guide-package p{font-size:13px;color:var(--muted)}.guide-package strong{font-size:36px;display:block;color:#bd1951}.guide-package small{display:block;font-size:11px;margin-top:10px;color:var(--muted)}.guide-faq details{padding:17px 0;margin:0}.guide-faq summary{font-size:15px}.guide-faq p{max-width:950px;font-size:14px;color:var(--muted);margin:12px 0 0}.guide-faq p b{color:var(--ink)}.guide-steps{margin-top:32px;border-top:1px solid var(--line);padding-top:28px}.guide-steps h2{font-size:25px}.guide-steps ol{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:0;list-style:none;counter-reset:steps;margin:24px 0}.guide-steps li{counter-increment:steps;font-size:14px}.guide-steps li::before{content:'0' counter(steps);display:block;font-size:12px;font-weight:800;color:#bd1951;margin-bottom:9px}.guide-steps span{display:block;color:var(--muted);font-size:13px;margin-top:8px;line-height:1.7}.guide-steps a{display:inline-block;text-decoration:none}.layout{padding-bottom:24px}@media(max-width:1320px){.service-guide{margin-left:24px;margin-right:24px}}@media(max-width:760px){.service-guide{margin-left:16px;margin-right:16px;border-radius:18px}.guide-manifesto{padding:30px 20px}.guide-manifesto h2{font-size:40px}.guide-manifesto p{font-size:13px}.guide-content{padding:22px 17px}.guide-levels,.guide-steps ol,.guide-package{grid-template-columns:1fr}.guide-package{padding:22px;gap:16px}.guide-steps ol{gap:18px}.guide-section-title h2{font-size:23px}.layout{padding-bottom:20px}}@media print{.service-guide{display:none!important}}
+.cutdown-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.cutdown-inline{display:flex;align-items:center;gap:10px;padding:10px 12px;min-height:68px;border:1px solid var(--line);border-radius:12px}.cutdown-inline.selected{border-color:#ff337b;background:#fff0f5}.cutdown-inline.unavailable{opacity:.5}.cutdown-duration{display:flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap;margin:0;font-size:14px}.cutdown-duration input{width:18px;height:18px;margin:0;accent-color:#ca235c}.cutdown-inline-quantity{display:flex;align-items:center;gap:5px;margin-left:auto}.cutdown-inline-quantity label{font-size:12px;margin:0;color:var(--muted)}#cutdownChoices .cutdown-inline-quantity input{width:54px;min-width:0;min-height:44px;padding:7px 4px;text-align:center;font-size:16px;flex:none}#cutdownChoices .cutdown-inline-quantity input:disabled{background:transparent;border-color:transparent;color:var(--muted);opacity:1}.cutdown-line-total{font-size:13px;white-space:nowrap}.cutdown-advice{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.7;padding:12px 0}.cutdown-advice input{width:18px;height:18px;flex:none;accent-color:#ca235c}.cutdown-advice input{margin-top:3px}@media(max-width:480px){.cutdown-grid{grid-template-columns:1fr}}.hero .hero-estimate-note{margin-top:18px;padding:12px 15px;border-radius:12px;background:#fff3c8;color:#641028;font-size:13px;line-height:1.7}.hero .eyebrow{letter-spacing:1px}@media(max-width:760px){.hero .hero-estimate-note{font-size:12px;padding:10px 12px;margin-top:14px}} </style></head><body>
+<div class="demo">BANANA SOUND STUDIO · ประเมินราคา เก็บบรีฟ และส่งให้ทีมดูแลต่อ</div>
+<header class="top"><a class="brand" href="/" aria-label="กลับหน้าแรก Banana Sound Studio" style="text-decoration:none">BANANA<small>MAKE MUSIC</small></a><div class="top-right"><span class="header-tagline">YOUR STORY. YOUR SONG.</span><div class="header-price"><span class="estimate-label">ราคาประเมินเบื้องต้น</span><strong id="topPrice" aria-live="polite">—</strong><small class="estimate-disclaimer">ไม่ใช่ราคายืนยัน · ทีมตรวจบรีฟก่อนเสนอราคา</small></div></div></header>
+<section class="hero"><div class="hero-copy"><div class="eyebrow">วางงบก่อนเริ่มทำเพลง</div><h1>ประเมินราคาทำเพลง<br><span>กับ Banana</span></h1><p>เพลงของตัวเอง เพลงให้คนพิเศษ เพลงแบรนด์ หรือ Cover<br>เลือกประเภทเพลง ความยาว และบริการที่ต้องการ เพื่อดูงบเบื้องต้น พร้อมสร้างการ์ดสรุปไว้คุยกับทีม Banana</p><p class="hero-estimate-note"><b>ตัวเลขที่แสดงเป็นราคาประเมิน ยังไม่ใช่ราคายืนยัน</b><br>ทีมจะตรวจบรีฟและพูดคุยขอบเขตงาน ก่อนสรุปใบเสนอราคาให้คุณ</p></div><div class="hero-art"><img src="/musicforbrand/banana-headphones.png" alt="กล้วยใส่หูฟัง Banana"><b>LET'S MAKE YOUR MUSIC.</b></div></section>
+<div class="layout"><main>
+<section class="section" id="start"><div class="section-head"><span class="num">01</span><div><h2>เริ่มจากเพลงที่อยากทำ</h2><p class="sub">เราแสดงเฉพาะคำถามที่เกี่ยวกับงานของคุณ</p></div></div>
 
-/* Editorial campaign direction */
-:root{--wine:#641028;--wine-dark:#35141d;--hot-pink:#f74179;--editorial-cream:#fff2c9;--editorial-line:#8d2740}
-body{background:#fff;color:var(--wine-dark)}
-.topbar{position:sticky;top:0;z-index:40;grid-template-columns:1fr auto;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:18px max(24px,5vw);border:0;border-bottom:1px solid rgba(100,16,40,.12);box-shadow:0 8px 26px rgba(53,20,29,.08)}
-.brand{color:var(--wine);font-size:30px;line-height:.92;letter-spacing:-.035em}.brand .logo{display:none}.brand small{font-size:10px;letter-spacing:.28em;margin-top:8px}
-.single-page-label{display:none}.header-price small{color:var(--hot-pink)}.header-price strong{color:var(--hot-pink)}
-.campaign-hero{grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);min-height:520px;max-width:none;margin:0;padding:58px max(38px,6vw);border:0;border-radius:0;background:linear-gradient(108deg,var(--hot-pink) 0%,#ff4c7f 57%,#ffd91f 57%,#ffe357 100%);box-shadow:none}
-.campaign-hero:before{display:block;width:340px;height:340px;right:18%;top:16%;border:0;border-radius:50%;background:rgba(255,239,105,.48);backdrop-filter:none;box-shadow:none}.campaign-hero:after{display:none}
-.hero-eyebrow{color:#fff9ea}.hero-eyebrow:before{background:#fff9ea}
-.campaign-hero h1{font-family:"LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:clamp(58px,6.5vw,96px);font-weight:950;line-height:1.08;color:#fff9ed;letter-spacing:0}.campaign-hero h1 span{background:none;color:#fff9ed}.campaign-hero h1 .budget-accent{color:#ffe22d}
-.campaign-hero p{max-width:440px;margin-top:26px;color:#fff;font-size:20px}.hero-note{color:#fff;letter-spacing:.18em}
-.hero-cta{display:inline-flex;align-items:center;gap:22px;margin-top:24px;padding:14px 24px;border-radius:14px;background:var(--wine-dark);color:#fff;text-decoration:none;font-size:18px;font-weight:900}.hero-cta span{font-size:27px;line-height:1}
-.hero-art{min-height:410px;align-items:flex-end;justify-content:flex-end}.hero-art:after{width:72%;height:15%;bottom:2%;background:rgba(73,7,28,.25);filter:blur(24px)}.hero-art img{width:min(720px,125%);max-height:500px;filter:drop-shadow(0 28px 30px rgba(55,4,22,.22));transform:translate(5%,3%)}
-.layout{max-width:1360px;gap:42px;padding:64px 34px}
-.main,.right{background:#fff;border:0;border-radius:0;box-shadow:none;backdrop-filter:none}.main{padding:0}.right{top:20px;padding:28px;background:var(--editorial-cream);border-radius:28px}
-.main>h1{font-size:clamp(38px,4vw,58px);color:var(--wine);line-height:1;letter-spacing:-.05em}.lead{font-size:17px;margin-top:14px}
-.section{border:0;border-top:1.5px solid rgba(100,16,40,.28);background:#fff;border-radius:0;padding:30px 0;margin:0;box-shadow:none}.section:first-of-type{margin-top:28px}.section h2{font-size:24px;color:var(--wine);letter-spacing:-.025em}
-label{color:var(--wine-dark)}
-input,select,textarea{border:1.5px solid rgba(100,16,40,.28);border-radius:12px;background:#fff;color:var(--wine-dark)}
-input:hover,select:hover,textarea:hover{border-color:var(--hot-pink)}
-.option,.package-card{border:1.5px solid var(--editorial-line);border-radius:13px;background:#fff;color:var(--wine);box-shadow:none}.option:hover,.package-card:hover{border-color:var(--hot-pink);box-shadow:none}.option.selected,.package-card.selected{border-color:var(--wine);background:#ffdce7;box-shadow:inset 0 0 0 1px var(--wine)}
-.tag{border:1.5px solid var(--editorial-line);background:#fff;color:var(--wine);border-radius:10px}.tag.selected{border-color:var(--wine);background:var(--wine);color:#fff;box-shadow:none}
-.genre-custom,.voice-details,.package-detail{background:#fff8e1;border:0;border-radius:14px}.package-detail{border-left:5px solid var(--hot-pink)}
-.package-card .badge{background:#fff0c1;color:var(--wine)}
-.special-card,.special-card:nth-child(2){border:1.5px solid rgba(100,16,40,.34);border-radius:16px;background:#fff;box-shadow:none}.special-card h3{color:var(--wine)}
-.note{background:#fff4cf;border:0;color:#6b4f2b}
-.logo-upload,.logo-upload.has-logo{border-color:rgba(100,16,40,.36);border-radius:16px;background:#fff8e1;box-shadow:none}
-.logo-upload.has-logo .logo-preview:after{background:var(--hot-pink)}
-.btn{border-radius:12px}.btn:hover{box-shadow:none}.btn-dark{background:var(--wine-dark)}.btn-yellow{background:var(--hot-pink);color:#fff}.btn-light{border:1.5px solid rgba(100,16,40,.35);color:var(--wine);background:#fff}
-.summary-title h2,.price-box h2{color:var(--hot-pink);font-weight:950}.price-box h2{font-size:28px}.edit-toggle{color:var(--wine)}.price-group-title{color:var(--wine)}
-.price-box{border-top:1px solid rgba(100,16,40,.25)}.total{border-top:2px solid var(--hot-pink)}.total strong{color:var(--hot-pink);font-size:clamp(28px,5.5vw,38px)}
-.price-disclaimer,.complimentary,.readiness,.share-callout{border:0;background:rgba(255,255,255,.68);border-radius:16px;box-shadow:none}.track i{background:linear-gradient(90deg,var(--hot-pink),var(--yellow))}
-.package-guide{max-width:none;margin:0;padding:70px max(34px,calc((100vw - 1292px)/2));background:var(--editorial-cream);border:0;border-radius:0;box-shadow:none}.guide-head small,.guide-head h2{color:var(--wine)}.guide-head h2{font-size:clamp(36px,4vw,58px);line-height:1}.guide-grid{gap:18px}.guide-card{border:1.5px solid rgba(100,16,40,.45);border-radius:16px;box-shadow:none}.guide-card:nth-child(1),.guide-card:nth-child(2),.guide-card:nth-child(3){border-top:1.5px solid rgba(100,16,40,.45)}.guide-card .level,.guide-factor b{color:var(--wine)}
-.guide-factors{border-color:rgba(100,16,40,.2)}.guide-factor{border:1px solid rgba(100,16,40,.25);border-radius:13px;background:rgba(255,255,255,.45)}
-.brand-manifesto{padding:84px max(34px,6vw);background:#fff4cc;color:var(--wine);-webkit-text-stroke:0;font-family:"LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:clamp(48px,6.8vw,94px);font-weight:950;line-height:1.15;letter-spacing:0;text-align:center}
-.brand-manifesto small{display:block;margin-top:28px;color:var(--wine);-webkit-text-stroke:0;font-size:16px;letter-spacing:.16em}
-.share-dialog{border-radius:18px}.share-dialog-head h2{color:var(--wine)}
-.toast{background:var(--wine)}
-@media(max-width:1050px){.campaign-hero{grid-template-columns:1fr .9fr;margin:0;padding:46px 34px}.layout{gap:24px}.right{border-radius:22px}.package-guide{padding:56px 24px}}
-@media(max-width:680px){
-  body{padding-bottom:78px}.topbar{padding:15px 18px}.brand{font-size:25px}.brand small{font-size:8px;margin-top:6px}.header-price strong{font-size:17px}
-  .campaign-hero{display:block;min-height:640px;margin:0;padding:34px 25px 0;overflow:hidden}.campaign-hero:before{width:260px;height:260px;right:-70px;top:40%}.campaign-hero h1{font-size:50px;line-height:1.08;max-width:340px}.campaign-hero p{position:relative;z-index:3;max-width:255px;font-size:16px;margin-top:20px}.hero-note{font-size:11px}.hero-cta{position:relative;z-index:4;margin-top:17px;padding:12px 18px;font-size:16px}.hero-art{position:absolute;right:-76px;bottom:-8px;width:125%;height:370px;min-height:0}.hero-art img{width:100%;max-height:390px;transform:none}.hero-art:after{right:5%;bottom:4%}
-  .layout{padding:38px 18px}.main>h1{font-size:40px}.lead{font-size:16px}.section{padding:26px 0}.section h2{font-size:22px}
-  .main,.right{border-radius:0}.right{margin-top:28px;padding:21px;border-radius:20px}.option{min-height:62px}.compact .option{padding:13px 8px}.package-card{min-height:0}.brand-manifesto{padding:58px 22px;font-size:42px;line-height:1.18;text-align:center}.brand-manifesto small{text-align:center}
-  .package-guide{margin:0;padding:48px 18px;border-radius:0}.guide-head h2{font-size:38px}.mobile-price-bar{background:var(--wine-dark);border:0;box-shadow:none}.mobile-price-bar .btn{width:100%;background:var(--hot-pink);color:#fff}
-}
-@media print{.brand-manifesto{display:none!important}}
-</style>
-</head>
-<body>
-<header class="topbar">
-  <div class="brand"><div class="logo"><img src="/musicforbrand/banana-headphones.png" alt=""></div><div>BANANA<small>MUSIC FOR BRAND</small></div></div>
-  <div class="single-page-label"><b>🎧 Music Brief</b><span>กรอกครบในหน้าเดียว · ราคาอัปเดตอัตโนมัติ</span></div>
-  <div class="top-actions">
-    <div class="header-price"><small>ราคาประเมินทั้งโปรเจกต์</small><strong id="topTotalPrice">5,000 บาท</strong></div>
-  </div>
-</header>
-
-<section class="campaign-hero" aria-labelledby="campaignHeroTitle">
-  <div class="hero-copy">
-    <div class="hero-eyebrow">BANANA MUSIC FOR BRAND</div>
-    <h1 id="campaignHeroTitle">ทำเพลง<br><span>ให้แบรนด์</span><br><span class="budget-accent">ใช้งบเท่าไหร่?</span></h1>
-    <p>อยากให้แบรนด์น่าจดจำ อย่าลืมทำเพลงประจำแบรนด์</p>
-    <a class="hero-cta" href="#briefForm">เริ่มสร้างเพลง <span>→</span></a>
-    <span class="hero-note">YOUR BRAND · SOUND BETTER</span>
-  </div>
-  <div class="hero-art"><img src="/musicforbrand/banana-headphones.png" alt="กล้วยใส่หูฟัง สัญลักษณ์ Banana Music for Brand"></div>
+<div class="field"><label for="purpose">อยากทำเพลงประเภทไหน?</label><select id="purpose"><option value="" selected disabled>เลือกประเภทเพลงที่อยากทำ</option><option value="artist">ผลงานของตัวเอง / ศิลปิน</option><option value="gift">คนพิเศษ / โอกาสพิเศษ</option><option value="brand">แบรนด์ / ร้านค้า / องค์กร</option><option value="cover">เพลง Cover</option><option value="other">อื่น ๆ / ขอคำแนะนำ</option></select></div>
+<div id="originalFields"><div class="field"><label for="projectName" id="projectLabel">ชื่อเจ้าของเพลง / ชื่อเพลง <small>ยังไม่ตั้งชื่อก็ได้</small></label><input id="projectName" placeholder="เช่น เพลงแรกของฉัน"></div><div class="field" id="storyWrap"><label for="story" id="storyLabel">อยากให้เพลงนี้เล่าเรื่องอะไร? <small>ไม่บังคับ</small></label><textarea id="story" placeholder="เรื่องราว ความรู้สึก หรือสิ่งที่อยากบอกผ่านเพลงนี้"></textarea></div></div>
+<div id="coverFields" hidden><div class="grid field"><div><label for="coverTitle">ชื่อเพลงต้นฉบับ</label><input id="coverTitle" placeholder="เพลงที่อยากร้อง"></div><div><label for="coverArtist">ศิลปินต้นฉบับ</label><input id="coverArtist" placeholder="ชื่อศิลปิน"></div></div><p class="note">ใช้ชื่อเพลงและศิลปินเป็นชื่อบรีฟอัตโนมัติ · ไม่ต้องตั้งชื่อโปรเจกต์</p><div class="field"><label for="coverDirection">อยากทำ Cover แบบไหน?</label><select id="coverDirection"><option value="same">คงแนวเพลงต้นฉบับ</option><option value="new">ทำเวอร์ชันใหม่ / เปลี่ยนแนวเพลง</option><option value="advice">ให้ Banana ช่วยแนะนำ</option></select></div><div class="field"><label for="coverNotes">อยากปรับเพลงอย่างไร? <small>ไม่บังคับ</small></label><textarea id="coverNotes" placeholder="เช่น ลดคีย์ให้ร้องสบาย เปลี่ยนเป็นเปียโน หรืออยากให้ละมุนขึ้น"></textarea></div></div>
+<div id="brandFields" hidden><div class="grid field"><div><label for="businessType">ประเภทธุรกิจ</label><select id="businessType"><option>ร้านอาหาร</option><option>คาเฟ่ / เครื่องดื่ม</option><option>โรงแรม / รีสอร์ต</option><option>ความงามและสุขภาพ</option><option>แฟชั่นและไลฟ์สไตล์</option><option>บริการ</option><option>องค์กร / หน่วยงาน</option><option>อื่น ๆ</option></select></div><div><label for="branchCount">จำนวนสาขา</label><select id="branchCount"><option value="0">ยังไม่มีหน้าร้าน</option><option value="1" selected>1 สาขา</option><option value="2">2–5 สาขา</option><option value="6">6–20 สาขา</option><option value="21">มากกว่า 20 สาขา</option><option value="global">Global Brand</option></select></div></div></div>
+<details><summary>เพิ่มวันใช้งาน / ลิงก์อ้างอิง</summary><div class="grid field"><div><label for="useDate">วันที่ต้องการใช้เพลง <small>ไม่บังคับ</small></label><input type="date" id="useDate"></div><div><label for="reference">ลิงก์เพลงอ้างอิง <small>ไม่บังคับ</small></label><input type="url" id="reference" placeholder="YouTube / Spotify / ลิงก์อื่น ๆ"></div></div></details>
 </section>
-
-<div class="layout">
-<main class="main" id="briefForm">
-  <h1 id="pageTitle">สร้างเพลงแบรนด์ของฉัน</h1>
-  <p class="lead" id="pageLead">ระบุความต้องการในหน้าเดียว เพื่อดูราคาประเมินเบื้องต้นแบบอัตโนมัติ</p>
-
-  <section class="section">
-    <h2>1. ข้อมูลแบรนด์</h2>
-    <div class="grid grid-2">
-      <div><label for="brandName">ชื่อแบรนด์</label><input id="brandName" placeholder="เช่น Banana Cafe"></div>
-      <div><label for="businessType">ประเภทธุรกิจ</label>
-        <select id="businessType">
-          <option>ร้านอาหาร</option><option>คาเฟ่ / เครื่องดื่ม</option><option>โรงแรม / รีสอร์ต</option>
-          <option>ความงามและสุขภาพ</option><option>แฟชั่นและไลฟ์สไตล์</option><option>บริการ</option><option>อื่น ๆ</option>
-        </select>
-      </div>
-      <div><label for="branchCount">จำนวนสาขา</label>
-        <select id="branchCount">
-          <option value="0">ยังไม่มีหน้าร้าน</option><option value="1" selected>1 สาขา</option>
-          <option value="2">2–5 สาขา</option><option value="6">6–20 สาขา</option><option value="21">มากกว่า 20 สาขา</option>
-          <option value="global">Global Brand</option>
-        </select>
-      </div>
-      <div><label for="province">จังหวัด</label><input id="province" placeholder="เช่น กรุงเทพฯ"></div>
-      <div style="grid-column:1/-1">
-        <label for="brandKeyword">คีย์เวิร์ดหรือข้อความสนุก ๆ ของร้าน <span style="color:var(--muted);font-weight:500">(ไม่บังคับ)</span></label>
-        <input id="brandKeyword" maxlength="80" placeholder="เช่น อร่อยจนอยากร้องเป็นเพลง! 🎵">
-        <small style="display:block;color:var(--muted);margin-top:6px">ข้อความนี้จะแสดงเป็นสโลแกนบนการ์ดสำหรับแชร์ และไม่เกี่ยวกับเนื้อเพลงหรือราคา</small>
-      </div>
-      <div style="grid-column:1/-1">
-        <label>โลโก้ร้าน / แบรนด์ / บริการ <span style="color:var(--muted);font-weight:500">(ไม่บังคับ)</span></label>
-        <div class="logo-upload" id="brandLogoUpload">
-          <div class="logo-preview" id="brandLogoPreview" aria-hidden="true"><img src="/musicforbrand/banana-headphones.png" alt=""></div>
-          <div class="logo-upload-copy">
-            <b id="brandLogoStatus">ใช้รูปกล้วยใส่หูฟังเป็นค่าเริ่มต้น</b>
-            <small id="brandLogoHint">เมื่อเลือกแล้ว โลโก้จะแสดงแทนรูปกล้วยบนการ์ดทันที รองรับรูปจาก iPhone, JPG, PNG และ WebP ไม่เกิน 10 MB</small>
-            <div class="logo-buttons">
-              <label class="btn btn-dark" for="brandLogo" style="margin:0;display:inline-block">📸 <span id="brandLogoButtonText">เลือกโลโก้</span></label>
-              <input class="hidden" id="brandLogo" type="file" accept="image/*,.heic,.heif">
-              <button class="btn btn-light hidden" id="removeBrandLogo" type="button">🗑️ นำออก</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>2. แนวเพลง</h2>
-    <div class="option-grid compact" id="genreOptions">
-      <button class="option selected" data-value="Pop">Pop</button>
-      <button class="option" data-value="Rock">Rock</button>
-      <button class="option" data-value="Hip-Hop / Rap">Hip-Hop / Rap</button>
-      <button class="option" data-value="R&B / Soul">R&B / Soul</button>
-      <button class="option" data-value="Electronic / Dance">Electronic / Dance</button>
-      <button class="option" data-value="Acoustic">Acoustic</button>
-      <button class="option" data-value="Jazz">Jazz</button>
-      <button class="option" data-value="ลูกทุ่ง">ลูกทุ่ง</button>
-      <button class="option" data-value="หมอลำ">หมอลำ</button>
-      <button class="option" data-value="ลูกทุ่งอีสาน">ลูกทุ่งอีสาน</button>
-      <button class="option" data-value="เพื่อชีวิต">เพื่อชีวิต</button>
-      <button class="option" data-value="เพลงไทยร่วมสมัย">เพลงไทยร่วมสมัย</button>
-      <button class="option" data-value="Cinematic">Cinematic</button>
-      <button class="option" data-value="Jingle / เพลงโฆษณา">Jingle / เพลงโฆษณา</button>
-    </div>
-    <div class="genre-custom">
-      <label for="customGenre">แนวเพลงอื่น ๆ <span style="color:var(--muted);font-weight:500">(ไม่บังคับ)</span></label>
-      <input id="customGenre" maxlength="100" placeholder="เช่น หมอลำอินดี้, City Pop ไทย">
-      <small>เลือกได้หลายแนวและพิมพ์เพิ่มได้ ตัวอย่าง: ลูกทุ่ง + หมอลำ + Electronic</small>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>3. อารมณ์เพลง</h2>
-    <div class="tags" id="moodOptions">
-      <button class="tag selected">สนุก ร่าเริง</button><button class="tag">อบอุ่น สบายๆ</button>
-      <button class="tag">เท่ คูล</button><button class="tag">หรูหรา</button>
-      <button class="tag">เศร้า โรแมนติก</button><button class="tag">พลัง ฮึกเหิม</button>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>4. ความยาวและเสียงร้อง</h2>
-    <div class="grid grid-2">
-      <div><label for="songLength">ความยาวเพลง</label>
-        <select id="songLength"><option value="15">15 วินาที</option><option value="30">30 วินาที</option><option value="60">60 วินาที</option><option value="full">เพลงเต็ม</option></select>
-      </div>
-      <div><label for="vocalType">รูปแบบเสียงร้อง</label>
-        <select id="vocalType"><option value="ai" selected>AI Voice</option><option value="real">นักร้องจริง</option><option value="instrumental">ดนตรีล้วน</option></select>
-      </div>
-    </div>
-
-    <h2 class="package-title">ระดับการผลิต</h2>
-    <input id="production" type="hidden" value="standard">
-    <div class="package-picker" id="productionOptions" role="radiogroup" aria-label="ระดับการผลิต">
-      <button class="package-card selected" type="button" data-value="standard" role="radio" aria-checked="true"><b>Standard</b><small>AI-assisted + Banana Curation</small><span class="badge">รวดเร็ว คุมงบ</span></button>
-      <button class="package-card" type="button" data-value="professional" role="radio" aria-checked="false"><b>Professional</b><small>Producer-led Hybrid Production</small><span class="badge">ปรับแต่งมากขึ้น</span></button>
-      <button class="package-card" type="button" data-value="premium" role="radio" aria-checked="false"><b>Premium</b><small>Exclusive Brand Production</small><span class="badge">คุณภาพสูงสุด</span></button>
-    </div>
-    <div class="package-detail" id="productionDescription"></div>
-
-    <div class="voice-details" id="voiceDetails">
-      <div class="grid grid-3">
-        <div><label for="vocalGender">เพศเสียง</label>
-          <select id="vocalGender"><option>ชาย</option><option>หญิง</option><option>ชาย + หญิง</option><option>ไม่จำกัด</option></select>
-        </div>
-        <div><label for="vocalAge">ช่วงวัยเสียง</label>
-          <select id="vocalAge"><option>เด็ก</option><option selected>วัยรุ่น</option><option>ผู้ใหญ่</option><option>ไม่จำกัด</option></select>
-        </div>
-        <div><label for="singerCount">จำนวนนักร้อง</label>
-          <select id="singerCount"><option value="1">1 คน</option><option value="2">2 คน</option><option value="3">3 คน</option><option value="4">4 คน</option></select>
-        </div>
-      </div>
-      <div style="margin-top:12px"><label for="vocalStyle">สไตล์เสียง</label>
-        <select id="vocalStyle"><option>อบอุ่น เป็นกันเอง</option><option>สดใส น่ารัก</option><option>เท่ มีพลัง</option><option>นุ่ม พรีเมียม</option><option>ให้ Banana แนะนำ</option></select>
-      </div>
-      <p class="note" style="margin-bottom:0"><b>ราคานักร้องจริงรวมร้อง Demo</b>, Session ห้องอัด, Vocal Director, Recording, Editing, Tuning, Vocal Mixing และ Mastering ตามขอบเขตงาน</p>
-    </div>
-    <p class="note hidden" id="instrumentalSongwritingNote" style="margin-bottom:0">ดนตรีล้วน — ไม่มีเนื้อร้องและไม่มีค่าแต่งคำร้อง</p>
-  </section>
-
-  <section class="section" id="songwritingSection">
-    <h2>5. Songwriting</h2>
-    <div class="grid">
-      <div><label for="songwriting">แต่งคำร้อง</label>
-        <select id="songwriting"><option value="yes" selected>ให้ Banana แต่งคำร้อง</option><option value="no">ลูกค้ามีเนื้อเพลงแล้ว</option></select>
-      </div>
-    </div>
-    <div style="margin-top:12px"><label for="mustSentence">ประโยคที่ต้องมีในเพลง</label><input id="mustSentence" placeholder="เช่น สดใหม่ทุกวัน"></div>
-    <p class="note hidden" id="specialSongwriterNote" style="margin-bottom:0">เลือกนักแต่งเพลงพิเศษแล้ว — ระบบจะใช้วงเงินที่ระบุแทนค่า Songwriting ของ Banana</p>
-  </section>
-
-  <section class="section">
-    <h2>6. การใช้งาน</h2>
-    <div class="tags" id="usageOptions">
-      <button class="tag selected">TikTok / Reels</button><button class="tag">YouTube</button><button class="tag">หน้าร้าน</button>
-      <button class="tag">Event</button><button class="tag">TVC</button><button class="tag">Streaming</button>
-    </div>
-    <p class="note">ไม่มีหน้าร้าน–20 สาขา ไม่คิดค่าช่องทางการใช้งาน ส่วนมากกว่า 20 สาขาและ Global Brand รวม 1 ช่องทาง ช่องทางเพิ่มเติมคิดเพิ่มช่องทางละ 1,000 บาท</p>
-  </section>
-
-  <section class="section">
-    <h2>7. ตัวเลือกพิเศษ</h2>
-    <div class="special-options">
-      <article class="special-card">
-        <h3>ศิลปินในฝันของแบรนด์</h3>
-        <p>อยากให้ใครมาร้องเพลงนี้? ใส่เล่น ๆ หรือระบุศิลปินที่ต้องการจริงก็ได้</p>
-        <label for="specialArtistName">ชื่อศิลปิน <span style="color:var(--muted);font-weight:500">(ไม่บังคับ)</span></label>
-        <input id="specialArtistName" maxlength="80" placeholder="เช่น แอ๊ด คาราบาว">
-        <label for="specialArtistBudget" style="margin-top:12px">งบสำหรับศิลปิน</label>
-        <div class="budget-input"><input id="specialArtistBudget" type="number" min="0" step="1000" inputmode="numeric" placeholder="เช่น 3,000"><span>บาท</span></div>
-      </article>
-      <article class="special-card">
-        <h3>นักแต่งเพลงพิเศษ</h3>
-        <p>เลือกนักแต่งเพลงที่อยากร่วมงานด้วย โดยงบส่วนนี้จะแทนค่า Songwriting ของ Banana</p>
-        <label for="specialSongwriterName">ชื่อนักแต่งเพลง <span style="color:var(--muted);font-weight:500">(ไม่บังคับ)</span></label>
-        <input id="specialSongwriterName" maxlength="80" placeholder="เช่น นักแต่งเพลงในฝันของคุณ">
-        <label for="specialSongwriterBudget" style="margin-top:12px">งบสำหรับนักแต่งเพลง</label>
-        <div class="budget-input"><input id="specialSongwriterBudget" type="number" min="0" step="1000" inputmode="numeric" placeholder="เช่น 50,000"><span>บาท</span></div>
-      </article>
-    </div>
-    <p class="note"><b>งบที่ระบุจะถูกรวมในยอดรวมบนการ์ด</b> แต่ยังไม่ใช่การยืนยันค่าตัว การรับงาน หรือสิทธิ์ในการใช้ชื่อศิลปินและนักแต่งเพลง ทีม Banana จะตรวจสอบและยืนยันอีกครั้ง</p>
-  </section>
-
-  <section class="section">
-    <h2>8. ข้อมูลติดต่อ</h2>
-    <div class="grid grid-3">
-      <div><label for="contactName">ชื่อผู้ติดต่อ</label><input id="contactName"></div>
-      <div><label for="contactPhone">เบอร์โทร / LINE</label><input id="contactPhone"></div>
-      <div><label for="contactEmail">อีเมล</label><input id="contactEmail" type="email"></div>
-    </div>
-  </section>
-
-  <div class="bottom-submit">
-    <button class="btn btn-light" id="saveDraft" type="button">💾 บันทึก Draft</button>
-    <button class="btn btn-yellow" id="sendBrief" type="button">🚀 ส่งบรีฟให้ Banana</button>
-    <div class="status" id="status">ยังไม่ได้บันทึก Draft</div>
-  </div>
-
-</main>
-
-<aside class="right">
-  <div class="summary-title"><h2>Music Brief</h2><button class="edit-toggle" id="editToggle">แก้ไขในสรุป</button></div>
-  <div class="brief" id="brief"></div>
-
-  <div class="price-box">
-    <h2>ราคาประเมิน</h2>
-    <div id="breakdown"></div>
-    <div class="total"><span>ราคาประเมินทั้งโปรเจกต์</span><strong id="totalPrice">5,000 บาท</strong></div>
-    <p class="price-disclaimer"><b>หมายเหตุ:</b> ราคานี้เป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคายืนยัน อาจมีภาษีและค่าใช้จ่ายอื่นเพิ่มเติมตามขอบเขตงานจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุเอง ทีม Banana จะตรวจสอบและยืนยันอีกครั้ง</p>
-  </div>
-
-  <div class="complimentary">
-    <b>🎁 Complimentary</b>
-    <div class="price-row"><span>Single Cover Design</span><strong>รวมในแพ็กเกจ</strong></div>
-    <small>มูลค่า 2,000 บาท</small>
-  </div>
-
-  <div class="readiness">
-    <div style="display:flex;justify-content:space-between"><b>Brief readiness</b><span id="readyText">0%</span></div>
-    <div class="track"><i id="readyBar" style="width:0"></i></div>
-  </div>
-
-  <div class="share-callout">
-    <b>การ์ดสรุปสำหรับแชร์</b>
-    <p>เปิดดูเพื่อแคปหน้าจอ หรือดาวน์โหลดเป็นรูปภาพได้ โดยไม่แสดงข้อมูลติดต่อส่วนตัว</p>
-    <button class="btn btn-yellow" id="previewShareCard" type="button">✨ ดูการ์ดของฉัน</button>
-  </div>
-
-  <div class="actions">
-    <button class="btn btn-light" id="copyBrief">📋 คัดลอกบรีฟ</button>
-    <button class="btn btn-light" id="downloadBrief">⬇️ ดาวน์โหลด</button>
-    <button class="btn btn-light wide" id="printBrief">🖨️ พิมพ์ / PDF</button>
-  </div>
-</aside>
-</div>
-
-<section class="brand-manifesto" aria-label="แนวคิดของ Banana Music for Brand">
-  อยากให้แบรนด์น่าจดจำ<br>อย่าลืมทำเพลงประจำแบรนด์
-  <small>BANANA MUSIC FOR BRAND</small>
+<section class="section" id="musicSection"><div class="section-head"><span class="num">02</span><div><h2>อยากให้เพลงฟังเป็นแบบไหน?</h2><p class="sub" id="musicSub">เลือกผสมได้ ไม่จำเป็นต้องรู้ศัพท์ดนตรี</p></div></div>
+<div id="genreWrap"><div class="inline-heading"><span class="label">แนวเพลง</span><span class="counter" id="genreCount">เลือกได้ 3 แนว</span></div><div class="selected-list" id="selectedGenres"></div><div class="chips" id="quickGenres" hidden></div><button class="select-box" id="toggleGenres" aria-expanded="false" aria-controls="genreCatalog">เลือกแนวเพลง ▾</button><div class="catalog" id="genreCatalog" hidden><label for="genreSearch">ค้นหาแนวเพลง</label><input id="genreSearch" type="search" placeholder="เช่น R&B, หมอลำ, City Pop"><div id="allGenres"></div></div><div class="recommend"><input type="checkbox" id="genreAdvice"><label for="genreAdvice">ยังไม่แน่ใจ ให้ Banana แนะนำแนวเพลง</label></div></div>
+<div id="coverGenreHint" class="package-detail" hidden>ใช้แนวเพลงต้นฉบับเป็นจุดเริ่มต้น เลือกอารมณ์เพิ่มเติมได้ หรือเปลี่ยนเป็น “ทำเวอร์ชันใหม่” เพื่อเลือกแนวเพลง</div>
+<hr class="divider"><div class="inline-heading"><span class="label">อารมณ์เพลง</span><span class="counter" id="moodCount">เลือกได้ 3 อารมณ์</span></div><div class="selected-list" id="selectedMoods"></div><div class="chips" id="quickMoods" hidden></div><button class="select-box" id="toggleMoods" aria-expanded="false" aria-controls="moreMoods">เลือกอารมณ์เพลง ▾</button><div id="moreMoods" class="catalog option-grid" hidden></div><div class="recommend"><input type="checkbox" id="moodAdvice"><label for="moodAdvice">ให้ Banana ช่วยแนะนำอารมณ์เพลง</label></div>
+<details><summary>อธิบายสไตล์เพิ่มเติม</summary><div class="field"><label for="styleNote">รายละเอียดที่อยากให้ทีมรู้ <small>ไม่บังคับ</small></label><textarea id="styleNote" placeholder="เช่น ท่อนแรกอบอุ่น แล้วค่อยบิวด์ให้ยิ่งใหญ่ตอนท้าย"></textarea></div><div class="field" id="mustWrap"><label for="mustSentence">ประโยคที่อยากให้มีในเพลง <small>ไม่บังคับ</small></label><input id="mustSentence" placeholder="ข้อความสำคัญ ชื่อคน หรือชื่อแบรนด์"></div></details>
 </section>
-
-<section class="package-guide" aria-labelledby="packageGuideTitle">
-  <div class="guide-head">
-    <small>ความรู้เพิ่มเติม</small>
-    <h2 id="packageGuideTitle">ทำไมแต่ละระดับจึงมีราคาต่างกัน?</h2>
-    <p>ความแตกต่างไม่ได้อยู่ที่ความยาวเพลงเพียงอย่างเดียว แต่รวมถึงเวลาของทีม จำนวนบุคลากร ระดับการออกแบบเฉพาะ และประสบการณ์ที่ลูกค้าได้รับตลอดกระบวนการผลิต</p>
-  </div>
-
-  <div class="guide-grid">
-    <article class="guide-card">
-      <span class="level">Level 01</span>
-      <h3>Standard</h3>
-      <p>AI-assisted Production สำหรับงานที่ต้องการความรวดเร็วและควบคุมงบ</p>
-      <ul>
-        <li>ใช้ AI ช่วยสร้างแกนหลักของเพลงประมาณ 80%</li>
-        <li>ทีม Banana คัดเลือกและปรับโครงสร้าง จังหวะ โทนเสียง และรายละเอียด</li>
-        <li>กระบวนการกระชับ ใช้ชั่วโมงโปรดิวเซอร์และทีมงานน้อยกว่าระดับอื่น</li>
-        <li>เหมาะกับงานสื่อสารที่ต้องการความคล่องตัวและมีแนวทางชัดเจน</li>
-      </ul>
-    </article>
-
-    <article class="guide-card">
-      <span class="level">Level 02</span>
-      <h3>Professional</h3>
-      <p>Producer-led Hybrid Production ที่ให้โปรดิวเซอร์ดูแลทิศทางและปรับงานเฉพาะแบรนด์มากขึ้น</p>
-      <ul>
-        <li>ใช้ AI เป็นเครื่องมือสนับสนุนเฉพาะบางขั้นตอน</li>
-        <li>ปรับ Arrangement, Sound, Vocal และ Mix อย่างละเอียดขึ้น</li>
-        <li>ใช้เวลาของโปรดิวเซอร์ ทีมเสียง และขั้นตอนตรวจคุณภาพมากกว่า Standard</li>
-        <li>ลูกค้ามีส่วนร่วมกับทิศทางและบรรยากาศการผลิตได้ใกล้ชิดขึ้น</li>
-      </ul>
-      <div class="studio-included">รวมประสบการณ์เข้ามาร่วมงานในสตูดิโออย่างน้อย 1 ครั้ง โดยนัดหมายตามขอบเขตงาน</div>
-    </article>
-
-    <article class="guide-card">
-      <span class="level">Level 03</span>
-      <h3>Premium</h3>
-      <p>Exclusive Brand Production ดูแล Creative Direction ตั้งแต่แนวคิดจนถึง Final Master</p>
-      <ul>
-        <li>ออกแบบตัวตนทางเสียงและรายละเอียดการผลิตเฉพาะสำหรับแบรนด์</li>
-        <li>จัดสรรบุคลากรและเวลาในการผลิตอย่างเข้มข้นที่สุด</li>
-        <li>สามารถวางแผนใช้นักร้อง นักดนตรี และอุปกรณ์บันทึกเสียงจริงตามความเหมาะสม</li>
-        <li>ทำงานร่วมกับทีมอย่างใกล้ชิด เพื่อคุณภาพและเอกลักษณ์ระดับสูงสุด</li>
-      </ul>
-      <div class="studio-included">รวมประสบการณ์เข้ามาร่วมงานในสตูดิโออย่างน้อย 1 ครั้ง พร้อมการดูแลอย่างใกล้ชิดตามขอบเขตงาน</div>
-    </article>
-  </div>
-
-  <div class="guide-factors" aria-label="ปัจจัยที่ทำให้ราคาแตกต่างกัน">
-    <div class="guide-factor"><b>บุคลากร</b><span>จำนวนและความเชี่ยวชาญของโปรดิวเซอร์ ทีมเสียง นักร้อง และนักดนตรี</span></div>
-    <div class="guide-factor"><b>เวลาในการผลิต</b><span>ระดับความละเอียดในการคิด ทดลอง ปรับแต่ง ตรวจคุณภาพ และทำ Final Master</span></div>
-    <div class="guide-factor"><b>สตูดิโอและอุปกรณ์</b><span>การใช้ห้องบันทึกเสียง ไมโครโฟน เครื่องดนตรี และระบบเสียงตามความเหมาะสม</span></div>
-    <div class="guide-factor"><b>การออกแบบเฉพาะ</b><span>ยิ่งต้องการเอกลักษณ์และการมีส่วนร่วมสูง กระบวนการก็ยิ่งใช้ทรัพยากรมากขึ้น</span></div>
-  </div>
-  <p class="guide-note">หมายเหตุ: รายละเอียดบุคลากร นักร้อง นักดนตรี อุปกรณ์ และเวลาใช้สตูดิโอเป็นไปตามขอบเขตที่ตกลง หากมีความต้องการนอกเหนือจากแพ็กเกจ ทีม Banana จะแจ้งรายละเอียดและประเมินราคาเพิ่มเติมก่อนเริ่มงาน</p>
+<section class="section" id="productionSection"><div class="section-head"><span class="num">03</span><div><h2>การผลิตและเสียงร้อง</h2><p class="sub">ราคาเปลี่ยนตามขอบเขตงาน ไม่เพิ่มราคาตามแนวเพลง</p></div></div>
+<div id="vocalWrap"><label for="vocalType">ใครเป็นคนร้อง?</label><select id="vocalType"><option value="">เลือกผู้ร้อง / รูปแบบเสียง</option><option value="self">ฉัน / คนของฉันร้องเอง</option><option value="ai">เสียงร้อง AI</option><option value="real">ให้ Banana จัดหานักร้อง</option><option value="instrumental">ดนตรีล้วน</option></select></div>
+<div id="coverVocal" class="package-detail" hidden><b>ลูกค้าร้องเอง · เพลงเต็ม</b><br>ไม่มีค่าแต่งเพลงและค่าตัวนักร้อง แต่ยังมีขั้นตอนผลิตดนตรี อัดเสียง กำกับ อีดิต จูนร้อง มิกซ์และมาสเตอร์</div>
+<div class="field" id="lengthWrap" hidden><label for="songLength">ความยาวเพลง</label><select id="songLength"><option value="15">1–15 วินาที</option><option value="30">30 วินาที</option><option value="60">60 วินาที</option><option value="full">เพลงเต็ม</option></select><p class="note">1–15 วินาที ใช้อัตราเริ่มต้นเดียวกัน</p></div>
+<div class="campaign field" id="campaign"><small>PERSONAL SONG · STUDIO EXPERIENCE</small><strong>60,000 บาท</strong><p><b>ทำเพลงเต็ม พร้อมทีมดูแลใกล้ชิด</b><br>รับบรีฟ วางทิศทาง แต่งเพลง ผลิตดนตรี และมาร้องที่ Banana</p><ul class="includes"><li>ห้องอัดและบันทึกเสียง</li><li>กำกับการร้อง</li><li>อีดิตและจูนเสียงร้อง</li><li>มิกซ์และมาสเตอร์</li><li>ไม่มีค่าตัวนักร้อง</li><li>ดูแลตามขอบเขตแพ็กเกจ</li></ul><p class="note">ราคาแคมเปญ · เพลงเต็มเท่านั้น · เวลาห้องอัด รอบแก้ ไฟล์ส่งมอบ และภาษี ยืนยันก่อนเริ่มงาน</p></div>
+<div id="levelsWrap" class="field" hidden><span class="label">ระดับการผลิต</span><div class="packages" id="packages"></div><div class="package-detail" id="packageDetail"></div></div>
+<div class="field" id="songwritingWrap" hidden><label for="songwriting">แต่งคำร้อง</label><select id="songwriting"><option value="yes">ให้ Banana แต่งคำร้อง</option><option value="no">มีเนื้อเพลงแล้ว</option></select></div>
+<div class="field" id="singerWrap" hidden><div class="singer-grid"><div><label for="vocalGender">เพศเสียง</label><select id="vocalGender"><option>ชาย</option><option>หญิง</option><option>ชาย + หญิง</option><option>ไม่จำกัด</option></select></div><div><label for="vocalAge">ช่วงวัยเสียง</label><select id="vocalAge"><option>เด็ก</option><option selected>วัยรุ่น</option><option>ผู้ใหญ่</option><option>ไม่จำกัด</option></select></div><div><label for="singerCount">จำนวนนักร้อง</label><select id="singerCount"><option value="1">1 คน</option><option value="2">2 คน</option><option value="3">3 คน</option><option value="4">4 คน</option></select></div></div><div class="field"><label for="vocalStyle">สไตล์เสียงร้อง</label><select id="vocalStyle"><option>อบอุ่น เป็นกันเอง</option><option>สดใส น่ารัก</option><option>เท่ มีพลัง</option><option>นุ่ม พรีเมียม</option><option>ให้ Banana แนะนำ</option></select></div></div>
+<p class="note" id="globalTalentNote" hidden></p><details id="talentRateTable" hidden><summary>ดูตารางราคาผลิตดนตรี / แต่งคำร้อง / นักร้อง</summary><p class="note" id="rateScope"></p><div id="activeRateTables"></div><div id="branchRateReference" hidden><h3 class="rate-heading">ราคาเริ่มต้นตามขนาดธุรกิจ</h3><p class="note">ใช้เป็นขั้นต่ำ เทียบกับระดับการผลิตแล้วใช้ราคาที่สูงกว่า · ค่าแต่งคำร้อง 1 รายการและค่านักร้อง 1 คนคิดแยกกัน</p><div class="rate-table-wrap"><table class="rate-table"><thead><tr><th>ขนาดธุรกิจ</th><th>1–15 วิ</th><th>30 วิ</th><th>60 วิ</th><th>เพลงเต็ม</th></tr></thead><tbody id="talentRateRows"></tbody></table></div></div><p class="note">อัตราสำหรับประเมินเบื้องต้น · บริการเสริม ขอบเขตใช้งาน สตูดิโอ และภาษี ยืนยันตามงานจริง</p></details><details id="specialTalent" hidden><summary>อยากร่วมงานกับศิลปิน / นักแต่งเพลงเป็นพิเศษ</summary><div class="grid field" id="specialSingerFields"><div><label for="specialArtistName">ชื่อศิลปิน <small>ไม่บังคับ</small></label><input id="specialArtistName"></div><div><label for="specialArtistBudget">งบสำหรับนักร้องหลักพิเศษ <small>บาท</small></label><input id="specialArtistBudget" type="number" min="0" step="1000"></div></div><div class="grid field" id="specialWriterFields"><div><label for="specialSongwriterName">ชื่อนักแต่งเพลง <small>ไม่บังคับ</small></label><input id="specialSongwriterName"></div><div><label for="specialSongwriterBudget">งบนักแต่งเพลง <small>บาท</small></label><input id="specialSongwriterBudget" type="number" min="0" step="1000"></div></div><p class="note">งบศิลปินพิเศษแทนค่านักร้องหลัก 1 คน และงบนักแต่งเพลงพิเศษแทนค่าแต่งคำร้อง ไม่บวกซ้ำ · ระบบใช้ยอดไม่ต่ำกว่าอัตราพื้นฐาน · ค่าตัวและการรับงานต้องให้ทีมยืนยัน</p></details>
 </section>
-
-<div class="mobile-price-bar">
-  <button class="btn btn-yellow" id="mobileSummary" type="button">✨ ดูการ์ดของฉัน</button>
+<section class="section" id="usageSection"><div class="section-head"><span class="num">04</span><div><h2>นำเพลงไปใช้และต่อยอด</h2><p class="sub">เลือกเท่าที่ต้องการ บริการเพิ่มเติมคุยรายละเอียดกับทีมก่อน</p></div></div><span class="label">จะนำเพลงไปใช้ที่ไหน?</span><div class="chips" id="usageChoices"></div><p class="note" id="branchNote" hidden>ไม่มีหน้าร้าน–20 สาขา ไม่คิดค่าช่องทางเพิ่ม · มากกว่า 20 สาขาและ Global Brand รวม 1 ช่องทาง ช่องทางเพิ่มเติมช่องทางละ 1,000 บาท</p><p class="note" id="rightsNote" hidden>การนำ Cover ไปเผยแพร่ต้องตรวจสอบสิทธิ์ก่อน ค่าผลิตเพลงไม่รวมการขออนุญาตใช้เพลงต้นฉบับ</p><details id="cutdownSection" hidden><summary>เวอร์ชันตัดสั้นสำหรับโฆษณา (Cutdown) <small id="cutdownBadge">เลือกเพิ่มได้</small></summary><p class="note"><b>ราคาเพลงหลักยังไม่รวม Cutdown</b> — คือการนำเพลงหลักมาปรับตัดและจัดช่วงเพลงให้พอดีกับโฆษณาแต่ละความยาว โดยใช้เพลงเดิม ไม่ใช่การแต่งเพลงใหม่</p><p class="note">ราคาประเมินต่อ 1 เวอร์ชัน (Ver) เลือกความยาวแล้วระบุจำนวนในกล่องเดียวกัน ราคาในกล่องคือยอดรวมของความยาวนั้น เลือกเฉพาะเวอร์ชันเพิ่มเติมจากเพลงหลัก หากไม่ต้องการเพิ่ม ไม่ต้องเลือก</p><div id="cutdownChoices" class="cutdown-grid"></div><p class="note">เลือกได้ไม่เกินความยาวเพลงหลัก หากต้องการเวอร์ชันที่ยาวกว่า ให้คุยกับทีมก่อน</p><label class="cutdown-advice"><input id="cutdownAdvice" type="checkbox"> ยังไม่แน่ใจเรื่องความยาวหรือจำนวน ขอคุยกับทีมก่อน</label><div class="field"><label for="cutdownNotes">รายละเอียดเพิ่มเติม <small>ไม่บังคับ</small></label><textarea id="cutdownNotes" maxlength="500" placeholder="เช่น ตัดตามภาพโฆษณา 2 ชิ้น หรืออยากปรับประโยคร้องในเวอร์ชันสั้น"></textarea></div><p class="note"><b>เช่น 15 วิ × 2 และ 6 วิ × 2 = เพิ่ม 16,000 บาท รายการที่เลือกจะรวมในยอดประเมิน แต่ยังไม่ใช่ราคายืนยัน</b> ฝ่ายประสานงานต้องยืนยันจำนวนเวอร์ชัน ภาพอ้างอิง และขอบเขตการปรับก่อน หากต้องแต่งคำร้อง อัดร้อง หรือทำดนตรีใหม่ อาจมีค่าใช้จ่ายเพิ่มเติม</p></details><div id="clientVisitWrap"><div class="studio-plan"><b id="studioHeading">การทำงานร่วมกับ Banana</b><p id="studioDescription"></p><p class="note"><b>งานงบตั้งแต่ 30,000 บาทขึ้นไป สามารถนัดเข้ามาฟังงานในสตูดิโอได้</b><br>ต้องได้รับการยืนยันจากฝ่ายประสานงานก่อนทุกครั้ง โดยแจ้งจำนวนผู้ร่วมงาน จำนวนครั้ง และระยะเวลาที่ต้องการ เพื่อให้ทีมจัดนัดและการดูแลได้เหมาะสม ยอดราคาประเมินบนเว็บยังไม่ใช่การยืนยันนัดหมาย</p></div><details><summary>แจ้งความต้องการ / นัดหมายกับฝ่ายประสานงาน</summary><p class="note">การเข้าสตูดิโอต้องพูดคุยและยืนยันนัดหมายก่อน จำนวนผู้ร่วมงาน จำนวนครั้ง ระยะเวลา และการรับรอง พิจารณาตามความเหมาะสมและดุลพินิจของฝ่ายประสานงานเป็นรายกรณี</p><div class="field"><label for="reviewMode" id="reviewModeLabel">สะดวกตรวจงานแบบไหน?</label><select id="reviewMode"><option value="record">นัดมาบันทึกเสียงที่ Banana</option><option value="online">ฟังงานออนไลน์ / ส่งไฟล์</option><option value="onsite">มาฟังงานที่ Banana</option><option value="hybrid">ทั้งออนไลน์และที่สตูดิโอ</option><option value="discuss">ขอคุยกับทีมก่อน</option></select></div><div id="visitFields" hidden><p class="note">การเข้ามาดูหรือฟังผลงานต้องพูดคุยและนัดหมายกับฝ่ายประสานงานก่อน โดยพิจารณาจำนวนผู้ร่วมงาน จำนวนครั้ง ระยะเวลา และการดูแลตามความเหมาะสมของแต่ละเคส ทั้งนี้ขึ้นอยู่กับดุลพินิจและการยืนยันของฝ่ายประสานงาน</p><div class="field"><label for="visitRequest">แจ้งความต้องการเบื้องต้น <small>ไม่บังคับ</small></label><textarea id="visitRequest" maxlength="400" placeholder="แจ้งสิ่งที่อยากให้ฝ่ายประสานงานช่วยดูแล แล้วทีมจะติดต่อเพื่อพูดคุยรายละเอียด"></textarea></div></div></details></div>
+<details><summary>บริการเพิ่มเติม · สตรีมมิง / MV / Lyric Video / นักดนตรี</summary><p class="note" style="margin-bottom:13px">รายการเหล่านี้เสนอราคาแยก ไม่บวกอัตโนมัติในค่าทำเพลง</p><div class="check-grid" id="addOnChoices"></div></details>
+</section>
+<section class="section" id="contactSection"><div class="section-head"><span class="num">05</span><div><h2>ส่งบรีฟให้ Banana ดูแลต่อ</h2><p class="sub">สร้างการ์ดได้ทันที โดยไม่ต้องกรอกข้อมูลติดต่อ</p></div></div><details open><summary>ข้อมูลติดต่อ <small>กรอกเมื่อส่งบรีฟให้ทีม</small></summary><div class="grid field"><div><label for="contactName">ชื่อผู้ติดต่อ</label><input id="contactName" autocomplete="name"></div><div><label for="contactPhone">เบอร์โทร / LINE</label><input id="contactPhone"></div></div><div class="grid field"><div><label for="contactEmail">อีเมล</label><input id="contactEmail" type="email" autocomplete="email"></div><div><label for="province">จังหวัด</label><input id="province"></div></div></details><details><summary>ปรับรูปและข้อความบนการ์ด</summary><div class="field upload-row"><img id="logoPreview" src="/musicforbrand/banana-headphones.png" alt="รูปสำหรับการ์ด"><div><label class="btn outline" for="logoFile">เลือกรูป / โลโก้</label><input id="logoFile" type="file" accept="image/*" hidden><button id="removeLogo" type="button" class="clear" hidden>ใช้รูปกล้วยเดิม</button></div></div><p class="note">JPG / PNG / WebP ไม่เกิน 10 MB · ประมวลผลในอุปกรณ์ ไม่อัปโหลด</p><div class="field"><label for="cardMessage">ข้อความสั้นบนการ์ด <small>ไม่บังคับ</small></label><input id="cardMessage" maxlength="80" placeholder="เพลงนี้ เพื่อคนพิเศษของฉัน"></div></details><div class="two field"><button class="btn outline" id="saveDraft">บันทึกบรีฟ</button><button class="btn dark" id="demoBrief">สร้างการ์ดสรุป</button></div><button class="btn primary wide field" id="sendBrief">ส่งบรีฟให้ Banana</button><p class="note" id="submitStatus" role="status">ทีมจะตรวจบรีฟและติดต่อกลับเพื่อยืนยันขอบเขตและราคา การส่งบรีฟยังไม่ใช่การสั่งซื้อ</p><p class="note">หากส่งไม่สำเร็จ สามารถดาวน์โหลดบรีฟแล้วส่งมาที่ <a href="mailto:bananasoundstudio@gmail.com">bananasoundstudio@gmail.com</a></p><p class="note" id="draftStatus">ข้อมูลบรีฟบันทึกไว้ในเบราว์เซอร์ จนกว่าคุณจะกดส่งให้ทีม</p></section>
+</main><aside class="summary-panel" id="summaryPanel"><div class="summary-header"><h2>เพลงของคุณ</h2><span style="font-size:11px;color:var(--muted)"><i class="live-dot"></i>อัปเดตตามตัวเลือก</span></div><div class="summary-body"><h3 class="summary-title" id="briefTitle">เพลงของฉัน</h3><p class="summary-type" id="briefType"></p><div id="briefRows"></div><div class="price-lines" id="priceLines"></div><div class="total" aria-live="polite"><span id="totalLabel">ราคาประเมินค่าทำเพลง</span><strong id="totalPrice">60,000 บาท</strong><small>ไม่ใช่ราคายืนยัน · ทีมตรวจบรีฟและขอบเขตงานก่อนเสนอราคา</small></div><div class="pending" id="pending"></div><p class="note">ค่าบริการนอกขอบเขต เช่น กลองสดหรือเครื่องดนตรีเพิ่มเติม ให้ทีมประเมินก่อนเริ่มงาน</p><div class="summary-actions"><button class="btn primary wide" id="previewCard">สร้างการ์ดสรุป ↗</button><div class="two"><button class="btn outline" id="copyBrief">คัดลอกบรีฟ</button><button class="btn outline" id="downloadBrief">ดาวน์โหลดบรีฟ</button></div><button class="btn outline wide" id="printBrief">พิมพ์ / PDF</button></div><p class="note" style="text-align:center">การ์ดไม่แสดงเบอร์โทร อีเมล หรือข้อมูลติดต่อ</p></div></aside></div>
+<section class="service-guide" aria-labelledby="guideTitle">
+<div class="guide-manifesto"><span class="eyebrow">BANANA MAKE MUSIC</span><h2 id="guideTitle">ทุกเรื่องราว<br><span>เป็นเพลงได้</span></h2><p>เพลงของคุณ เพลงให้คนสำคัญ เพลงของแบรนด์<br>หรือเพลงที่คุณรักในเวอร์ชันใหม่ — เริ่มจากสิ่งที่คุณอยากสื่อ แล้วให้ Banana ช่วยวางทางไปด้วยกัน</p></div>
+<div class="guide-content"><div class="guide-section-title"><span class="eyebrow">สำหรับแบรนด์ / ร้านค้า / องค์กร</span><h2>เพลงสำหรับแบรนด์ เลือกระดับการผลิตแบบไหนดี?</h2><p>เปรียบเทียบการผลิตเพลงร้านค้า เพลงองค์กร และเพลงโฆษณา ตั้งแต่การสร้างเพลงด้วย AI พร้อมทีมดูแลคุณภาพ การลงมือพัฒนาดนตรีเพิ่มเติม ไปจนถึงการคัดสรรผู้เชี่ยวชาญเฉพาะโปรเจกต์</p><p><b>ส่วนนี้อธิบายงานแบรนด์โดยเฉพาะ สำหรับเพลงของตัวเอง / ศิลปิน ดูแพ็กเกจแยกด้านล่าง</b></p></div>
+<div class="guide-levels">
+<article><span class="level-index">01</span><h3>Standard</h3><b>สร้างเพลงด้วย AI พร้อมทีมดูแลคุณภาพ</b><p>ใช้ AI เป็นหลักในการสร้างเพลง โดยทีม Banana คัดเลือกผลงานและปรับแต่งเสียงในจุดที่จำเป็น ให้ได้คุณภาพตามมาตรฐาน พร้อมนำไปใช้งาน เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ</p><dl class="level-details"><div><dt>เหมาะกับคุณ ถ้า…</dt><dd>ต้องการเพลงพร้อมใช้งานจาก AI ที่มีทีมช่วยคัดเลือกและดูแลคุณภาพเสียง โดยเน้นความเรียบง่ายและควบคุมงบประมาณ</dd></div><div><dt>ทีมทำอะไรให้</dt><dd>ใช้ AI สร้างเพลงตามบรีฟ ทีม Banana ฟังและคัดเลือกผลงานที่เหมาะสม แล้วปรับแต่งเสียงเฉพาะจุดที่จำเป็น เช่น ความสมดุลและระดับความดัง เพื่อให้เพลงได้มาตรฐานและพร้อมใช้งาน</dd></div><div><dt>ความต่างที่คุณได้รับ</dt><dd>เพลงที่ผ่านการคัดเลือกและตรวจคุณภาพโดยทีม Banana ใช้ต้นฉบับที่คัดเลือกเป็นหลัก พร้อมปรับเสียงเท่าที่จำเป็น เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ</dd></div><div><dt>ทำงานร่วมกันอย่างไร</dt><dd>ส่งบรีฟ ฟังผลงานที่ทีมคัดเลือก และแจ้งความคิดเห็นตามขอบเขตที่ตกลง</dd></div></dl></article>
+<article><span class="level-index">02</span><h3>Professional</h3><b>ลงมือพัฒนาดนตรีเพิ่มเติม</b><p>ทีมโปรดิวเซอร์ Banana ลงมือเรียบเรียง ปรับรายละเอียด และเพิ่มซาวน์ในส่วนที่เหมาะสม เพื่อให้เพลงมีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น เหมาะกับงานที่ต้องการความละเอียดในการปรับแต่งดนตรี</p><dl class="level-details"><div><dt>เหมาะกับคุณ ถ้า…</dt><dd>ต้องการให้ทีมโปรดิวเซอร์ลงมือปรับเรียบเรียง เพิ่มซาวน์ และพัฒนารายละเอียดดนตรีให้ตรงกับงานมากขึ้น</dd></div><div><dt>ทีมทำอะไรให้</dt><dd>ทีมโปรดิวเซอร์ Banana ลงมือพัฒนารายละเอียดดนตรี ทั้งการเรียบเรียง ปรับแก้ และเพิ่มซาวน์ในส่วนที่เหมาะสม เช่น เติมชั้นเสียง เพิ่มน้ำหนักจังหวะ หรือปรับช่วงเชื่อมของเพลง พร้อมเก็บรายละเอียดเสียงให้กลมกลืน</dd></div><div><dt>ความต่างที่คุณได้รับ</dt><dd>เพลงที่ได้รับการปรับแต่งดนตรีเพิ่มเติม ให้มีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น โดยร่วมพิจารณากับทีมว่าส่วนใดควรปรับหรือทำเพิ่มตามขอบเขตที่ตกลง</dd></div><div><dt>ทำงานร่วมกันอย่างไร</dt><dd>ร่วมฟังเดโมและคุยจุดที่ต้องพัฒนากับทีมโปรดิวเซอร์ ก่อนปรับรายละเอียดดนตรีตามขอบเขตที่ตกลง</dd></div></dl></article>
+<article><span class="level-index">03</span><h3>Premium</h3><b>คัดสรรผู้เชี่ยวชาญ ร่วมสร้างสรรค์เฉพาะโปรเจกต์</b><p>Banana คัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญตรงกับโจทย์ มาร่วมดูแลตั้งแต่แนวคิด ทิศทางดนตรี ไปจนถึงรายละเอียดเสียงในทุกขั้นตอน เหมาะกับงานที่ต้องการประสบการณ์และมุมมองของผู้เชี่ยวชาญมาช่วยสร้างเอกลักษณ์ให้เพลง โดยจัดทีมและวางวิธีผลิตให้เหมาะกับแต่ละโปรเจกต์</p><dl class="level-details"><div><dt>เหมาะกับคุณ ถ้า…</dt><dd>ต้องการผู้เชี่ยวชาญที่มีเครดิตผลงานตรงกับแนวเพลง มาร่วมคิดและสร้างเอกลักษณ์ พร้อมจัดทีมให้เหมาะกับโปรเจกต์โดยเฉพาะ</dd></div><div><dt>ทีมทำอะไรให้</dt><dd>Banana พิจารณาโจทย์และแนวเพลง เพื่อคัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญเหมาะกับโปรเจกต์ มาร่วมพัฒนาแนวคิด วางทิศทางดนตรี และดูแลรายละเอียดเสียงในทุกขั้นตอน พร้อมจัดทีมและวางวิธีผลิตให้เหมาะกับงานโดยเฉพาะ</dd></div><div><dt>ความต่างที่คุณได้รับ</dt><dd>ประสบการณ์และมุมมองของผู้เชี่ยวชาญที่ตรงกับโจทย์ มาช่วยสร้างเอกลักษณ์และตัดสินใจในรายละเอียดสำคัญของเพลง ตั้งแต่แนวคิดจนถึงงานเสียงขั้นสุดท้าย โดยยืนยันทีมผู้ร่วมงานและขอบเขตก่อนเริ่มผลิต</dd></div><div><dt>ทำงานร่วมกันอย่างไร</dt><dd>พูดคุยแนวคิดและทิศทางเพลงกับทีม พร้อมพิจารณาผู้ร่วมงานที่เหมาะสม และวางจุดฟังงานตามขอบเขตที่ตกลง</dd></div></dl></article>
+</div><div class="level-scope-note"><b>ขอบเขตระดับการผลิตเพลงสำหรับแบรนด์</b><p>ทั้ง 3 ระดับข้างต้นอธิบายวิธีพัฒนาเพลงและการดูแลงานแบรนด์ การแต่งคำร้องและนักร้องคิดตามตัวเลือกในแบบประเมิน ไม่ได้รวมทุกบริการโดยอัตโนมัติ</p><p>งานงบตั้งแต่ 30,000 บาทขึ้นไป สามารถนัดเข้ามาฟังงานในสตูดิโอได้ โดยต้องได้รับการยืนยันจากฝ่ายประสานงานก่อน จำนวนผู้ร่วมงาน รอบนัด ระยะเวลา และการรับรองพิจารณาตามความเหมาะสมของแต่ละโปรเจกต์ ส่วนรอบแก้ไขตกลงก่อนเริ่มงาน กลองสด เครื่องดนตรีจริงเพิ่มเติม และบริการพิเศษประเมินแยกตามบรีฟ</p><p>ตัวอย่างข้างต้นเป็นงานแบรนด์ ขอบเขตจริงและราคายืนยันจะระบุในใบเสนอราคา สำหรับเพลงของตัวเอง / ศิลปิน ใช้รายละเอียดแพ็กเกจ 60,000 บาทในส่วนถัดไป แยกจากการเปรียบเทียบนี้</p></div>
+<div class="guide-package"><div><span class="eyebrow">ผลงานของตัวเอง / ศิลปิน</span><h3>เพลงเต็ม ร้องเอง<br>พร้อมทีมดูแลในสตูดิโอ</h3><p>รับบรีฟ แต่งเพลง ผลิตดนตรี บันทึกเสียง กำกับการร้อง อีดิต จูน มิกซ์ และมาสเตอร์ ตามขอบเขตแพ็กเกจ</p></div><div><strong>60,000 บาท</strong><p>ราคาแคมเปญแพ็กเกจเพลงส่วนตัว<br>ไม่มีค่าตัวนักร้องที่ Banana จัดหา</p><small>รายละเอียดส่งมอบ เวลาห้องอัด รอบแก้ และภาษี ให้ทีมยืนยันก่อนเริ่มงาน</small></div></div>
+<div class="guide-section-title"><h2>รู้ให้ชัด ก่อนเริ่มทำเพลง</h2><p>คำตอบสั้น ๆ สำหรับคำถามที่มักเจอ</p></div>
+<div class="guide-faq">
+<details><summary>อยากทำเพลงให้คนพิเศษ เริ่มอย่างไร?</summary><p>เลือก “คนพิเศษ / โอกาสพิเศษ” แล้วเล่าให้เราฟังว่าทำให้ใครหรือเพื่อโอกาสอะไร จากนั้นเลือกรูปแบบเสียงร้องและการผลิตที่เหมาะกับงบ หากเลือกร้องเองพร้อมทีมดูแลเพลงเต็ม จะใช้แพ็กเกจเพลงส่วนตัว 60,000 บาท</p></details>
+<details><summary>ราคาประเมินรวมอะไร และยังไม่รวมอะไร?</summary><p>ระบบคำนวณจากบริการที่เลือก ได้แก่ ผลิตดนตรี แต่งคำร้องเมื่อให้ Banana แต่ง และนักร้องจริงเมื่อให้ Banana จัดหา งานแบรนด์มีส่วนของขนาดการใช้งานตามจำนวนสาขา ส่วนสตรีมมิง MV, Lyric Video กลองสด และบริการนอกขอบเขต จะคุยรายละเอียดและเสนอราคาเพิ่มเติม แพ็กเกจเพลงส่วนตัวคิดเป็นยอดแพ็กเกจ จึงไม่บวกบริการที่รวมแล้วซ้ำอีก</p></details>
+<details><summary>ตัวเลขบนเว็บเป็นราคาที่ต้องจ่ายจริงเลยหรือไม่?</summary><p><b>เป็นราคาประเมินเบื้องต้น ไม่ใช่ราคายืนยันหรือใบเสนอราคา</b> ทีม Banana จะตรวจบรีฟ ความยาวเพลง ผู้ร่วมงาน ขอบเขตใช้งาน รายการส่งมอบ รอบแก้ ระยะเวลา และภาษี แล้วสรุปราคาให้ตกลงร่วมกันก่อนเริ่มงาน</p></details>
+<details><summary>ร้องเองได้ไหม หรือให้ Banana จัดหานักร้องได้?</summary><p>เพลงผลงานของตัวเองใช้แพ็กเกจร้องเอง ส่วนเพลง Cover เลือกร้องเองหรือให้ Banana จัดหานักร้องได้ สำหรับงานแบรนด์ เลือกนักร้องที่ Banana จัดหา เสียงร้อง AI หรือดนตรีล้วน ค่านักร้องจริงคำนวณต่อคนตามระดับการผลิตและขนาดงาน</p></details>
+<details><summary>มีเนื้อเพลงแล้ว หรืออยากทำ Cover คิดอย่างไร?</summary><p>ถ้ามีเนื้อเพลงแล้ว เลือกตัวเลือกนั้นเพื่อไม่คิดค่าแต่งคำร้อง งาน Cover ไม่มีค่าแต่งเพลงใหม่ แต่ยังมีค่าผลิตหรือเรียบเรียงดนตรี และขั้นตอนอัดเสียง อีดิต จูน มิกซ์ และมาสเตอร์ตามงานที่ตกลง หากร้องเองจะไม่มีค่าตัวนักร้อง การเผยแพร่ Cover ต้องตรวจสอบสิทธิ์เพลงต้นฉบับก่อน</p></details>
+<details><summary>เข้ามาดู ฟังงาน หรืออัดเสียงที่ Banana ได้อย่างไร?</summary><p><b>งานงบตั้งแต่ 30,000 บาทขึ้นไป สามารถนัดเข้ามาฟังงานในสตูดิโอได้ โดยต้องได้รับการยืนยันจากฝ่ายประสานงานก่อนทุกครั้ง</b> แจ้งจำนวนผู้ร่วมงาน จำนวนครั้ง และระยะเวลาที่ต้องการ ให้ทีมจัดนัดและการรับรองตามความเหมาะสมของแต่ละเคส ราคาประเมินบนเว็บยังไม่ใช่การยืนยันนัดหมาย สำหรับเพลงส่วนตัวและ Cover ที่ร้องเอง การนัดบันทึกเสียงยังเป็นไปตามขอบเขตบริการที่ตกลง</p></details>
+<details><summary>เลือกศิลปินหรือนักแต่งเพลงที่อยากร่วมงานได้ไหม?</summary><p>ระบุชื่อและงบที่ต้องการได้ ทีมต้องตรวจสอบค่าตัวและการรับงานอีกครั้ง งบศิลปินพิเศษแทนค่านักร้องหลัก 1 คน และงบนักแต่งพิเศษแทนค่าแต่งคำร้อง ไม่บวกซ้ำกับรายการเดียวกัน ตัวเลขที่กรอกยังไม่ใช่การยืนยันค่าตัวหรือการรับงาน</p></details>
+<details><summary>อยากขึ้นสตรีมมิง ทำ MV หรือ Lyric Video ด้วยได้ไหม?</summary><p>เลือกบริการที่สนใจไว้ในบรีฟได้เลย ทีมจะพูดคุยแนวทาง ขอบเขต สิทธิ์ที่เกี่ยวข้อง และเสนอราคาแยกก่อนเริ่มบริการเหล่านี้ ตัวเลือกแสดงความสนใจยังไม่ใช่การสั่งซื้อ</p></details>
+<details><summary>ราคางานโฆษณารวมเวอร์ชันตัดสั้น (Cutdown) หรือยัง?</summary><p>ราคาเพลงหลักยังไม่รวม Cutdown เลือกเพิ่มได้ในหมวดเวอร์ชันตัดสั้นสำหรับโฆษณา: 6 วินาที 3,000 บาท · 15 วินาที 5,000 บาท · 30 วินาที 6,000 บาท · 45 วินาที 7,000 บาท · 60 วินาที 8,000 บาท ต่อ 1 เวอร์ชัน เลือกจำนวนแยกตามความยาวได้ เช่น 15 วิ 2 เวอร์ชัน และ 6 วิ 2 เวอร์ชัน รวมเพิ่ม 16,000 บาท รายการที่เลือกจะรวมในยอดประเมิน ฝ่ายประสานงานต้องยืนยันภาพอ้างอิง จำนวนเวอร์ชัน และขอบเขตการปรับก่อน หากต้องแต่งคำร้อง อัดร้อง หรือทำดนตรีใหม่ จะประเมินเพิ่มเติมตามงาน</p></details>
+<details><summary>งานแบรนด์ได้สิทธิ์ใช้งานแบบไหน?</summary><p>ทีมจะยืนยันช่องทาง พื้นที่หรือประเทศ ระยะเวลา และขอบเขตสิทธิ์ที่ได้รับในใบเสนอราคา หากมีความต้องการเฉพาะ เช่น การซื้อสิทธิ์ขาด ให้ระบุเพื่อพูดคุยและสรุปข้อตกลงก่อนเริ่มงาน</p></details>
 </div>
-<div class="toast" id="toast"></div>
-
-<div class="share-modal hidden" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
-  <div class="share-dialog">
-    <div class="share-dialog-head">
-      <h2 id="shareModalTitle">การ์ดสรุป Music Brief</h2>
-      <button class="icon-button" id="closeShareModal" type="button" aria-label="ปิด">×</button>
-    </div>
-    <canvas id="shareCanvas" width="1080" height="1350" aria-label="ตัวอย่างการ์ดสรุปสำหรับแชร์"></canvas>
-    <div class="share-dialog-actions">
-      <button class="btn btn-light" id="refreshShareCard" type="button">🔄 อัปเดตการ์ด</button>
-      <button class="btn btn-yellow" id="downloadShareCard" type="button">⬇️ ดาวน์โหลด PNG</button>
-    </div>
-    <p class="share-dialog-note">ราคานี้เป็นการประเมินเบื้องต้น และไม่ใช่ราคายืนยัน</p>
-  </div>
-</div>
-
+<div class="guide-steps"><h2>จากไอเดีย ถึงวันเริ่มงาน</h2><ol><li><b>เลือกและเล่าความต้องการ</b><span>ดูราคาประเมิน เก็บบรีฟหรือดาวน์โหลดการ์ดสรุป</span></li><li><b>คุยรายละเอียดกับ Banana</b><span>ทีมตรวจขอบเขตและเสนอราคา พร้อมวางแผนงาน</span></li><li><b>ยืนยันก่อนเริ่มผลิต</b><span>ตกลงราคา งานส่งมอบ และนัดหมายกับทีมให้ชัดเจน</span></li></ol><a class="btn primary" href="#start">กลับไปประเมินราคา ↑</a><p class="note">ส่งบรีฟให้ทีมตรวจรายละเอียดและเสนอราคา ก่อนยืนยันเริ่มผลิต</p></div>
+</div></section>
+<footer class="footer-note">BANANA SOUND STUDIO · ทุกเรื่องราวเป็นเพลงได้</footer><div class="mobile-bar"><div><small>ราคาประเมินค่าทำเพลง</small><strong id="mobilePrice">60,000 บาท</strong></div><button class="btn primary" id="mobileCard">ดูการ์ด ↗</button></div>
+<div class="modal" id="cardModal" role="dialog" aria-modal="true" aria-labelledby="cardHeading" hidden><div class="modal-box"><div class="modal-top"><h2 id="cardHeading">การ์ดสรุปเพลงของคุณ</h2><button class="close" id="closeCard" aria-label="ปิดการ์ด">×</button></div><canvas id="shareCanvas" width="1080" height="1440" aria-label="การ์ดสรุปเพลงและราคา"></canvas><div class="two field"><button class="btn outline" id="refreshCard">อัปเดตการ์ด</button><button class="btn primary" id="downloadCard">ดาวน์โหลด PNG</button></div><p class="note" style="text-align:center">ราคาประเมินเบื้องต้น ยังไม่ใช่ใบเสนอราคา</p></div></div><div class="modal" id="pickerModal" role="dialog" aria-modal="true" aria-labelledby="pickerHeading" hidden><div class="modal-box picker-box"><div class="modal-top"><h2 id="pickerHeading">เลือกแนวเพลง</h2><span class="picker-price" id="pickerPrice">60,000 บาท</span><button class="close" id="closePicker" aria-label="ปิดตัวเลือก">×</button></div><p class="picker-sub">เลือกผสมได้สูงสุด 3 รายการ · กดซ้ำเพื่อนำออก</p><div id="pickerSelected" class="picker-selected"></div><div id="pickerContent" class="picker-content"></div><div class="picker-footer"><small id="pickerCount">เลือกแล้ว 0 / 3</small><button class="btn primary" id="donePicker">ยืนยันตัวเลือก ✓</button></div></div></div><div class="toast" id="toast" role="status" hidden></div>
 <script>
-const EMAIL='toysakie@gmail.com';
-const CC_EMAIL='bananasoundstudio@gmail.com';
-const SUBMIT_ENDPOINT=`https://formsubmit.co/ajax/${EMAIL}`;
-const STORAGE='banana-mfb-live-v3';
-const state={genres:['Pop'],moods:['สนุก ร่าเริง'],usages:['TikTok / Reels'],editMode:false,logoDataUrl:''};
-
-const PRICES={
-  production:{15:3000,30:5000,60:10000,full:15000},
-  songwriting:{15:2000,30:5000,60:10000,full:15000},
-  singer:{
-    standard:{15:2000,30:3000,60:6000,full:10000},
-    professional:{15:5000,30:8000,60:10000,full:12000},
-    premium:{15:8000,30:12000,60:15000,full:18000}
-  },
-  extraSinger:{15:2000,30:3000,60:6000,full:10000},
-  productionUpgrade:{
-    standard:{15:0,30:0,60:0,full:0},
-    professional:{15:3000,30:5000,60:10000,full:10000},
-    premium:{15:7000,30:15000,60:20000,full:30000}
-  },
-  branches:{0:0,1:0,2:2000,6:5000,21:10000,global:30000}
+'use strict';
+const $=id=>document.getElementById(id),v=id=>$(id).value,show=(id,yes)=>$(id).hidden=!yes,money=n=>n.toLocaleString('th-TH')+' บาท';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const PRICES={production:{15:3000,30:5000,60:10000,full:15000},singer:{standard:{15:3000,30:5000,60:10000,full:15000},professional:{15:5000,30:8000,60:12000,full:18000},premium:{15:8000,30:12000,60:15000,full:20000}},upgrade:{standard:{15:0,30:0,60:0,full:0},professional:{15:3000,30:5000,60:10000,full:10000},premium:{15:7000,30:15000,60:20000,full:30000}},branches:{0:0,1:0,2:2000,6:5000,21:10000,global:30000}};
+const LYRIC_RATES={standard:{15:3000,30:5000,60:10000,full:15000},professional:{15:3000,30:6000,60:12000,full:18000},premium:{15:5000,30:8000,60:15000,full:20000}};
+const BRANCH_TALENT_MIN={
+ '0':{15:3000,30:5000,60:10000,full:15000},
+ '1':{15:3000,30:5000,60:10000,full:15000},
+ '2':{15:3000,30:6000,60:11000,full:16000},
+ '6':{15:4000,30:7500,60:12500,full:17500},
+ '21':{15:5000,30:9000,60:14000,full:19000},
+ global:{15:6000,30:10000,60:15000,full:20000}
 };
-
-const PRODUCTION_PACKAGES={
-  standard:{name:'Standard',description:'เหมาะกับงานที่ต้องการความรวดเร็วและควบคุมงบ ใช้ AI ช่วยสร้างแกนหลักของเพลงประมาณ 80% จากนั้นทีม Banana คัดเลือกและปรับโครงสร้าง จังหวะ โทนเสียง และรายละเอียดให้เหมาะกับแบรนด์'},
-  professional:{name:'Professional',description:'ดูแลโดยโปรดิวเซอร์ในรูปแบบ Hybrid Production ใช้ AI เป็นเครื่องมือสนับสนุนเฉพาะบางขั้นตอน พร้อมปรับ Arrangement, Sound, Vocal และ Mix ให้มีเอกลักษณ์และตอบโจทย์แบรนด์มากขึ้น'},
-  premium:{name:'Premium',description:'โปรดักชันออกแบบเฉพาะแบรนด์ ดูแล Creative Direction ตั้งแต่แนวคิดจนถึง Final Master และสามารถวางแผนใช้นักร้องหรือนักดนตรีจริงตามขอบเขตที่ตกลง เพื่อคุณภาพและเอกลักษณ์สูงสุด'}
-};
-
-const $=id=>document.getElementById(id);
-const val=id=>$(id).value;
-const money=n=>n.toLocaleString('th-TH')+' บาท';
-const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-
-function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
-
-function brandInitial(){
-  const name=val('brandName').trim();
-  return (name ? [...name][0] : 'B').toUpperCase();
+const branchTalent=()=>brand()?BRANCH_TALENT_MIN[v('branchCount')]:null;
+const lyricPrice=(level,len)=>Math.max(LYRIC_RATES[level][len],branchTalent()?.[len]||0);
+const singerPrice=(level,len)=>branchTalent()?Math.max(PRICES.singer[level][len],branchTalent()[len]):PRICES.singer[level][len];
+const extraSingerPrice=(level,len)=>singerPrice(level,len);
+const LEVELS={"standard":{"name":"Standard","tag":"สร้างด้วย AI · ทีมดูแลคุณภาพ","desc":"ใช้ AI เป็นหลักในการสร้างเพลง โดยทีม Banana คัดเลือกผลงานและปรับแต่งเสียงในจุดที่จำเป็น ให้ได้คุณภาพตามมาตรฐาน พร้อมนำไปใช้งาน เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ"},"professional":{"name":"Professional","tag":"ทีมโปรดิวเซอร์พัฒนาดนตรีเพิ่มเติม","desc":"ทีมโปรดิวเซอร์ Banana ลงมือเรียบเรียง ปรับรายละเอียด และเพิ่มซาวน์ในส่วนที่เหมาะสม เพื่อให้เพลงมีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น เหมาะกับงานที่ต้องการความละเอียดในการปรับแต่งดนตรี"},"premium":{"name":"Premium","tag":"คัดสรรผู้เชี่ยวชาญเฉพาะโปรเจกต์","desc":"Banana คัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญตรงกับโจทย์ มาร่วมดูแลตั้งแต่แนวคิด ทิศทางดนตรี ไปจนถึงรายละเอียดเสียงในทุกขั้นตอน เหมาะกับงานที่ต้องการประสบการณ์และมุมมองของผู้เชี่ยวชาญมาช่วยสร้างเอกลักษณ์ให้เพลง โดยจัดทีมและวางวิธีผลิตให้เหมาะกับแต่ละโปรเจกต์"}};
+const CUTDOWN_RATES={6:3000,15:5000,30:6000,45:7000,60:8000};
+function cutdownQuantity(sec){const n=Array.isArray(state.cutdowns)?(state.cutdowns.includes(sec)?1:0):Number(state.cutdowns?.[sec]);return Number.isFinite(n)&&n>0?Math.floor(n):0}
+function activeCutdowns(){return brand()?Object.keys(CUTDOWN_RATES).filter(sec=>cutdownQuantity(sec)>0&&(length()==='full'||Number(sec)<=Number(length()))):[]}
+function cutdownTotal(){return activeCutdowns().reduce((sum,sec)=>sum+CUTDOWN_RATES[sec]*cutdownQuantity(sec),0)}
+function cutdownSummary(){return activeCutdowns().map(sec=>sec+' วิ × '+cutdownQuantity(sec)).join(' · ')}
+function cutdownVersionCount(){return activeCutdowns().reduce((n,sec)=>n+cutdownQuantity(sec),0)}
+function renderCutdowns(){
+ show('cutdownSection',brand());const active=activeCutdowns();
+ $('cutdownChoices').innerHTML=Object.entries(CUTDOWN_RATES).map(([sec,price])=>{const disabled=length()!=='full'&&Number(sec)>Number(length()),selected=active.includes(sec),qty=selected?cutdownQuantity(sec):1;return '<div class="cutdown-item cutdown-inline'+(selected?' selected':'')+(disabled?' unavailable':'')+'"'+(disabled?' title="ยาวกว่าเพลงหลัก กรุณาคุยกับทีมก่อน"':'')+'><label class="cutdown-duration"><input type="checkbox" data-cutdown="'+sec+'" '+(selected?'checked ':'')+(disabled?'disabled ':'')+'><span>'+sec+' วิ</span></label><div class="cutdown-inline-quantity"><input id="cutdownQty'+sec+'" data-cut-qty="'+sec+'" aria-label="จำนวนเวอร์ชัน Cutdown '+sec+' วินาที" type="number" min="1" step="1" inputmode="numeric" value="'+qty+'" '+(!selected?'disabled':'')+'><label for="cutdownQty'+sec+'">Ver</label></div><strong class="cutdown-line-total">'+money(price*qty)+'</strong></div>'}).join('');
+ $('cutdownBadge').textContent=active.length?cutdownVersionCount()+' เวอร์ชัน · +'+money(cutdownTotal()):state.cutdownAdvice?'รอคุยกับทีม':'เลือกเพิ่มได้';
+ $('cutdownAdvice').checked=!!state.cutdownAdvice;
 }
-function renderBrandLogo(){
-  const preview=$('brandLogoPreview');
-  preview.innerHTML='';
-  $('brandLogoUpload').classList.toggle('has-logo',Boolean(state.logoDataUrl));
-  if(state.logoDataUrl){
-    const img=document.createElement('img');img.src=state.logoDataUrl;img.alt='';preview.appendChild(img);
-    $('brandLogoStatus').textContent='✓ ใช้โลโก้นี้บนการ์ดแล้ว';
-    $('brandLogoHint').textContent='เปิด “ดูการ์ดของฉัน” ได้เลย โลโก้นี้จะแสดงแทนรูปกล้วย';
-    $('brandLogoButtonText').textContent='เปลี่ยนโลโก้';$('removeBrandLogo').classList.remove('hidden');
-  }else{
-    const img=document.createElement('img');img.src='/musicforbrand/banana-headphones.png';img.alt='';preview.appendChild(img);
-    $('brandLogoStatus').textContent='ใช้รูปกล้วยใส่หูฟังเป็นค่าเริ่มต้น';
-    $('brandLogoHint').textContent='เมื่อเลือกแล้ว โลโก้จะแสดงแทนรูปกล้วยบนการ์ดทันที รองรับรูปจาก iPhone, JPG, PNG และ WebP ไม่เกิน 10 MB';
-    $('brandLogoButtonText').textContent='เลือกโลโก้';$('removeBrandLogo').classList.add('hidden');
-  }
+const GENRES={'Pop & Indie':['Pop','T-Pop','Indie Pop','Bedroom Pop','Dream Pop','Synth Pop','City Pop'],'Soul & Groove':['R&B','Soul','Funk','Disco','Jazz','Bossa Nova'],'Hip-Hop & Electronic':['Hip-Hop / Rap','Trap','Lo-fi','Electronic Pop','House','EDM / Dance'],'Acoustic & Rock':['Acoustic / Folk','Pop Rock','Rock','Alternative Rock','Country'],'ไทย & ภูมิภาค':['ลูกทุ่ง','หมอลำ / อีสาน','เพื่อชีวิต','ไทยร่วมสมัย','Reggae / Ska'],'Cinematic & Specialty':['Cinematic / Orchestral','Ambient','Gospel / Choir','Jingle / เพลงโฆษณา']};
+const QUICK=['Pop','T-Pop','R&B','Indie Pop','Acoustic / Folk','Hip-Hop / Rap','ลูกทุ่ง','EDM / Dance'];
+const MOODS=['สดใส / ร่าเริง','สนุก / ชวนเต้น','อบอุ่น / เป็นกันเอง','ผ่อนคลาย / สบาย ๆ','โรแมนติก / หวาน','ซึ้ง / ประทับใจ','คิดถึง / ย้อนความทรงจำ','เศร้า / อกหัก','เหงา / ละมุน','เท่ / มั่นใจ','หรูหรา / สง่างาม','มีพลัง / ฮึกเหิม','ยิ่งใหญ่ / ตื่นเต้น','ลึกลับ / ดาร์ก','ขี้เล่น / กวน ๆ'];
+const USAGES=['ฟังส่วนตัว / ของขวัญ','TikTok / Reels','YouTube','หน้าร้าน','Event','TVC','Streaming'];
+const ADDONS=['ขึ้นสตรีมมิง','Music Video','Lyric Video','กลองสด','เครื่องดนตรีจริงเพิ่มเติม','ขอคำแนะนำจากทีม'];
+let state={kind:'original',level:'standard',genres:[],moods:[],usages:[],addons:[],cutdowns:{},cutdownAdvice:false,logo:''},lastFocus=null,toastTimer;
+const STORAGE='banana-make-music-v2';
+const cover=()=>v('purpose')==='cover',brand=()=>v('purpose')==='brand',selfSinging=()=>!cover()&&v('vocalType')==='self',personal=()=>selfSinging()&&['artist','gift','other'].includes(v('purpose'));
+const title=()=>cover()?[v('coverTitle'),v('coverArtist')].filter(Boolean).join(' — ')||'เพลง Cover ของฉัน':v('projectName').trim()||(brand()?'เพลงแบรนด์ของฉัน':'เพลงของฉัน');
+const purpose=()=>$('purpose').selectedOptions[0].text;
+const length=()=>cover()||selfSinging()?'full':v('songLength');
+const lengthText=()=>length()==='full'?'เพลงเต็ม':length()==='15'?'1–15 วินาที':length()+' วินาที';
+const voice=()=>v('vocalType')==='self'?'ลูกค้าร้องเอง':v('vocalType')==='ai'?'เสียงร้อง AI':v('vocalType')==='instrumental'?'ดนตรีล้วน':`นักร้อง ${v('vocalGender')} · ${v('singerCount')} คน`;
+const genreText=()=>cover()&&v('coverDirection')==='same'?'คงแนวเพลงต้นฉบับ':cover()&&v('coverDirection')==='advice'||$('genreAdvice').checked?'ให้ Banana แนะนำ':state.genres.join(' + ')||'ยังไม่ระบุ';
+const moodText=()=>$('moodAdvice').checked?'ให้ Banana แนะนำ':state.moods.join(', ')||'ยังไม่ระบุ';
+function toast(s){$('toast').textContent=s;show('toast',true);clearTimeout(toastTimer);toastTimer=setTimeout(()=>show('toast',false),2600)}
+let lastStudioSelf=null;
+function renderStudioPlan(){
+ const self=v('vocalType')==='self',c=cover();
+ const content=self?(c?['Cover · เตรียมเพลงและนัดอัดเสียง','เลือกเพลงและทิศทาง เตรียมคีย์และดนตรี แล้วนัดมาร้องที่ Banana พร้อมทีมบันทึกและกำกับเสียงร้อง จากนั้นตรวจมิกซ์ผ่านไฟล์ที่ทีมส่งให้ฟัง']:['เพลงส่วนตัว · ดูแลตั้งแต่บรีฟถึงวันอัด','คุยเรื่องราวและทิศทางเพลง ร่วมฟังเดโม แล้วนัดมาร้องที่ Banana พร้อมทีมดูแลการบันทึกและกำกับเสียงร้อง การตรวจมิกซ์และส่งมอบเป็นไปตามขั้นตอนที่ตกลง']):brand()?(state.level==='standard'?['Standard · ฟังเดโมออนไลน์เป็นหลัก','รับบรีฟและส่งเดโมให้ฟังออนไลน์ เพื่อให้กระบวนการคล่องตัว หากต้องการเข้ามาฟังผลงาน ให้ฝ่ายประสานงานพิจารณาและจัดนัดตามความเหมาะสม']:state.level==='professional'?['Professional · ร่วมพัฒนาทิศทางกับโปรดิวเซอร์','รับบรีฟ ฟังเดโม และปรับทิศทางกับทีม อาจนัดเข้ามาฟังงานหรือร่วมเซสชันในช่วงที่เหมาะสม โดยฝ่ายประสานงานตกลงรูปแบบและขอบเขตเป็นรายกรณี']:['Premium · คัดสรรผู้เชี่ยวชาญร่วมสร้างสรรค์','คัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญตรงกับโจทย์ ร่วมวางแนวคิด ทิศทางดนตรี และจุดฟังงาน โดยยืนยันทีม ขอบเขต และนัดหมายกับฝ่ายประสานงานก่อนเริ่มผลิต']):v('vocalType')==='real'?[c?'Cover · ทีมจัดหานักร้องและส่งงานให้ตรวจ':'ทีมจัดหานักร้อง · ฟังเดโมและตรวจงานออนไลน์','คุยทิศทางและเสียงร้องที่ต้องการ ทีมจัดหานักร้องและดำเนินการผลิต พร้อมส่งเดโมและมิกซ์ให้ฟัง หากต้องการร่วมดูหรือฟังเซสชันอัดเสียง ให้แจ้งฝ่ายประสานงานเพื่อพิจารณาก่อน']:['รับบรีฟและตรวจงานออนไลน์','คุยแนวเพลงและรายละเอียด ส่งเดโมให้ฟัง แล้วตรวจและปรับงานผ่านไฟล์ที่ทีมส่งให้ หากมีเหตุผลที่ต้องเข้าสตูดิโอ ให้ฝ่ายประสานงานช่วยพิจารณารูปแบบที่เหมาะสม'];
+ $('studioHeading').textContent=content[0];$('studioDescription').textContent=content[1];
+ if(lastStudioSelf!==null&&lastStudioSelf!==self)$('reviewMode').value=self?'record':'online';
+ const allowed=self?['record','discuss']:['online','onsite','hybrid','discuss'];
+ if(!allowed.includes(v('reviewMode')))$('reviewMode').value=self?'record':'online';
+ Array.from($('reviewMode').options).forEach(o=>{o.hidden=!allowed.includes(o.value);o.disabled=o.hidden});
+ $('reviewModeLabel').textContent=self?'การนัดบันทึกเสียง':'สะดวกตรวจงานแบบไหน?';lastStudioSelf=self;
 }
-
-function resizeLogo(file){
-  return new Promise((resolve,reject)=>{
-    const reader=new FileReader();
-    reader.onerror=reject;
-    reader.onload=()=>{
-      const img=new Image();
-      img.onerror=reject;
-      img.onload=()=>{
-        const max=512,scale=Math.min(1,max/Math.max(img.width,img.height));
-        const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));
-        const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
-        const compact=canvas.toDataURL('image/webp',.9);
-        resolve(compact.startsWith('data:image/webp')?compact:canvas.toDataURL('image/png'));
-      };
-      img.src=reader.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-$('brandLogo').addEventListener('change',async event=>{
-  const file=event.target.files[0];if(!file)return;
-  const imageType=file.type.startsWith('image/')||/\.(jpe?g|png|webp|heic|heif)$/i.test(file.name);
-  if(!imageType||file.size>10*1024*1024){toast('กรุณาใช้ไฟล์รูปภาพไม่เกิน 10 MB');event.target.value='';return}
-  try{
-    state.logoDataUrl=await resizeLogo(file);renderBrandLogo();
-    const saved=saveDraft(false);toast(saved?'ใช้โลโก้นี้บนการ์ดแล้ว':'ใช้โลโก้แล้ว แต่บันทึกได้เฉพาะหน้านี้');
-    if(!$('shareModal').classList.contains('hidden'))await drawShareCard();
-  }catch(e){toast('รูปนี้เปิดไม่ได้ ลองบันทึกเป็น JPG หรือ PNG แล้วเลือกใหม่')}
-});
-$('removeBrandLogo').onclick=()=>{state.logoDataUrl='';$('brandLogo').value='';renderBrandLogo();saveDraft(false);toast('กลับไปใช้รูปกล้วยแล้ว')};
-
-function bindMulti(containerId,key){
-  $(containerId).querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
-    btn.classList.toggle('selected');
-    const text=btn.textContent.trim();
-    state[key]=[...$(containerId).querySelectorAll('.selected')].map(x=>x.textContent.trim());
-    update();
-  }));
-}
-bindMulti('genreOptions','genres');
-bindMulti('moodOptions','moods');
-bindMulti('usageOptions','usages');
-
-function genreText(){
-  const custom=val('customGenre').split(',').map(item=>item.trim()).filter(Boolean);
-  return [...new Set([...(state.genres||[]),...custom])].join(' + ')||'-';
-}
-
-function renderProductionPackage(){
-  const selected=val('production');
-  document.querySelectorAll('#productionOptions .package-card').forEach(btn=>{
-    const active=btn.dataset.value===selected;
-    btn.classList.toggle('selected',active);
-    btn.setAttribute('aria-checked',active?'true':'false');
-  });
-  $('productionDescription').textContent=PRODUCTION_PACKAGES[selected].description;
-}
-
-document.querySelectorAll('#productionOptions .package-card').forEach(btn=>btn.addEventListener('click',()=>{
-  $('production').value=btn.dataset.value;
-  renderProductionPackage();
-  update();
-}));
-
-document.querySelectorAll('input,select,textarea').forEach(el=>{
-  el.addEventListener('input',update);el.addEventListener('change',update);
-});
-$('vocalGender').addEventListener('change',()=>{
-  if(val('vocalGender')==='ชาย + หญิง' && Number(val('singerCount'))<2)$('singerCount').value='2';
-  update();
-});
-
+function visitText(){const mode=$('reviewMode').selectedOptions[0].text;if(v('reviewMode')==='online')return mode;return mode+' · รอฝ่ายประสานงานพูดคุยและยืนยันนัดหมาย'+(v('visitRequest').trim()?' · '+v('visitRequest').trim():'')}
 function estimate(){
-  const len=val('songLength');
-  const bananaRows=[['Music Production',PRICES.production[len]]];
-  const artistBudget=Math.max(0,Number(val('specialArtistBudget'))||0);
-  const songwriterBudget=Math.max(0,Number(val('specialSongwriterBudget'))||0);
-  const hasSpecialSongwriter=Boolean(val('specialSongwriterName').trim()||songwriterBudget);
-  if(val('vocalType')!=='instrumental' && val('songwriting')==='yes' && !hasSpecialSongwriter) bananaRows.push(['Songwriting (แต่งคำร้อง)',PRICES.songwriting[len]]);
-  if(val('vocalType')==='real'){
-    bananaRows.push(['Real Singer (รวมร้อง Demo)',PRICES.singer[val('production')][len]]);
-    const count=Number(val('singerCount'));
-    if(count>1) bananaRows.push([`นักร้องเพิ่ม ${count-1} คน`,PRICES.extraSinger[len]*(count-1)]);
-  }
-  const p=PRICES.productionUpgrade[val('production')][len];
-  if(p) bananaRows.push([`${PRODUCTION_PACKAGES[val('production')].name} Production`,p]);
-  const b=PRICES.branches[val('branchCount')];
-  if(b) bananaRows.push(['Branch License',b]);
-  const extraUsages=Math.max(0,state.usages.length-1);
-  const usageIsChargeable=['21','global'].includes(val('branchCount'));
-  if(usageIsChargeable && extraUsages) bananaRows.push([`ช่องทางใช้งานเพิ่ม ${extraUsages} ช่องทาง`,extraUsages*1000]);
-  const bananaTotal=bananaRows.reduce((sum,row)=>sum+row[1],0);
-  const specialRows=[];
-  if(artistBudget)specialRows.push([`งบศิลปิน — ${val('specialArtistName').trim()||'ยังไม่ระบุชื่อ'}`,artistBudget]);
-  if(songwriterBudget)specialRows.push([`งบนักแต่งเพลงพิเศษ — ${val('specialSongwriterName').trim()||'ยังไม่ระบุชื่อ'}`,songwriterBudget]);
-  return {rows:[...bananaRows,...specialRows],bananaRows,bananaTotal,artistBudget,songwriterBudget,total:bananaTotal+artistBudget+songwriterBudget};
+ if(!v('purpose')||!v('vocalType'))return {rows:[],total:0,pending:[]};
+ const len=length(),level=state.level,rows=[],pending=[];
+ if(personal())rows.push(['แพ็กเกจเพลงส่วนตัว · เพลงเต็ม',60000],['ค่าตัวนักร้อง',0]);
+ else{
+ rows.push(['ผลิตดนตรี · '+LEVELS[level].name,PRICES.production[len]+PRICES.upgrade[level][len]]);
+ const writerAllowed=!cover()&&v('vocalType')!=='instrumental';
+ const writerBudget=Math.max(0,Number(v('specialSongwriterBudget'))||0);
+ const specialWriter=writerAllowed&&v('songwriting')==='yes'&&Boolean(v('specialSongwriterName').trim()||writerBudget);
+ if(writerAllowed&&(v('songwriting')==='yes'||specialWriter)){
+ const baseline=lyricPrice(level,len);
+ rows.push([specialWriter?'แต่งคำร้อง · ผู้ร่วมงานพิเศษ (รอยืนยัน)':'แต่งคำร้อง',specialWriter?Math.max(baseline,writerBudget):baseline]);
+ if(specialWriter)pending.push('ค่าตัวนักแต่งเพลงพิเศษและการรับงาน');
+ }
+ if(cover())rows.push(['ค่าแต่งเพลง',0]);
+ if(v('vocalType')==='real'){
+ const perSinger=singerPrice(level,len),count=Math.max(1,Number(v('singerCount'))||1);
+ const budget=Math.max(0,Number(v('specialArtistBudget'))||0);
+ const specialSinger=Boolean(v('specialArtistName').trim()||budget);
+ rows.push([specialSinger?'นักร้องหลัก · ศิลปินพิเศษ (รอยืนยัน)':'นักร้องจริง 1 คน (รวมร้อง Demo)',specialSinger?Math.max(perSinger,budget):perSinger]);
+ if(count>1)rows.push([`นักร้องเพิ่ม ${count-1} คน × ${money(perSinger)}`,perSinger*(count-1)]);
+ if(specialSinger)pending.push('ค่าตัวศิลปินพิเศษและการรับงาน');
+ }else if(cover())rows.push(['ค่าตัวนักร้อง',0]);
+ }
+ if(brand()){
+ const b=PRICES.branches[v('branchCount')];if(b)rows.push(['ขอบเขตใช้งานแบรนด์ตามจำนวนสาขา',b]);
+ if(['21','global'].includes(v('branchCount'))&&state.usages.length>1)rows.push(['ช่องทางใช้งานเพิ่มเติม',(state.usages.length-1)*1000]);
+ }
+ for(const sec of activeCutdowns())rows.push(['Cutdown '+sec+' วิ × '+cutdownQuantity(sec)+' เวอร์ชัน (รอยืนยัน)',CUTDOWN_RATES[sec]*cutdownQuantity(sec)]);
+ if(activeCutdowns().length)pending.push('ขอบเขต Cutdown (รวมราคาประเมินที่เลือกแล้ว)');
+ if(brand()&&state.cutdownAdvice)pending.push('Cutdown เพิ่มเติม · ขอคุยกับฝ่ายประสานงาน (ยังไม่รวมราคา)');
+ pending.push(...state.addons.filter(x=>x!=='ขอคำแนะนำจากทีม'));
+ return {rows,total:rows.reduce((sum,row)=>sum+row[1],0),pending};
 }
+function briefRows(){const rows=[['แนวเพลง',genreText()],['อารมณ์',moodText()],['ความยาว',lengthText()],['เสียงร้อง',voice()],['การผลิต',personal()?'เพลงส่วนตัว · ดูแลในสตูดิโอ':LEVELS[state.level].name],['ใช้งาน',state.usages.join(', ')||'ยังไม่ระบุ']];if(brand())rows.push(['ธุรกิจ',v('businessType')],['สาขา',$('branchCount').selectedOptions[0].text]);if(activeCutdowns().length)rows.push(['Cutdown เพิ่มเติม',cutdownSummary()+' · '+money(cutdownTotal())+' (รวมในยอดประเมิน)']);if(brand()&&state.cutdownAdvice)rows.push(['Cutdown ที่รอประเมิน','ขอคุยกับฝ่ายประสานงาน']);rows.push(['รูปแบบทำงาน',visitText()]);if(state.addons.includes('ขอคำแนะนำจากทีม'))rows.push(['ความช่วยเหลือ','ขอคำแนะนำจากทีม']);return rows}
+function toggleSelection(key,item,max){const a=state[key],i=a.indexOf(item);if(i>=0)a.splice(i,1);else{if(max&&a.length>=max){toast('เลือกได้ไม่เกิน '+max+' รายการ เพื่อให้ทิศทางเพลงชัดเจน');return}a.push(item)}if(key==='genres')$('genreAdvice').checked=false;if(key==='moods')$('moodAdvice').checked=false;render()}
+function chip(label,key,active){return `<button type="button" class="chip${active?' selected':''}" data-group="${key}" data-item="${esc(label)}" aria-pressed="${active}">${esc(label)}</button>`}
+function renderTaxonomy(){
+ $('quickGenres').innerHTML=QUICK.map(x=>chip(x,'genres',state.genres.includes(x))).join('');
+ $('selectedGenres').innerHTML=state.genres.map(x=>`<button class="selected-chip" data-group="genres" data-item="${esc(x)}" aria-label="นำ ${esc(x)} ออก">${esc(x)}<span>×</span></button>`).join('');
+ $('genreCount').textContent=state.genres.length+'/3 แนว';
+ const q=v('genreSearch').trim().toLowerCase();let matches=0;
+ $('allGenres').innerHTML=Object.entries(GENRES).map(([group,items])=>{const found=items.filter(x=>!q||x.toLowerCase().includes(q)||group.toLowerCase().includes(q));matches+=found.length;return found.length?`<h3>${group}</h3><div class="chips">${found.map(x=>chip(x,'genres',state.genres.includes(x))).join('')}</div>`:''}).join('')||'<p class="note">ไม่พบแนวนี้ ลองอธิบายในช่องสไตล์เพิ่มเติมได้เลย</p>';
+ $('quickMoods').innerHTML=MOODS.slice(0,6).map(x=>chip(x,'moods',state.moods.includes(x))).join('');$('moreMoods').innerHTML=MOODS.map(x=>chip(x,'moods',state.moods.includes(x))).join('');
+ $('selectedMoods').innerHTML=state.moods.map(x=>`<button class="selected-chip" data-group="moods" data-item="${esc(x)}" aria-label="นำ ${esc(x)} ออก">${esc(x)}<span>×</span></button>`).join('');$('moodCount').textContent=state.moods.length+'/3 อารมณ์';
+ $('usageChoices').innerHTML=USAGES.filter(x=>!brand()||x!=='ฟังส่วนตัว / ของขวัญ').map(x=>chip(x,'usages',state.usages.includes(x))).join('');
+}
+function renderPackages(){
+ const len=length();
+ $('packages').innerHTML=Object.entries(LEVELS).map(([key,l])=>{const price=PRICES.production[len]+PRICES.upgrade[key][len]+(cover()&&v('vocalType')==='real'?singerPrice(key,len)+extraSingerPrice(key,len)*Math.max(0,Number(v('singerCount'))-1):0);return `<button class="choice${state.level===key?' selected':''}" data-level="${key}" aria-pressed="${state.level===key}"><b>${l.name}</b><small>${l.tag}</small>${cover()?'<strong>'+money(price)+'</strong>':''}</button>`}).join('');
+ const brandDetails={"standard":["สร้างเพลงด้วย AI พร้อมทีมดูแลคุณภาพ","ใช้ AI สร้างเพลงตามบรีฟ ทีม Banana ฟังและคัดเลือกผลงานที่เหมาะสม แล้วปรับแต่งเสียงเฉพาะจุดที่จำเป็น เช่น ความสมดุลและระดับความดัง เพื่อให้เพลงได้มาตรฐานและพร้อมใช้งาน","เพลงที่ผ่านการคัดเลือกและตรวจคุณภาพโดยทีม Banana ใช้ต้นฉบับที่คัดเลือกเป็นหลัก พร้อมปรับเสียงเท่าที่จำเป็น เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ"],"professional":["ลงมือพัฒนาดนตรีเพิ่มเติม","ทีมโปรดิวเซอร์ Banana ลงมือพัฒนารายละเอียดดนตรี ทั้งการเรียบเรียง ปรับแก้ และเพิ่มซาวน์ในส่วนที่เหมาะสม เช่น เติมชั้นเสียง เพิ่มน้ำหนักจังหวะ หรือปรับช่วงเชื่อมของเพลง พร้อมเก็บรายละเอียดเสียงให้กลมกลืน","เพลงที่ได้รับการปรับแต่งดนตรีเพิ่มเติม ให้มีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น โดยร่วมพิจารณากับทีมว่าส่วนใดควรปรับหรือทำเพิ่มตามขอบเขตที่ตกลง"],"premium":["คัดสรรผู้เชี่ยวชาญ ร่วมสร้างสรรค์เฉพาะโปรเจกต์","Banana พิจารณาโจทย์และแนวเพลง เพื่อคัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญเหมาะกับโปรเจกต์ มาร่วมพัฒนาแนวคิด วางทิศทางดนตรี และดูแลรายละเอียดเสียงในทุกขั้นตอน พร้อมจัดทีมและวางวิธีผลิตให้เหมาะกับงานโดยเฉพาะ","ประสบการณ์และมุมมองของผู้เชี่ยวชาญที่ตรงกับโจทย์ มาช่วยสร้างเอกลักษณ์และตัดสินใจในรายละเอียดสำคัญของเพลง ตั้งแต่แนวคิดจนถึงงานเสียงขั้นสุดท้าย โดยยืนยันทีมผู้ร่วมงานและขอบเขตก่อนเริ่มผลิต"]};
+ const coverDetails={"standard":["สร้างเพลงด้วย AI พร้อมทีมดูแลคุณภาพ","ใช้ AI สร้างเพลงตามบรีฟ ทีม Banana ฟังและคัดเลือกผลงานที่เหมาะสม แล้วปรับแต่งเสียงเฉพาะจุดที่จำเป็น เช่น ความสมดุลและระดับความดัง เพื่อให้เพลงได้มาตรฐานและพร้อมใช้งาน","เพลงที่ผ่านการคัดเลือกและตรวจคุณภาพโดยทีม Banana ใช้ต้นฉบับที่คัดเลือกเป็นหลัก พร้อมปรับเสียงเท่าที่จำเป็น เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ"],"professional":["ลงมือพัฒนาดนตรีเพิ่มเติม","ทีมโปรดิวเซอร์ Banana ลงมือพัฒนารายละเอียดดนตรี ทั้งการเรียบเรียง ปรับแก้ และเพิ่มซาวน์ในส่วนที่เหมาะสม เช่น เติมชั้นเสียง เพิ่มน้ำหนักจังหวะ หรือปรับช่วงเชื่อมของเพลง พร้อมเก็บรายละเอียดเสียงให้กลมกลืน","เพลงที่ได้รับการปรับแต่งดนตรีเพิ่มเติม ให้มีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น โดยร่วมพิจารณากับทีมว่าส่วนใดควรปรับหรือทำเพิ่มตามขอบเขตที่ตกลง"],"premium":["คัดสรรผู้เชี่ยวชาญ ร่วมสร้างสรรค์เฉพาะโปรเจกต์","Banana พิจารณาโจทย์และแนวเพลง เพื่อคัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญเหมาะกับโปรเจกต์ มาร่วมพัฒนาแนวคิด วางทิศทางดนตรี และดูแลรายละเอียดเสียงในทุกขั้นตอน พร้อมจัดทีมและวางวิธีผลิตให้เหมาะกับงานโดยเฉพาะ","ประสบการณ์และมุมมองของผู้เชี่ยวชาญที่ตรงกับโจทย์ มาช่วยสร้างเอกลักษณ์และตัดสินใจในรายละเอียดสำคัญของเพลง ตั้งแต่แนวคิดจนถึงงานเสียงขั้นสุดท้าย โดยยืนยันทีมผู้ร่วมงานและขอบเขตก่อนเริ่มผลิต"]};
+ const genericDetails={"standard":["สร้างเพลงด้วย AI พร้อมทีมดูแลคุณภาพ","ใช้ AI สร้างเพลงตามบรีฟ ทีม Banana ฟังและคัดเลือกผลงานที่เหมาะสม แล้วปรับแต่งเสียงเฉพาะจุดที่จำเป็น เช่น ความสมดุลและระดับความดัง เพื่อให้เพลงได้มาตรฐานและพร้อมใช้งาน","เพลงที่ผ่านการคัดเลือกและตรวจคุณภาพโดยทีม Banana ใช้ต้นฉบับที่คัดเลือกเป็นหลัก พร้อมปรับเสียงเท่าที่จำเป็น เหมาะกับงานที่ต้องการความเรียบง่ายและควบคุมงบประมาณ"],"professional":["ลงมือพัฒนาดนตรีเพิ่มเติม","ทีมโปรดิวเซอร์ Banana ลงมือพัฒนารายละเอียดดนตรี ทั้งการเรียบเรียง ปรับแก้ และเพิ่มซาวน์ในส่วนที่เหมาะสม เช่น เติมชั้นเสียง เพิ่มน้ำหนักจังหวะ หรือปรับช่วงเชื่อมของเพลง พร้อมเก็บรายละเอียดเสียงให้กลมกลืน","เพลงที่ได้รับการปรับแต่งดนตรีเพิ่มเติม ให้มีมิติ เป็นธรรมชาติ และตรงกับความต้องการมากขึ้น โดยร่วมพิจารณากับทีมว่าส่วนใดควรปรับหรือทำเพิ่มตามขอบเขตที่ตกลง"],"premium":["คัดสรรผู้เชี่ยวชาญ ร่วมสร้างสรรค์เฉพาะโปรเจกต์","Banana พิจารณาโจทย์และแนวเพลง เพื่อคัดเลือกโปรดิวเซอร์และผู้ร่วมงานที่มีเครดิตผลงานและความชำนาญเหมาะกับโปรเจกต์ มาร่วมพัฒนาแนวคิด วางทิศทางดนตรี และดูแลรายละเอียดเสียงในทุกขั้นตอน พร้อมจัดทีมและวางวิธีผลิตให้เหมาะกับงานโดยเฉพาะ","ประสบการณ์และมุมมองของผู้เชี่ยวชาญที่ตรงกับโจทย์ มาช่วยสร้างเอกลักษณ์และตัดสินใจในรายละเอียดสำคัญของเพลง ตั้งแต่แนวคิดจนถึงงานเสียงขั้นสุดท้าย โดยยืนยันทีมผู้ร่วมงานและขอบเขตก่อนเริ่มผลิต"]};
+ const detail=(cover()?coverDetails:brand()?brandDetails:genericDetails)[state.level];
+ $('packageDetail').innerHTML='<b>'+esc(detail[0])+'</b><p><strong>ทีมทำอะไรให้:</strong> '+esc(detail[1])+'</p><p><strong>สิ่งที่คุณได้รับ:</strong> '+esc(detail[2])+'</p>'+(cover()?'<p class="production-scope">ทุกระดับมีการอัดเสียง กำกับการร้อง อีดิต จูน มิกซ์ และมาสเตอร์ตามขอบเขตงาน · ไม่มีค่าแต่งเพลง · ค่านักร้องคิดเมื่อให้ Banana จัดหา</p>':'<p class="production-scope">ส่วนนี้อธิบายการผลิตดนตรี ค่าแต่งคำร้องและนักร้องคิดตามตัวเลือกในแบบประเมิน</p>')+'<p class="production-scope">งานงบตั้งแต่ 30,000 บาทขึ้นไป สามารถนัดมาฟังงานในสตูดิโอได้ โดยต้องได้รับการยืนยันจากฝ่ายประสานงานก่อน จำนวนคน รอบนัด และระยะเวลาพิจารณาเป็นรายกรณี เครื่องดนตรีสดเพิ่มเติมประเมินแยก ขอบเขตงานและรอบแก้ไขยืนยันก่อนเริ่มงาน</p>';
+}
+let previousPurpose=null;
+function syncFields(){
+ const chosen=v('purpose'),flexible=['gift','other'].includes(chosen);
+ if(flexible&&previousPurpose!==null&&previousPurpose!==chosen&&!['gift','other'].includes(previousPurpose))$('vocalType').value='';
+ if(brand()&&['','self'].includes(v('vocalType')))$('vocalType').value='ai';
+ if(brand())state.usages=state.usages.filter(x=>x!=='ฟังส่วนตัว / ของขวัญ');
+ previousPurpose=chosen;
+ const c=cover();if(brand()&&v('vocalType')==='self')$('vocalType').value='ai';if(v('purpose')==='artist')$('vocalType').value='self';if(c&&!['self','real'].includes(v('vocalType')))$('vocalType').value='self';const p=personal(),b=brand(),real=v('vocalType')==='real',instrumental=!c&&v('vocalType')==='instrumental';state.kind=c?'cover':'original';Array.from($('vocalType').options).forEach(o=>{o.hidden=(o.value===''&&!flexible)||(c&&['ai','instrumental'].includes(o.value))||(b&&o.value==='self');o.disabled=o.hidden});
+ show('originalFields',!c&&!!chosen);show('coverFields',c);show('brandFields',b);show('storyWrap',!c);show('vocalWrap',v('purpose')!=='artist');show('coverVocal',c);show('campaign',p);show('lengthWrap',!!v('vocalType')&&!c&&!selfSinging());show('levelsWrap',!!v('vocalType')&&!p);show('songwritingWrap',!!v('vocalType')&&!c&&!p&&!instrumental);show('singerWrap',real);show('specialTalent',real||(!c&&!p&&!instrumental&&v('songwriting')==='yes'));show('specialSingerFields',real);show('specialWriterFields',!c&&!p&&!instrumental&&v('songwriting')==='yes');show('mustWrap',!c&&!instrumental);show('rightsNote',c);show('branchNote',b);show('clientVisitWrap',true);renderStudioPlan();show('visitFields',v('reviewMode')!=='online');
+ $('coverVocal').innerHTML='<b>เพลง Cover · เพลงเต็ม</b><br>ไม่มีค่าแต่งเพลง · '+(real?'รวมค่านักร้องตามระดับการผลิตที่เลือก':'ลูกค้าร้องเอง ไม่มีค่าตัวนักร้อง')+' · ยังมีการผลิตดนตรี อัดเสียง กำกับ อีดิต จูนร้อง มิกซ์และมาสเตอร์';show('globalTalentNote',!!v('vocalType')&&!personal());$('globalTalentNote').textContent=(brand()?$('branchCount').selectedOptions[0].text+' · ':'')+LEVELS[state.level].name+' · '+lengthText()+' · '+(cover()||v('vocalType')==='instrumental'||v('songwriting')==='no'?'ไม่มีค่าแต่งคำร้อง':'แต่งคำร้อง '+money(lyricPrice(state.level,length())))+' · '+(v('vocalType')==='real'?'นักร้องจริง '+money(singerPrice(state.level,length()))+' ต่อคน':'ไม่มีค่าตัวนักร้อง');show('talentRateTable',!!v('vocalType')&&!personal());const genreVisible=!c||v('coverDirection')==='new';show('genreWrap',genreVisible);show('coverGenreHint',!genreVisible);
+ $('coverGenreHint').textContent=v('coverDirection')==='advice'?'ทีม Banana จะช่วยแนะนำแนวทาง Cover ที่เหมาะกับเสียงของคุณ':'ใช้แนวเพลงต้นฉบับเป็นจุดเริ่มต้น เลือกอารมณ์เพิ่มเติมได้ หรือเปลี่ยนเป็น “ทำเวอร์ชันใหม่” เพื่อเลือกแนวเพลง';
+ $('projectLabel').innerHTML=b?'ชื่อแบรนด์ / องค์กร':'ชื่อเจ้าของเพลง / ชื่อเพลง <small>ยังไม่ตั้งชื่อก็ได้</small>';
+ $('projectName').placeholder=b?'ชื่อร้าน แบรนด์ หรือองค์กร':'เช่น เพลงแรกของฉัน';
+ const labels={artist:'อยากให้เพลงนี้เล่าเรื่องอะไร?',gift:'เพลงนี้ทำให้ใคร หรือเพื่อโอกาสอะไร?',occasion:'ทำเพื่อโอกาสอะไร และอยากเก็บความทรงจำแบบไหน?',brand:'อยากให้คนจดจำอะไรเกี่ยวกับแบรนด์?',other:'เล่าสิ่งที่อยากทำให้ Banana ฟัง'};
+ $('storyLabel').innerHTML=(labels[v('purpose')]||'แนวทางเพลง')+' <small>ไม่บังคับ</small>';
+ document.querySelectorAll('[data-kind]').forEach(x=>{const on=x.dataset.kind===state.kind;x.classList.toggle('selected',on);x.setAttribute('aria-pressed',on)});
+ ['musicSection','productionSection','usageSection','contactSection'].forEach(id=>show(id,!!chosen));
+ $('logoPreview').src=state.logo||'/musicforbrand/banana-headphones.png';show('removeLogo',!!state.logo);
+}
+function renderRateTables(){
+ $('rateScope').textContent=(brand()?$('branchCount').selectedOptions[0].text:'อัตราผลิตทั่วไป')+' · หน่วยบาท · แสดงเฉพาะบริการที่ใช้กับงานประเภทนี้';show('branchRateReference',brand());
+ const lens=cover()?['full']:['15','30','60','full'];
+ const categories=[['ผลิต / เรียบเรียงดนตรี',(key,len)=>PRICES.production[len]+PRICES.upgrade[key][len]]];
+ if(!cover()&&v('vocalType')!=='instrumental'&&v('songwriting')==='yes')categories.push(['แต่งคำร้อง',(key,len)=>lyricPrice(key,len)]);
+ if(v('vocalType')==='real')categories.push(['นักร้องจริงต่อคน',(key,len)=>singerPrice(key,len)]);
+ $('activeRateTables').innerHTML=categories.map(([name,price])=>'<h3 class="rate-heading">'+name+'</h3><div class="rate-table-wrap"><table class="rate-table"><thead><tr><th>ระดับ</th>'+lens.map(len=>'<th>'+({15:'1–15 วิ',30:'30 วิ',60:'60 วิ',full:'เพลงเต็ม'}[len])+'</th>').join('')+'</tr></thead><tbody>'+Object.entries(LEVELS).map(([key,l])=>'<tr><th>'+l.name+'</th>'+lens.map(len=>'<td>'+price(key,len).toLocaleString('th-TH')+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>').join('');
+}
+function render(save=true,refreshCutdowns=true){syncFields();renderTaxonomy();renderPackages();if(refreshCutdowns)renderCutdowns();const e=estimate();$('briefTitle').textContent=title();$('briefType').textContent=(cover()?'เพลง Cover':'เพลงแต่งใหม่ · '+purpose());$('briefRows').innerHTML=briefRows().map(([k,val])=>`<div class="brief-row"><span>${esc(k)}</span><b>${esc(val)}</b></div>`).join('');$('priceLines').innerHTML=e.rows.map(([k,n])=>`<div class="price-line${n===0?' zero':''}"><span>${esc(k)}</span><b>${n===0?'ไม่มี':money(n)}</b></div>`).join('');$('totalPrice').textContent=money(e.total);$('mobilePrice').textContent=money(e.total);$('topPrice').textContent=money(e.total);$('totalLabel').textContent=e.pending.length?'ราคาประเมินเบื้องต้น · บางรายการรอยืนยัน':'ราคาประเมินเบื้องต้น';renderRateTables();$('pickerPrice').textContent=money(e.total);renderPickerSelection();$('pending').innerHTML=e.pending.length?'<b>รอคุยรายละเอียด / ประเมินเพิ่มเติม</b><br>'+esc(e.pending.join(' · '))+'<br>ราคาและขอบเขตจริงต้องยืนยันกับฝ่ายประสานงาน · รายการที่ยังไม่มีราคาประเมินยังไม่รวมในยอด':'';const ready=!!v('purpose')&&!!v('vocalType');['previewCard','mobileCard','demoBrief','copyBrief','downloadBrief','printBrief','sendBrief'].forEach(id=>$(id).disabled=!ready);if(!ready){['totalPrice','mobilePrice','topPrice','pickerPrice'].forEach(id=>$(id).textContent='—');$('briefTitle').textContent=v('purpose')?'เลือกรูปแบบเสียงร้อง':'เลือกประเภทเพลงเพื่อเริ่มต้น';$('briefType').textContent='ระบบจะแสดงราคาประเมินเมื่อเลือกข้อมูลที่จำเป็นแล้ว';$('briefRows').innerHTML='';$('priceLines').innerHTML='';$('pending').textContent='';$('totalLabel').textContent='ยังไม่ได้ประเมินราคา';}if(save)saveDraft(false)}
+function collect(){const fields={};document.querySelectorAll('input[id]:not([type=file]),select[id],textarea[id]').forEach(el=>fields[el.id]=el.type==='checkbox'?el.checked:el.value);return {state,fields}}
+function saveDraft(manual){try{localStorage.setItem(STORAGE,JSON.stringify(collect()));$('draftStatus').textContent='บันทึกในเบราว์เซอร์ล่าสุด '+new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'})+' · ยังไม่ได้ส่งบรีฟให้ทีม';if(manual)toast('บันทึก Draft แล้ว')}catch(e){$('draftStatus').textContent='พื้นที่บันทึกในเบราว์เซอร์ไม่พอ กรุณาดาวน์โหลดบรีฟเก็บไว้';if(manual)toast('บันทึกไม่ได้ กรุณาดาวน์โหลดบรีฟ')}}
+function fullBriefDetails(){
+ const rows=[];
+ if(brand()&&(activeCutdowns().length||state.cutdownAdvice)){rows.push('Cutdown: ปรับตัดจากเพลงหลัก · รอฝ่ายประสานงานยืนยันขอบเขต');if(v('cutdownNotes').trim())rows.push('รายละเอียด Cutdown: '+v('cutdownNotes').trim());}
+ if(!personal()&&v('vocalType')==='real'){
+ rows.push('ช่วงวัยเสียง: '+v('vocalAge'),'สไตล์เสียงร้อง: '+v('vocalStyle'));
+ if(v('specialArtistName').trim()||Number(v('specialArtistBudget')))rows.push('ศิลปินพิเศษ: '+(v('specialArtistName').trim()||'ยังไม่ระบุชื่อ'));
+ }
+ if(!cover()&&!personal()&&v('vocalType')!=='instrumental'){
+ rows.push('แต่งคำร้อง: '+$('songwriting').selectedOptions[0].text);
+ if(v('songwriting')==='yes'&&(v('specialSongwriterName').trim()||Number(v('specialSongwriterBudget'))))rows.push('นักแต่งเพลงพิเศษ: '+(v('specialSongwriterName').trim()||'ยังไม่ระบุชื่อ'));
+ }
+ return rows;
+}
+function textBrief(){const e=estimate();return ['BANANA MAKE MUSIC',title(),(cover()?'เพลง Cover':'เพลงแต่งใหม่ · '+purpose()),...briefRows().map(r=>r.join(': ')),...fullBriefDetails(),...(!cover()&&v('story')?['เรื่องราว: '+v('story')]:[]),...(cover()&&v('coverNotes')?['แนวทาง Cover: '+v('coverNotes')]:[]),...(v('styleNote')?['สไตล์เพิ่มเติม: '+v('styleNote')]:[]),...(!cover()&&v('vocalType')!=='instrumental'&&v('mustSentence')?['ประโยคสำคัญ: '+v('mustSentence')]:[]),...(v('reference')?['อ้างอิง: '+v('reference')]:[]),...(v('useDate')?['วันใช้งาน: '+v('useDate')]:[]),'',...e.rows.map(r=>r[0]+': '+(r[1]?money(r[1]):'ไม่มี')),(e.pending.length?'ยอดประเมินเบื้องต้น (บางรายการรอยืนยัน): ':'ราคาประเมิน: ')+money(e.total),...(e.pending.length?['รอยืนยัน / บริการเพิ่มเติม: '+e.pending.join(', ')]:[]),'ภาษี ขอบเขตงาน และสิทธิ์การใช้งาน ยืนยันก่อนเริ่มงาน','', 'ผู้ติดต่อ: '+v('contactName'),'โทร / LINE: '+v('contactPhone'),'อีเมล: '+v('contactEmail'),'จังหวัด: '+v('province')].join('\n')}
+function download(url,name,revoke){const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();if(revoke)setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function wrap(ctx,text,x,y,maxWidth,size=28,maxLines=2,line=36){ctx.font=`700 ${size}px Line, sans-serif`;const words=Array.from(text||'—');let current='',lines=[];for(const ch of words){if(ctx.measureText(current+ch).width>maxWidth&&current){lines.push(current);current=ch}else current+=ch}if(current)lines.push(current);lines.slice(0,maxLines).forEach((l,i)=>ctx.fillText(i===maxLines-1&&lines.length>maxLines?l.slice(0,-1)+'…':l,x,y+i*line));}
+function rect(ctx,x,y,w,h,r,color){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fillStyle=color;ctx.fill()}
+async function drawCard(){
+ await document.fonts.ready;const canvas=$('shareCanvas'),ctx=canvas.getContext('2d'),e=estimate();canvas.width=1080;canvas.height=1440;ctx.fillStyle='#fffaf6';ctx.fillRect(0,0,1080,1440);ctx.fillStyle='#f73c7a';ctx.fillRect(0,0,1080,245);ctx.fillStyle='#ffda32';ctx.fillRect(795,0,285,245);ctx.fillStyle='#fff';ctx.font='900 24px Line,sans-serif';ctx.fillText('BANANA SOUND STUDIO',58,55);ctx.font='900 60px Line,sans-serif';ctx.fillText('เพลงในแบบของฉัน',58,137);ctx.font='700 21px Line,sans-serif';ctx.fillText('YOUR STORY. YOUR SONG.',60,198);
+ try{const img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=state.logo||'/musicforbrand/banana-headphones.png'});const scale=Math.min(255/img.width,215/img.height);ctx.drawImage(img,805+(255-img.width*scale)/2,15+(215-img.height*scale)/2,img.width*scale,img.height*scale)}catch(error){}
+ ctx.fillStyle='#411323';wrap(ctx,title(),58,320,960,44,2,52);ctx.fillStyle='#87747b';ctx.font='700 25px Line,sans-serif';ctx.fillText((cover()?'COVER SONG':'ORIGINAL SONG · '+purpose()),58,430);
+ let y=500;if(brand()){rect(ctx,58,453,964,52,12,'#fff0b0');ctx.fillStyle='#641028';ctx.font='700 22px Line,sans-serif';ctx.fillText('ขอบเขตแบรนด์: '+$('branchCount').selectedOptions[0].text,78,487);y=550;}briefRows().slice(0,6).forEach(([k,val])=>{ctx.fillStyle='#87747b';ctx.font='400 24px Line,sans-serif';ctx.fillText(k,58,y);ctx.fillStyle='#411323';wrap(ctx,val,285,y,735,28,2,35);y+=brand()?70:80});
+ if(v('reviewMode')!=='online'){ctx.fillStyle='#87747b';wrap(ctx,$('reviewMode').selectedOptions[0].text+' · นัดหมายกับฝ่ายประสานงาน',58,990,960,23,1,30)}
+ if(v('cardMessage')){ctx.fillStyle='#f73c7a';wrap(ctx,'“'+v('cardMessage')+'”',58,1035,960,27,1,35)}
+ rect(ctx,55,1090,970,200,25,'#ffda32');ctx.fillStyle='#641028';ctx.font='700 25px Line,sans-serif';ctx.fillText(e.pending.length?'ราคาประเมินเบื้องต้น · บางรายการรอยืนยัน':'ราคาประเมินเบื้องต้น',85,1142);ctx.font='900 65px Line,sans-serif';ctx.fillText(money(e.total),85,1230);if(activeCutdowns().length){ctx.font='700 19px Line,sans-serif';wrap(ctx,'รวม Cutdown '+cutdownSummary()+' · '+money(cutdownTotal()),85,1265,910,22,1,26)}
+ ctx.fillStyle='#87747b';wrap(ctx,e.pending.length?'รอยืนยัน / บริการเพิ่มเติม: '+e.pending.join(' · '):state.addons.includes('ขอคำแนะนำจากทีม')?'ต้องการคำแนะนำจากทีม Banana':'บริการนอกขอบเขตแพ็กเกจ ประเมินเพิ่มเติมก่อนเริ่มงาน',58,1340,964,23,2,30);ctx.font='400 18px Line,sans-serif';ctx.fillText('ราคาประเมินเบื้องต้น · ไม่ใช่ราคายืนยัน · ทีมตรวจบรีฟก่อนเสนอราคา',58,1410);
+}
+async function openCard(){if(!v('purpose')||!v('vocalType')){toast('เลือกประเภทเพลงและรูปแบบเสียงร้องก่อน');return}lastFocus=document.activeElement;await drawCard();show('cardModal',true);document.body.style.overflow='hidden';$('closeCard').focus()}
+function closeCard(){show('cardModal',false);document.body.style.overflow='';lastFocus?.focus()}
+$('talentRateRows').innerHTML=Object.entries(BRANCH_TALENT_MIN).filter(([key])=>key!=='0').map(([key,r])=>'<tr><th>'+({'1':'1 สาขา','2':'2–5 สาขา','6':'6–20 สาขา','21':'มากกว่า 20 สาขา',global:'Global Brand'}[key])+'</th>'+['15','30','60','full'].map(len=>'<td>'+r[len].toLocaleString('th-TH')+'</td>').join('')+'</tr>').join('');
+$('addOnChoices').innerHTML=ADDONS.map(x=>`<label class="check-option"><input type="checkbox" data-addon="${x}">${x}</label>`).join('');
+document.addEventListener('click',e=>{const chip=e.target.closest('[data-group]');if(chip){toggleSelection(chip.dataset.group,chip.dataset.item,['genres','moods'].includes(chip.dataset.group)?3:0);return}const kind=e.target.closest('[data-kind]');if(kind){state.kind=kind.dataset.kind;render();return}const level=e.target.closest('[data-level]');if(level){state.level=level.dataset.level;render()}});
+document.querySelectorAll('input[id]:not([type=file]),select[id],textarea[id]').forEach(el=>el.addEventListener('input',()=>{if(el.id==='cutdownAdvice')state.cutdownAdvice=el.checked;if(el.id==='genreAdvice'&&el.checked)state.genres=[];if(el.id==='moodAdvice'&&el.checked)state.moods=[];if(el.id==='vocalGender'&&v('vocalGender')==='ชาย + หญิง'&&Number(v('singerCount'))<2)$('singerCount').value='2';render()}));
+document.querySelectorAll('[data-addon]').forEach(el=>el.addEventListener('change',()=>{state.addons=Array.from(document.querySelectorAll('[data-addon]:checked')).map(x=>x.dataset.addon);render()}));
+let pickerType='genres',pickerFocus=null;
+$('pickerContent').append($('genreCatalog'),$('moreMoods'));
+function renderPickerSelection(){
+ const items=state[pickerType];$('pickerSelected').innerHTML=items.map(x=>`<button class="selected-chip" data-group="${pickerType}" data-item="${esc(x)}" aria-label="นำ ${esc(x)} ออก">${esc(x)} ×</button>`).join('');$('pickerCount').textContent='เลือกแล้ว '+items.length+' / 3';
+}
+function openPicker(type){pickerFocus=document.activeElement;pickerType=type;$('pickerHeading').textContent=type==='genres'?'เลือกแนวเพลง':'เลือกอารมณ์เพลง';show('genreCatalog',type==='genres');show('moreMoods',type==='moods');show('pickerModal',true);$('toggleGenres').setAttribute('aria-expanded',String(type==='genres'));$('toggleMoods').setAttribute('aria-expanded',String(type==='moods'));document.body.style.overflow='hidden';renderPickerSelection();if(type==='genres')$('genreSearch').focus();else $('closePicker').focus()}
+function closePicker(){show('pickerModal',false);$('toggleGenres').setAttribute('aria-expanded','false');$('toggleMoods').setAttribute('aria-expanded','false');document.body.style.overflow='';pickerFocus?.focus()}
+$('toggleGenres').onclick=()=>openPicker('genres');$('toggleMoods').onclick=()=>openPicker('moods');$('closePicker').onclick=closePicker;$('donePicker').onclick=closePicker;$('pickerModal').onclick=e=>{if(e.target===$('pickerModal'))closePicker()};
+$('toggleGenres').setAttribute('aria-controls','pickerModal');$('toggleMoods').setAttribute('aria-controls','pickerModal');$('toggleGenres').setAttribute('aria-haspopup','dialog');$('toggleMoods').setAttribute('aria-haspopup','dialog');
+document.addEventListener('keydown',e=>{if($('pickerModal').hidden)return;if(e.key==='Escape'){e.preventDefault();closePicker();return}if(e.key==='Tab'){const nodes=Array.from($('pickerModal').querySelectorAll('button,input')).filter(x=>!x.disabled&&x.getClientRects().length);const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+$('cutdownChoices').addEventListener('input',e=>{const sec=e.target.dataset.cutQty;if(!sec)return;const n=Number(e.target.value);if(!Number.isSafeInteger(n)||n<1)return;state.cutdowns={...Object.fromEntries(activeCutdowns().map(key=>[key,cutdownQuantity(key)])),[sec]:n};render(true,false);$('cutdownBadge').textContent=cutdownVersionCount()+' เวอร์ชัน · +'+money(cutdownTotal());e.target.closest('.cutdown-item').querySelector('.cutdown-line-total').textContent=money(CUTDOWN_RATES[sec]*n)});
+$('cutdownChoices').addEventListener('change',e=>{const sec=e.target.dataset.cutdown||e.target.dataset.cutQty;if(!sec)return;const quantities=Object.fromEntries(activeCutdowns().map(key=>[key,cutdownQuantity(key)]));if(e.target.dataset.cutQty){const n=Number(e.target.value);if(!Number.isSafeInteger(n)||n<1){toast('กรอกจำนวนเวอร์ชันเป็นจำนวนเต็มตั้งแต่ 1 ขึ้นไป');render();return}quantities[sec]=n}else if(e.target.checked)quantities[sec]=quantities[sec]||1;else delete quantities[sec];state.cutdowns=quantities;render()});
+$('cutdownAdvice').addEventListener('change',()=>{state.cutdownAdvice=$('cutdownAdvice').checked;render()});
 
-function addOnList(){return [...document.querySelectorAll('.addon input:checked')].map(x=>x.value)}
-
-function voiceText(){
-  if(val('vocalType')==='ai') return 'AI Voice';
-  if(val('vocalType')==='instrumental') return 'ดนตรีล้วน';
-  return `นักร้องจริง / ${val('vocalGender')} / ${val('vocalAge')} / ${val('singerCount')} คน`;
-}
-
-function readiness(){
-  const checks=[
-    val('brandName'),val('province'),genreText(),state.moods.length,
-    val('songLength'),val('vocalType'),state.usages.length,val('contactName'),
-    val('contactPhone')||val('contactEmail')
-  ];
-  return Math.round(checks.filter(Boolean).length/checks.length*100);
-}
-
-function briefRows(){
-  const rows=[
-    ['แบรนด์',val('brandName')||'-','brandName'],
-    ['ธุรกิจ',val('businessType'),'businessType'],
-    ['ข้อความร้าน',val('brandKeyword')||'-','brandKeyword'],
-    ['สาขา',$('branchCount').selectedOptions[0].text,'branchCount'],
-    ['จังหวัด',val('province')||'-','province'],
-    ['แนวเพลง',genreText(),'genres'],
-    ['อารมณ์',state.moods.join(', ')||'-','moods'],
-    ['ความยาว',val('songLength')==='full'?'เพลงเต็ม':val('songLength')+' วินาที','songLength'],
-    ['เสียงร้อง',voiceText(),'vocalType'],
-    ['โปรดักชัน',PRODUCTION_PACKAGES[val('production')].name,'production'],
-    ['การใช้งาน',state.usages.join(', ')||'-','usages'],
-    ['ประโยคสำคัญ',val('vocalType')==='instrumental'?'ดนตรีล้วน — ไม่มีเนื้อร้อง':val('mustSentence')||'-',val('vocalType')==='instrumental'?'none':'mustSentence']
-  ];
-  if(val('specialArtistName').trim()||Number(val('specialArtistBudget')))rows.push(['ศิลปินในฝัน',`${val('specialArtistName').trim()||'ยังไม่ระบุชื่อ'} / ${Number(val('specialArtistBudget'))?money(Number(val('specialArtistBudget'))):'ยังไม่ระบุงบ'}`,'specialArtist']);
-  if(val('specialSongwriterName').trim()||Number(val('specialSongwriterBudget')))rows.push(['นักแต่งพิเศษ',`${val('specialSongwriterName').trim()||'ยังไม่ระบุชื่อ'} / ${Number(val('specialSongwriterBudget'))?money(Number(val('specialSongwriterBudget'))):'ยังไม่ระบุงบ'}`,'specialSongwriter']);
-  return rows;
-}
-
-function editControl(field){
-  if(field==='brandName'||field==='brandKeyword'||field==='province'||field==='mustSentence') return `<input data-edit="${field}" value="${escapeHTML(val(field))}">`;
-  if(field==='songLength') return `<select data-edit="songLength"><option value="15">15 วินาที</option><option value="30">30 วินาที</option><option value="60">60 วินาที</option><option value="full">เพลงเต็ม</option></select>`;
-  if(field==='vocalType') return `<select data-edit="vocalType"><option value="ai">AI Voice</option><option value="real">นักร้องจริง</option><option value="instrumental">ดนตรีล้วน</option></select>`;
-  if(field==='production') return `<select data-edit="production"><option value="standard">Standard</option><option value="professional">Professional</option><option value="premium">Premium</option></select>`;
-  if(field==='branchCount') return `<select data-edit="branchCount"><option value="0">ยังไม่มีหน้าร้าน</option><option value="1">1 สาขา</option><option value="2">2–5 สาขา</option><option value="6">6–20 สาขา</option><option value="21">มากกว่า 20 สาขา</option><option value="global">Global Brand</option></select>`;
-  return '';
-}
-
-function renderBrief(){
-  const rows=briefRows();
-  $('brief').innerHTML=rows.map(([label,text,field])=>{
-    if(state.editMode && ['brandName','brandKeyword','province','mustSentence','songLength','vocalType','production','branchCount'].includes(field)){
-      return `<div class="brief-row"><span>${label}</span>${editControl(field)}</div>`;
-    }
-    return `<div class="brief-row"><span>${label}</span><b>${escapeHTML(text)}</b></div>`;
-  }).join('');
-  if(state.editMode){
-    $('brief').querySelectorAll('[data-edit]').forEach(el=>{
-      const id=el.dataset.edit;
-      el.value=$(id).value;
-      el.addEventListener('input',()=>{$(id).value=el.value;if(id==='production')renderProductionPackage();update(false)});
-      el.addEventListener('change',()=>{$(id).value=el.value;if(id==='production')renderProductionPackage();update(false)});
-    });
-  }
-}
-
-function update(autosave=true){
-  const isInstrumental=val('vocalType')==='instrumental';
-  const hasSpecialSongwriter=Boolean(val('specialSongwriterName').trim()||Number(val('specialSongwriterBudget')));
-  $('voiceDetails').classList.toggle('hidden',val('vocalType')!=='real');
-  $('songwritingSection').classList.toggle('hidden',isInstrumental);
-  $('instrumentalSongwritingNote').classList.toggle('hidden',!isInstrumental);
-  $('specialSongwriterNote').classList.toggle('hidden',!hasSpecialSongwriter);
-  renderProductionPackage();
-  renderBrief();
-  const est=estimate();
-  const bananaHTML=est.bananaRows.map(([name,price],i)=>`<div class="price-row"><span>${escapeHTML(name)}</span><strong>${i?'+':''}${money(price)}</strong></div>`).join('');
-  const dreamRows=[];
-  if(est.artistBudget)dreamRows.push(['งบศิลปินที่อยากได้',est.artistBudget]);
-  if(est.songwriterBudget)dreamRows.push(['งบนักแต่งเพลงพิเศษ',est.songwriterBudget]);
-  const dreamHTML=dreamRows.length?`<div class="price-group-title">DREAM TEAM BUDGET</div>${dreamRows.map(([name,price])=>`<div class="price-row"><span>${escapeHTML(name)}</span><strong>+${money(price)}</strong></div>`).join('')}`:'';
-  $('breakdown').innerHTML=`<div class="price-group-title">BANANA PRODUCTION</div>${bananaHTML}${dreamHTML}`;
-  $('totalPrice').textContent=money(est.total);
-  $('topTotalPrice').textContent=money(est.total);
-  const r=readiness();$('readyText').textContent=r+'%';$('readyBar').style.width=r+'%';
-  renderBrandLogo();
-  if(autosave)saveDraft(false);
-}
-
-$('editToggle').onclick=()=>{state.editMode=!state.editMode;$('editToggle').textContent=state.editMode?'เสร็จสิ้น':'แก้ไขในสรุป';renderBrief()};
-
-function collect(){
-  const fields={};
-  document.querySelectorAll('input[id]:not([type="file"]),select[id],textarea[id]').forEach(el=>fields[el.id]=el.value);
-  return {state,fields,addons:addOnList(),savedAt:new Date().toISOString()};
-}
-function saveDraft(manual=true){
-  try{
-    localStorage.setItem(STORAGE,JSON.stringify(collect()));
-    $('status').textContent='บันทึกล่าสุด '+new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'});
-    if(manual)toast('บันทึก Draft แล้ว');
-    return true;
-  }catch(e){
-    $('status').textContent='ข้อมูลรูปใหญ่เกินกว่าจะบันทึกเป็น Draft';
-    if(manual)toast('ข้อมูลรูปใหญ่เกินกว่าจะบันทึกเป็น Draft');
-    return false;
-  }
-}
-function restore(){
-  const raw=localStorage.getItem(STORAGE);if(!raw)return;
-  try{
-    const d=JSON.parse(raw);
-    Object.assign(state,d.state||{});
-    Object.entries(d.fields||{}).forEach(([id,v])=>{if($(id))$(id).value=v});
-    if(d.fields?.songwriting==='banana'||d.fields?.songwriting==='special'||!val('songwriting'))$('songwriting').value='yes';
-    if(d.fields?.songwriting==='provided')$('songwriting').value='no';
-    if(d.fields?.vocalType==='artist'||!val('vocalType'))$('vocalType').value='ai';
-    if(!Array.isArray(d.state?.genres)&&d.state?.genre)state.genres=[d.state.genre];
-    if(!Array.isArray(state.genres))state.genres=['Pop'];
-    document.querySelectorAll('#genreOptions button').forEach(b=>b.classList.toggle('selected',state.genres.includes(b.dataset.value||b.textContent.trim())));
-    [['moodOptions','moods'],['usageOptions','usages']].forEach(([id,key])=>{
-      document.querySelectorAll(`#${id} button`).forEach(b=>b.classList.toggle('selected',(state[key]||[]).includes(b.textContent.trim())));
-    });
-    document.querySelectorAll('.addon input').forEach(x=>x.checked=(d.addons||[]).includes(x.value));
-    $('status').textContent='โหลด Draft ล่าสุดแล้ว';
-  }catch(e){localStorage.removeItem(STORAGE)}
-}
-
-function roundedRect(ctx,x,y,w,h,r){
-  const radius=Math.min(r,w/2,h/2);ctx.beginPath();ctx.roundRect(x,y,w,h,radius);
-}
-function fitText(ctx,text,maxWidth,startSize,minSize=28){
-  let size=startSize;ctx.font=`900 ${size}px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif`;
-  while(size>minSize&&ctx.measureText(text).width>maxWidth){size-=2;ctx.font=`900 ${size}px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif`}
-  return size;
-}
-function drawRightText(ctx,text,rightX,y){
-  ctx.save();ctx.textAlign='left';ctx.direction='ltr';
-  const width=ctx.measureText(String(text)).width;
-  ctx.fillText(String(text),rightX-width,y);
-  ctx.restore();
-}
-function canvasTextUnits(text){
-  if(typeof Intl!=='undefined'&&Intl.Segmenter){
-    return [...new Intl.Segmenter('th',{granularity:'word'}).segment(String(text))].map(item=>item.segment);
-  }
-  return [...String(text)];
-}
-function canvasLines(ctx,text,maxWidth){
-  const lines=[];let line='';
-  canvasTextUnits(text).forEach(unit=>{
-    const next=line+unit;
-    if(!line||ctx.measureText(next).width<=maxWidth){line=next;return}
-    lines.push(line.trim());line=unit.trimStart();
+async function sendBrief(){
+ if(!v('purpose')||!v('vocalType')){toast('เลือกประเภทเพลงและรูปแบบเสียงร้องก่อน');return}
+ if(!v('contactName').trim()||(!v('contactPhone').trim()&&!v('contactEmail').trim())){toast('กรุณากรอกชื่อและเบอร์โทร / LINE หรืออีเมล');$('contactName').focus();return}
+ if(v('contactEmail')&&!$('contactEmail').checkValidity()){$('contactEmail').reportValidity();return}
+ const button=$('sendBrief');if(button.disabled)return;
+ const original=button.textContent;button.disabled=true;button.textContent='กำลังส่งบรีฟ…';$('submitStatus').textContent='กำลังส่งบรีฟให้ทีม Banana';
+ try{
+  const response=await fetch('https://formsubmit.co/ajax/toysakie@gmail.com',{
+   method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},
+   body:JSON.stringify({_subject:'Music Brief - '+title(),_template:'table',_captcha:'false',_cc:'bananasoundstudio@gmail.com',_replyto:v('contactEmail').trim()||'toysakie@gmail.com',project:title(),purpose:purpose(),contact_name:v('contactName').trim(),contact_phone_or_line:v('contactPhone').trim()||'-',contact_email:v('contactEmail').trim()||'-',estimated_total:money(estimate().total),brief:textBrief()})
   });
-  if(line)lines.push(line.trim());
-  return lines.length?lines:['-'];
+  if(!response.ok)throw new Error('submit failed');
+  const result=await response.json();if(result.success!==true&&result.success!=='true')throw new Error('submit not confirmed');
+  $('submitStatus').textContent='ส่งบรีฟเรียบร้อยแล้ว ทีม Banana จะติดต่อกลับเพื่อยืนยันรายละเอียด';toast('ส่งบรีฟเรียบร้อยแล้ว');
+ }catch(error){$('submitStatus').textContent='ส่งบรีฟไม่สำเร็จ ข้อมูลยังอยู่ในเบราว์เซอร์ กรุณาลองอีกครั้ง หรือดาวน์โหลดบรีฟแล้วส่งทางอีเมล';toast('ส่งไม่สำเร็จ กรุณาลองอีกครั้งหรือส่งบรีฟทางอีเมล')}
+ finally{button.disabled=false;button.textContent=original}
 }
-function drawWrappedText(ctx,text,x,y,maxWidth,startSize=32,minSize=24,maxLines=2,lineHeight=34){
-  let size=startSize,lines=[];
-  do{ctx.font=`850 ${size}px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif`;lines=canvasLines(ctx,text,maxWidth);if(lines.length<=maxLines)break;size-=2}while(size>=minSize);
-  if(lines.length>maxLines){lines=lines.slice(0,maxLines);let last=lines[maxLines-1];while(last&&ctx.measureText(last+'…').width>maxWidth)last=last.slice(0,-1);lines[maxLines-1]=last+'…'}
-  lines.forEach((line,index)=>ctx.fillText(line,x,y+index*lineHeight));
-}
-function drawDetailCell(ctx,label,value,x,y,width){
-  roundedRect(ctx,x,y,width,94,18);ctx.fillStyle='#fff';ctx.fill();ctx.strokeStyle='rgba(100,16,40,.20)';ctx.lineWidth=2;ctx.stroke();
-  ctx.fillStyle='#8b5967';ctx.font='650 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.textAlign='left';ctx.fillText(label,x+18,y+30);
-  ctx.fillStyle='#35141d';drawWrappedText(ctx,value,x+18,y+65,width-36,31,23,1,30);
-}
-function drawTalentCard(ctx,label,name,budget,x,y,width,tint){
-  roundedRect(ctx,x,y,width,92,18);ctx.fillStyle=tint;ctx.fill();ctx.strokeStyle='rgba(100,16,40,.16)';ctx.lineWidth=2;ctx.stroke();
-  ctx.fillStyle='#8b5967';ctx.font='700 21px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.textAlign='left';ctx.fillText(label,x+20,y+29);
-  ctx.fillStyle='#35141d';drawWrappedText(ctx,name||'ยังไม่ระบุชื่อ',x+20,y+66,width*.52,30,22,1,30);
-  const budgetText=budget?money(budget):'ยังไม่ระบุงบ';fitText(ctx,budgetText,width*.38,34,22);ctx.fillStyle='#641028';drawRightText(ctx,budgetText,x+width-24,y+66);ctx.textAlign='left';
-}
-function logoCropBounds(img){
-  try{
-    const maxSample=512,ratio=Math.min(1,maxSample/img.naturalWidth,maxSample/img.naturalHeight);
-    const sw=Math.max(1,Math.round(img.naturalWidth*ratio)),sh=Math.max(1,Math.round(img.naturalHeight*ratio));
-    const sample=document.createElement('canvas');sample.width=sw;sample.height=sh;
-    const sampleCtx=sample.getContext('2d',{willReadFrequently:true});sampleCtx.drawImage(img,0,0,sw,sh);
-    const pixels=sampleCtx.getImageData(0,0,sw,sh).data;
-    const corners=[[0,0],[sw-1,0],[0,sh-1],[sw-1,sh-1]].map(([x,y])=>{const i=(y*sw+x)*4;return [pixels[i],pixels[i+1],pixels[i+2],pixels[i+3]]});
-    const bg=corners.reduce((sum,c)=>sum.map((v,i)=>v+c[i]),[0,0,0,0]).map(v=>v/4);
-    let left=sw,top=sh,right=-1,bottom=-1;
-    for(let y=0;y<sh;y++)for(let x=0;x<sw;x++){
-      const i=(y*sw+x)*4,a=pixels[i+3];if(a<20)continue;
-      const distance=Math.abs(pixels[i]-bg[0])+Math.abs(pixels[i+1]-bg[1])+Math.abs(pixels[i+2]-bg[2])+Math.abs(a-bg[3]);
-      if(bg[3]<40||distance>42){left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y)}
-    }
-    if(right<left||bottom<top)return {sx:0,sy:0,sw:img.naturalWidth,sh:img.naturalHeight};
-    const pad=6,leftP=Math.max(0,left-pad),topP=Math.max(0,top-pad),rightP=Math.min(sw-1,right+pad),bottomP=Math.min(sh-1,bottom+pad);
-    return {sx:leftP/ratio,sy:topP/ratio,sw:(rightP-leftP+1)/ratio,sh:(bottomP-topP+1)/ratio};
-  }catch(error){return {sx:0,sy:0,sw:img.naturalWidth,sh:img.naturalHeight}}
-}
-async function drawShareCard(){
-  if(document.fonts?.load){try{await document.fonts.load('900 48px "LINE Seed Sans TH"')}catch(error){}}
-  const canvas=$('shareCanvas'),ctx=canvas.getContext('2d'),w=canvas.width,h=canvas.height;
-  ctx.clearRect(0,0,w,h);ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);
-  ctx.fillStyle='#f74179';ctx.fillRect(0,0,700,190);ctx.fillStyle='#ffd91f';ctx.fillRect(700,0,380,190);
-  ctx.beginPath();ctx.arc(790,94,116,0,Math.PI*2);ctx.fillStyle='rgba(255,244,137,.55)';ctx.fill();
-
-  ctx.textBaseline='alphabetic';ctx.textAlign='left';ctx.fillStyle='#fff9ed';ctx.font='900 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('BANANA · MUSIC FOR BRAND',54,35);
-  fitText(ctx,'เพลงแบรนด์ของฉัน',620,62,46);ctx.fillStyle='#fff9ed';ctx.fillText('เพลงแบรนด์ของฉัน',54,96);
-  roundedRect(ctx,54,118,360,44,12);ctx.fillStyle='#35141d';ctx.fill();ctx.fillStyle='#fff';ctx.font='800 20px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('สร้างกับ Banana Music for Brand',76,147);
-  ctx.beginPath();ctx.ellipse(868,171,134,18,0,0,Math.PI*2);ctx.fillStyle='rgba(73,7,28,.20)';ctx.fill();
-
-  roundedRect(ctx,44,190,992,1108,34);ctx.fillStyle='#fff';ctx.fill();ctx.strokeStyle='rgba(100,16,40,.12)';ctx.lineWidth=2;ctx.stroke();
-  const drawMain=()=>{
-    ctx.textAlign='left';ctx.fillStyle='#8b5967';ctx.font='700 19px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('MUSIC BRIEF ESTIMATE',78,250);
-    const brand=val('brandName').trim()||'แบรนด์ของฉัน';fitText(ctx,brand,820,50,32);ctx.fillStyle='#35141d';ctx.fillText(brand,78,306);
-    ctx.fillStyle='#77717b';ctx.font='600 24px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText(val('businessType'),78,344);
-    const branchText=$('branchCount').selectedOptions[0].text;
-    ctx.font='750 18px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';const branchW=Math.min(220,ctx.measureText(branchText).width+34);roundedRect(ctx,978-branchW,238,branchW,42,12);ctx.fillStyle='#ffdce7';ctx.fill();ctx.fillStyle='#641028';ctx.textAlign='center';ctx.fillText(branchText,978-branchW/2,266);ctx.textAlign='left';
-
-    const keyword=val('brandKeyword').trim();
-    const detailsY=keyword?472:390;
-    if(keyword){
-      roundedRect(ctx,78,382,924,64,16);ctx.fillStyle='#fff2c9';ctx.fill();
-      ctx.fillStyle='#f74179';ctx.font='900 32px Georgia,serif';ctx.fillText('“',98,420);
-      ctx.fillStyle='#35141d';drawWrappedText(ctx,keyword,134,418,836,27,21,1,28);
-    }else{
-      ctx.strokeStyle='rgba(48,35,69,.08)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(78,377);ctx.lineTo(1002,377);ctx.stroke();
-    }
-    const details=[
-      ['แนวเพลง',genreText()],
-      ['อารมณ์',(state.moods||[]).join(', ')||'-'],
-      ['ความยาว',val('songLength')==='full'?'เพลงเต็ม':val('songLength')+' วินาที'],
-      ['เสียงร้อง',voiceText()],
-      ['ระดับการผลิต',PRODUCTION_PACKAGES[val('production')].name],
-      ['การใช้งาน',(state.usages||[]).join(', ')||'-']
-    ];
-    details.forEach(([label,value],i)=>{
-      const col=i%2,row=Math.floor(i/2),x=78+col*470,y=detailsY+row*104;
-      drawDetailCell(ctx,label,value,x,y,454);
-    });
-    const est=estimate(),artistName=val('specialArtistName').trim(),songwriterName=val('specialSongwriterName').trim();
-    const talents=[];
-    if(artistName||est.artistBudget)talents.push(['ศิลปินในฝัน',artistName,est.artistBudget,'#ffdce7']);
-    if(songwriterName||est.songwriterBudget)talents.push(['นักแต่งเพลงพิเศษ',songwriterName,est.songwriterBudget,'#fff2c9']);
-    const talentY=detailsY+324;
-    talents.forEach((item,index)=>drawTalentCard(ctx,item[0],item[1],item[2],78,talentY+index*102,924,item[3]));
-
-    const priceY=talents.length?talentY+talents.length*102+10:talentY+12;
-    roundedRect(ctx,78,priceY,924,226,22);const priceGlow=ctx.createLinearGradient(78,priceY,1002,priceY+226);priceGlow.addColorStop(0,'#fff2c9');priceGlow.addColorStop(.56,'#ffdce7');priceGlow.addColorStop(1,'#f74179');ctx.fillStyle=priceGlow;ctx.fill();
-    ctx.fillStyle='#8b5967';ctx.font='700 20px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('โปรดักชันโดย Banana',106,priceY+40);ctx.fillStyle='#35141d';ctx.font='850 26px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';drawRightText(ctx,money(est.bananaTotal),962,priceY+40);
-    let lineY=priceY+76;
-    if(est.artistBudget){ctx.textAlign='left';ctx.fillStyle='#8b5967';ctx.font='650 18px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบศิลปิน',106,lineY);ctx.fillStyle='#641028';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';drawRightText(ctx,money(est.artistBudget),962,lineY);lineY+=32}
-    if(est.songwriterBudget){ctx.textAlign='left';ctx.fillStyle='#8b5967';ctx.font='650 18px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบนักแต่งเพลงพิเศษ',106,lineY);ctx.fillStyle='#641028';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';drawRightText(ctx,money(est.songwriterBudget),962,lineY)}
-    ctx.strokeStyle='rgba(48,35,69,.13)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(106,priceY+126);ctx.lineTo(974,priceY+126);ctx.stroke();
-    ctx.textAlign='left';ctx.fillStyle='#35141d';ctx.font='800 22px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('ราคาประเมินทั้งโปรเจกต์',106,priceY+169);
-    fitText(ctx,money(est.total),540,54,34);ctx.fillStyle='#641028';drawRightText(ctx,money(est.total),962,priceY+190);ctx.textAlign='left';
-    const noteY=Math.min(1242,priceY+260);ctx.fillStyle='#817985';ctx.font='500 16px "LINE Seed Sans TH",system-ui,-apple-system,"Segoe UI",sans-serif';ctx.fillText('งบศิลปินและนักแต่งเพลงเป็นข้อมูลที่ผู้ใช้ระบุ ยังไม่ใช่การยืนยันค่าตัวหรือการรับงาน',78,noteY);
-    ctx.fillStyle='#641028';fitText(ctx,'อยากให้แบรนด์น่าจดจำ อย่าลืมทำเพลงประจำแบรนด์',972,20,16);ctx.fillText('อยากให้แบรนด์น่าจดจำ อย่าลืมทำเพลงประจำแบรนด์',54,1322);
-  };
-  return new Promise(resolve=>{
-    const img=new Image();img.onload=()=>{
-      const box={x:674,y:6,w:388,h:178};
-      if(state.logoDataUrl){roundedRect(ctx,box.x,box.y,box.w,box.h,30);ctx.fillStyle='rgba(255,255,255,.74)';ctx.fill();ctx.strokeStyle='rgba(255,255,255,.95)';ctx.lineWidth=2;ctx.stroke()}
-      const crop=logoCropBounds(img),inset=state.logoDataUrl?14:0,maxW=box.w-inset*2,maxH=box.h-inset*2,scale=Math.min(maxW/crop.sw,maxH/crop.sh),dw=crop.sw*scale,dh=crop.sh*scale;
-      ctx.drawImage(img,crop.sx,crop.sy,crop.sw,crop.sh,box.x+(box.w-dw)/2,box.y+(box.h-dh)/2,dw,dh);drawMain();resolve();
-    };
-    img.onerror=()=>{drawMain();resolve()};
-    img.src=state.logoDataUrl||'/musicforbrand/banana-headphones.png';
-  });
-}
-
-async function openShareCard(){await drawShareCard();$('shareModal').classList.remove('hidden');document.body.style.overflow='hidden';$('closeShareModal').focus()}
-function closeShareCard(){$('shareModal').classList.add('hidden');document.body.style.overflow=''}
-$('previewShareCard').onclick=openShareCard;
-$('refreshShareCard').onclick=async()=>{await drawShareCard();toast('อัปเดตการ์ดแล้ว')};
-$('closeShareModal').onclick=closeShareCard;
-$('shareModal').addEventListener('click',e=>{if(e.target===$('shareModal'))closeShareCard()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('shareModal').classList.contains('hidden'))closeShareCard()});
-$('downloadShareCard').onclick=async()=>{
-  await drawShareCard();const a=document.createElement('a');a.href=$('shareCanvas').toDataURL('image/png');a.download=(val('brandName').trim()||'my-brand')+'-music-brief.png';a.click();toast('ดาวน์โหลดการ์ด PNG แล้ว');
-};
-
-function textBrief(){
-  const e=estimate();
-  return [
-    'BANANA MUSIC FOR BRAND',
-    '',
-    ...briefRows().map(r=>`${r[0]}: ${r[1]}`),
-    '',
-    'งบประมาณโดยประมาณ',
-    ...e.rows.map(r=>`- ${r[0]}: ${money(r[1])}`),
-    `- โปรดักชันโดย Banana รวม: ${money(e.bananaTotal)}`,
-    `ราคาประเมินทั้งโปรเจกต์: ${money(e.total)}`,
-    '',
-    'Complimentary: Single Cover Design (มูลค่า 2,000 บาท)',
-    '',
-    `ผู้ติดต่อ: ${val('contactName')||'-'}`,
-    `เบอร์โทร / LINE: ${val('contactPhone')||'-'}`,
-    `อีเมล: ${val('contactEmail')||'-'}`,
-    '',
-    'หมายเหตุ: ราคานี้เป็นเพียงการประเมินเบื้องต้น ไม่ใช่ราคายืนยัน อาจมีภาษีและค่าใช้จ่ายอื่นเพิ่มเติมตามขอบเขตงานจริง งบศิลปินและนักแต่งเพลงเป็นตัวเลขที่ผู้ใช้ระบุ ยังไม่ใช่การยืนยันค่าตัว การรับงาน หรือสิทธิ์ในการใช้ชื่อ'
-  ].filter(Boolean).join('\n');
-}
-
-$('saveDraft').onclick=()=>saveDraft(true);
-$('copyBrief').onclick=async()=>{await navigator.clipboard.writeText(textBrief());toast('คัดลอกบรีฟแล้ว')};
-$('downloadBrief').onclick=()=>{
-  const blob=new Blob([textBrief()],{type:'text/plain;charset=utf-8'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(val('brandName')||'music-for-brand')+'-brief.txt';a.click();URL.revokeObjectURL(a.href);toast('ดาวน์โหลดแล้ว');
-};
-$('printBrief').onclick=()=>window.print();
-
-async function send(){
-  if(!val('contactName') || (!val('contactPhone')&&!val('contactEmail'))){toast('กรุณากรอกชื่อและช่องทางติดต่อ');return}
-  const subject='Music For Brand Brief - '+(val('brandName')||'New Brand');
-  const button=$('sendBrief');
-  const originalLabel=button.textContent;
-  button.disabled=true;
-  button.textContent='กำลังส่ง...';
-  try{
-    const response=await fetch(SUBMIT_ENDPOINT,{
-      method:'POST',
-      headers:{'Accept':'application/json','Content-Type':'application/json'},
-      body:JSON.stringify({
-        _subject:subject,
-        _template:'table',
-        _captcha:'false',
-        _cc:CC_EMAIL,
-        _replyto:val('contactEmail')||EMAIL,
-        brand:val('brandName')||'-',
-        contact_name:val('contactName'),
-        contact_phone_or_line:val('contactPhone')||'-',
-        contact_email:val('contactEmail')||'-',
-        estimated_total:money(estimate().total),
-        brief:textBrief()
-      })
-    });
-    if(!response.ok)throw new Error('submit failed');
-    localStorage.removeItem(STORAGE);
-    $('status').textContent='ส่งบรีฟเรียบร้อยแล้ว';
-    toast('ส่งบรีฟเรียบร้อยแล้ว ทีม Banana จะติดต่อกลับ');
-  }catch(error){
-    toast('ส่งบรีฟไม่สำเร็จ กรุณาลองใหม่อีกครั้ง');
-  }finally{
-    button.disabled=false;
-    button.textContent=originalLabel;
-  }
-}
-$('sendBrief').onclick=send;
-$('mobileSummary').onclick=openShareCard;
-
-restore();update(false);
-</script>
-</body>
-</html>
+$('sendBrief').onclick=sendBrief;
+$('saveDraft').onclick=()=>saveDraft(true);$('previewCard').onclick=openCard;$('mobileCard').onclick=openCard;$('demoBrief').onclick=openCard;$('closeCard').onclick=closeCard;$('refreshCard').onclick=drawCard;$('cardModal').onclick=e=>{if(e.target===$('cardModal'))closeCard()};
+document.addEventListener('keydown',e=>{if($('cardModal').hidden)return;if(e.key==='Escape')closeCard();if(e.key==='Tab'){const controls=[$('closeCard'),$('refreshCard'),$('downloadCard')];if(e.shiftKey&&document.activeElement===controls[0]){e.preventDefault();controls[2].focus()}else if(!e.shiftKey&&document.activeElement===controls[2]){e.preventDefault();controls[0].focus()}}});
+$('downloadCard').onclick=async()=>{await drawCard();download($('shareCanvas').toDataURL('image/png'),title().slice(0,65)+'-banana-brief.png');toast('ดาวน์โหลดการ์ด PNG แล้ว')};
+$('copyBrief').onclick=async()=>{try{await navigator.clipboard.writeText(textBrief());toast('คัดลอกบรีฟแล้ว')}catch(e){toast('คัดลอกไม่ได้ กรุณาดาวน์โหลดบรีฟแทน')}};
+$('downloadBrief').onclick=()=>download(URL.createObjectURL(new Blob([textBrief()],{type:'text/plain;charset=utf-8'})),title().slice(0,65)+'-brief.txt',true);$('printBrief').onclick=()=>window.print();
+$('logoFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;if(f.size>10*1024*1024){toast('เลือกรูปไม่เกิน 10 MB');return}if(!f.type.startsWith('image/')){toast('กรุณาเลือกไฟล์รูปภาพ');return}try{const url=URL.createObjectURL(f);const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url});const c=document.createElement('canvas'),ratio=Math.min(1,600/Math.max(img.width,img.height));c.width=Math.max(1,Math.round(img.width*ratio));c.height=Math.max(1,Math.round(img.height*ratio));c.getContext('2d').drawImage(img,0,0,c.width,c.height);state.logo=c.toDataURL('image/png');URL.revokeObjectURL(url);render()}catch(error){toast('เปิดรูปนี้ไม่ได้ ลองใช้ JPG หรือ PNG')}};
+$('removeLogo').onclick=()=>{state.logo='';$('logoFile').value='';render()};
+try{const d=JSON.parse(localStorage.getItem(STORAGE)||'null');if(d){state={...state,...d.state};Object.entries(d.fields||{}).forEach(([id,value])=>{const el=$(id);if(el){if(el.type==='checkbox')el.checked=value;else el.value=value}});if(d.fields?.purpose==='occasion')$('purpose').value='gift';document.querySelectorAll('[data-addon]').forEach(x=>x.checked=state.addons.includes(x.dataset.addon))}}catch(e){}
+render(false);
+</script></body></html>
