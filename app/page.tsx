@@ -403,7 +403,7 @@ const peopleCategories = [
 ];
 
 const navLinks = [
-  { href: "/musicforbrand/", label: "Music for Brand" },
+  { href: "/musicforbrand/", label: "Music Making" },
   { href: "#studio", label: "Studio" },
   { href: "#films", label: "Films" },
   { href: "#label", label: "Label" },
