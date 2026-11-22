@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ปากตลาด — เสียงประกาศขายของและเพลงร้าน</title>
+  <meta name="description" content="ปากตลาด ช่วยให้ร้านค้าและพ่อค้าแม่ค้าทำเสียงประกาศขายของและเลือกเพลงพื้นหลังได้ในแอปเดียว พัฒนาโดย Banana Sound Studio">
+  <link rel="icon" href="/paktalad-app/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/paktalad-app/assets/favicon.png">
+  <style>
+    :root {
+      --orange-top: #ffb400;
+      --orange: #ff7a14;
+      --orange-deep: #ff4e1f;
+      --magenta: #c2184b;
+      --cream: #fff7f0;
+      --paper: #ffffff;
+      --ink: #2a1210;
+      --ink-soft: #5c3a32;
+      --line: #f0d4c4;
+      --soon: #8a6a60;
+      --shadow: 0 16px 40px rgba(80, 24, 8, 0.10);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Sarabun", "Noto Sans Thai", "Sukhumvit Set", "Thonburi", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: var(--magenta); }
+
+    .draft-bar {
+      background: #2a1210;
+      color: #ffe8c8;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 8px 16px;
+    }
+
+    .wrap {
+      width: min(100% - 32px, var(--max));
+      margin-inline: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 247, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    nav a:hover { background: #ffe1c8; }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-wrap: wrap; }
+      nav { width: 100%; justify-content: flex-start; }
+      nav a { padding: 6px 10px; }
+    }
+
+    .hero {
+      padding: 48px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (min-width: 800px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        padding: 24px 0 8px;
+      }
+    }
+
+    .hero-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-top: 18px;
+      background: #ffe1c8;
+      color: var(--magenta);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      line-height: 1.15;
+      margin: 10px 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+      max-width: 36em;
+    }
+
+    .byline {
+      margin-top: 10px;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .store-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 10px 18px 10px 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #fff;
+      background: #111;
+      box-shadow: var(--shadow);
+      min-width: 220px;
+    }
+
+    .store-btn:hover { filter: brightness(1.08); }
+
+    .store-btn .mark {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+    }
+
+    .store-btn small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      opacity: 0.8;
+      line-height: 1.2;
+    }
+
+    .store-btn b {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .store-btn--soon {
+      background: #efe4dc;
+      color: var(--soon);
+      box-shadow: none;
+      border: 1px dashed #c9a99a;
+      cursor: default;
+    }
+
+    .hero-visual {
+      background: linear-gradient(180deg, var(--orange-top), var(--orange-deep));
+      border-radius: 28px;
+      padding: 22px 22px 0;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-visual img {
+      width: min(100%, 340px);
+      margin: 0 auto;
+      border-radius: 24px 24px 0 0;
+    }
+
+    #download, #about, #contact, #gallery { scroll-margin-top: 84px; }
+
+    section { padding: 56px 0; }
+
+    section h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .about p { max-width: 46em; color: var(--ink-soft); }
+
+    .about p + p { margin-top: 12px; }
+
+    .features {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    @media (min-width: 700px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1000px) {
+      .features { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 22px 20px;
+      box-shadow: 0 8px 24px rgba(80, 24, 8, 0.04);
+    }
+
+    .card .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, var(--orange-top), var(--orange-deep));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .card p { color: var(--ink-soft); font-size: 0.98rem; }
+
+    .shots {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 700px) {
+      .shots { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1000px) {
+      .shots { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 699px) {
+      .shots {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .shots figure {
+        flex: 0 0 min(82%, 320px);
+        scroll-snap-align: start;
+      }
+    }
+
+    .shots figure {
+      margin: 0;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(80, 24, 8, 0.05);
+    }
+
+    .shots img { width: 100%; height: auto; }
+
+    .shots figcaption {
+      padding: 10px 14px 14px;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 800px) {
+      .contact-grid { grid-template-columns: 1.2fr 0.8fr; }
+    }
+
+    .contact-grid dl {
+      display: grid;
+      gap: 4px 16px;
+    }
+
+    @media (min-width: 520px) {
+      .contact-grid dl { grid-template-columns: 9.5em 1fr; align-items: baseline; }
+      .contact-grid dt { padding-top: 10px; }
+      .contact-grid dd { padding-top: 10px; }
+    }
+
+    .contact-grid dt {
+      font-weight: 700;
+      color: var(--ink);
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-grid dd {
+      color: var(--ink-soft);
+      padding-top: 4px;
+      padding-bottom: 10px;
+      border-top: 1px solid transparent;
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 520px) {
+      .contact-grid dt, .contact-grid dd { border-top: 1px solid var(--line); padding-bottom: 10px; }
+    }
+
+    .placeholder {
+      display: inline-block;
+      background: #fff3c8;
+      color: #6a4a00;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .legal-links a, .legal-links span {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--cream);
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid var(--line);
+    }
+
+    .legal-links .disabled {
+      color: var(--soon);
+      font-weight: 500;
+    }
+
+    footer {
+      background: #2a1210;
+      color: #f7ddd0;
+      padding: 28px 0 36px;
+      font-size: 0.92rem;
+    }
+
+    footer a { color: #ffd7a8; }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <img src="/paktalad-app/assets/app-icon.png" alt="">
+        ปากตลาด
+      </a>
+      <nav aria-label="เมนูหลัก">
+        <a href="#download">ดาวน์โหลด</a>
+        <a href="#about">เกี่ยวกับ</a>
+        <a href="#contact">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="download">
+      <div class="wrap hero-grid">
+        <div>
+          <img class="hero-icon" src="/paktalad-app/assets/app-icon.png" alt="ไอคอนแอปปากตลาด">
+          <span class="eyebrow">มีบน Google Play แล้ว</span>
+          <h1>ปากตลาด</h1>
+          <p class="lead">สร้างเสียงประกาศขายของและเลือกเพลงพื้นหลัง สำหรับพ่อค้าแม่ค้า</p>
+          <p class="byline">แอปของ Banana Sound Studio · ห้างหุ้นส่วนจำกัด บานาน่าเรคคอร์ด</p>
+
+          <div class="store-row">
+            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.bananasoundstudio.paktalad" rel="noopener noreferrer" target="_blank">
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#34A853" d="M3.6 20.5 13.2 12 3.6 3.5v17z"/>
+                <path fill="#FBBC04" d="m3.6 3.5 9.6 8.5 3.3-3.2z"/>
+                <path fill="#4285F4" d="M21 12.1c0-.7-.2-1.3-.6-1.8L16.5 8.8 13.2 12l3.3 3.2 3-1.3c.3-.5.5-1.1.5-1.8z"/>
+                <path fill="#EA4335" d="m13.2 12 3.3 3.2-9.6 5.3c.7.6 1.6.9 2.5.9 1.1 0 2.2-.4 3.1-1.2z"/>
+              </svg>
+              <span>
+                <small>ดาวน์โหลดบน</small>
+                <b>Google Play</b>
+              </span>
+            </a>
+
+            <span class="store-btn store-btn--soon" aria-disabled="true" title="ยังไม่มีหน้าร้านบนแอปสโตร์">
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M16.2 12.7c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.3-.1-2.6.8-3.3.8s-1.7-.8-2.9-.7c-1.5.1-2.8.9-3.6 2.2-1.5 2.7-.4 6.6 1.1 8.8.7 1.1 1.6 2.3 2.7 2.2 1.1-.1 1.5-.7 2.8-.7s1.6.7 2.8.7 1.9-1.1 2.6-2.1c.8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.8zM14.3 6.4c.6-.7 1-1.7.9-2.7-0.9.1-1.9.6-2.5 1.3-.6.6-1.1 1.6-1 2.6 1 .1 1.9-.5 2.6-1.2z"/>
+              </svg>
+              <span>
+                <small>แอปสโตร์</small>
+                <b>เร็ว ๆ นี้</b>
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="/paktalad-app/assets/shot-1.png" alt="ภาพหน้าจอหน้าร้านของแอปปากตลาด กดปุ่มเดียวเสียงร้านพร้อมทันที">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap">
+        <h2>เกี่ยวกับปากตลาด</h2>
+        <p>ปากตลาด ช่วยให้ร้านค้าและพ่อค้าแม่ค้าทำเสียงประกาศขายของได้ง่าย ๆ ในแอปเดียว เหมาะกับร้านค้า ตลาดนัด และร้านอาหาร ที่อยากให้ลูกค้าได้ยินโปรโมชันและสินค้าของคุณโดยไม่ต้องตะโกนเอง</p>
+        <p>จัดการหน้าร้านได้จากหน้าจอเดียว ทั้งเสียงประกาศ เพลงพื้นหลัง และคลังเสียงของร้าน</p>
+
+        <div class="features">
+          <article class="card">
+            <div class="num">1</div>
+            <h3>สร้างเสียงประกาศจากข้อความ</h3>
+            <p>พิมพ์ข้อความที่คุณเขียนเอง แก้ไขได้ตามใจ แล้วเลือกคนพูดและโทนเสียง ตั้งแต่เป็นกันเองจนถึงโทนตลาดแตก</p>
+          </article>
+          <article class="card">
+            <div class="num">2</div>
+            <h3>ใช้เสียงเอไอ หรืออัดเสียงเอง</h3>
+            <p>สร้างเสียงประกาศด้วยเสียงเอไอ ให้เอไอช่วยเขียนข้อความ หรืออัดเสียงด้วยไมโครโฟนของเครื่องก็ได้</p>
+          </article>
+          <article class="card">
+            <div class="num">3</div>
+            <h3>สร้างเพลงร้านและเปิดเพลงพื้นหลัง</h3>
+            <p>เลือกเพลงพื้นหลังให้ประกาศฟังน่าสนใจ ตั้งคิวเพลงวนซ้ำ และให้ประกาศแทรกอัตโนมัติได้</p>
+          </article>
+          <article class="card">
+            <div class="num">4</div>
+            <h3>คลังเสียงอยู่ในเครื่อง</h3>
+            <p>เก็บเสียงประกาศและเพลงไว้ในคลัง เปิดใช้ซ้ำได้ทุกเมื่อ และเพิ่มไฟล์เสียงหรือเพลงของร้านเองได้</p>
+          </article>
+          <article class="card">
+            <div class="num">5</div>
+            <h3>หน้าร้านจอเดียว กดปุ่มก็พร้อม</h3>
+            <p>จัดเรียงเสียงตามใจ แล้วเปิดใช้งานหน้าร้านจากหน้าจอเดียว มีเมนูตั้งเวลาในแอปด้วย</p>
+          </article>
+          <article class="card">
+            <div class="num">6</div>
+            <h3>คลังกลางและคลังบีมู้ด</h3>
+            <p>เมื่อเข้าสู่ระบบ สามารถใช้คลังกลางปากตลาด และคลังเพลงบีมู้ด รวมถึงไฟล์ส่วนตัวบนบัญชีได้</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="about">
+      <div class="wrap">
+        <h2>ราคา</h2>
+        <p>ทดลองใช้เต็มระบบฟรี 7 วันนับจากเปิดใช้ครั้งแรก หลังจากนั้นแพ็กเกจฟรีใช้ได้แบบจำกัด</p>
+        <div class="features">
+          <article class="card">
+            <div class="num">7</div>
+            <h3>ทดลองฟรี 7 วัน</h3>
+            <p>ใช้ได้ครบทุกฟีเจอร์ตั้งแต่เปิดแอปครั้งแรก ไม่ต้องจ่ายก่อน</p>
+          </article>
+          <article class="card">
+            <div class="num">฿</div>
+            <h3>ปลดล็อกแอป 149 บาท</h3>
+            <p>ซื้อครั้งเดียว ไม่หมดอายุ ได้โควตาสร้างเสียงประกาศ 12 ครั้ง และเพลง 6 ครั้ง</p>
+          </article>
+          <article class="card">
+            <div class="num">+</div>
+            <h3>แพ็กเพิ่ม แพ็กละ 49 บาท</h3>
+            <p>เพิ่มเสียงประกาศ 10 ครั้ง หรือเพลง 5 ครั้ง สำหรับบัญชีที่ปลดล็อกแล้ว ซื้อผ่านระบบซื้อในแอป</p>
+          </article>
+        </div>
+        <p style="color:var(--ink-soft);margin-top:14px">การเปิดไฟล์เดิมซ้ำและการอัดเสียงเองไม่หักโควตา</p>
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <h2 id="gallery-title">ดูภาพในแอป</h2>
+        <p class="lead" style="margin-bottom:8px">ภาพจากหน้าร้าน Google Play ของปากตลาด</p>
+        <div class="shots">
+          <figure>
+            <img src="/paktalad-app/assets/shot-1.png" alt="หน้าร้าน จัดเรียงเสียงและกดเล่นได้จากหน้าจอเดียว">
+            <figcaption>หน้าร้าน — กดปุ่มเดียว เสียงร้านพร้อมทันที</figcaption>
+          </figure>
+          <figure>
+            <img src="/paktalad-app/assets/shot-2.png" alt="หน้าสร้างเสียงประกาศและสร้างเพลงร้าน">
+            <figcaption>สร้างเสียงประกาศและเพลงร้านได้เอง</figcaption>
+          </figure>
+          <figure>
+            <img src="/paktalad-app/assets/shot-3.png" alt="หน้าแก้ไขข้อความประกาศ เลือกคนพูดและโทนเสียง">
+            <figcaption>เลือกคนพูดและโทนเสียง รวมถึงให้เอไอช่วยเขียน</figcaption>
+          </figure>
+          <figure>
+            <img src="/paktalad-app/assets/shot-4.png" alt="หน้าเปิดเพลงพื้นหลังและคิวเพลง">
+            <figcaption>เปิดเพลงพื้นหลังต่อเนื่อง คิวเพลงวนซ้ำ ประกาศแทรกอัตโนมัติ</figcaption>
+          </figure>
+          <figure>
+            <img src="/paktalad-app/assets/shot-5.png" alt="หน้าคลังเพลงและเสียงในเครื่อง">
+            <figcaption>คลังเสียงของร้านอยู่ในเครื่อง เพิ่มไฟล์ของร้านเองได้</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>ติดต่อ</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <dl>
+              <dt>ผู้พัฒนา</dt>
+              <dd>Banana Sound Studio<br>ห้างหุ้นส่วนจำกัด บานาน่าเรคคอร์ด</dd>
+
+              <dt>อีเมลสนับสนุน</dt>
+              <dd><a href="mailto:hello@bananasoundstudio.com">hello@bananasoundstudio.com</a></dd>
+
+              <dt>เรื่องข้อมูลส่วนบุคคล</dt>
+              <dd><a href="mailto:toysakie@gmail.com">toysakie@gmail.com</a></dd>
+
+              <dt>โทรศัพท์</dt>
+              <dd><a href="tel:+66816125259">081-612-5259</a></dd>
+
+              <dt>ที่อยู่</dt>
+              <dd>625 ชั้น 14 อาคารทัศนียา ซอยรามคำแหง 39 (เทพลีลา 1) วังทองหลาง กรุงเทพมหานคร 10310</dd>
+
+              <dt>เว็บสตูดิโอ</dt>
+              <dd><a href="https://www.bananasoundstudio.com/" rel="noopener noreferrer" target="_blank">bananasoundstudio.com</a></dd>
+
+              <dt>เฟซบุ๊กของผู้พัฒนา</dt>
+              <dd><a href="https://www.facebook.com/BananaSoundStudio" rel="noopener noreferrer" target="_blank">facebook.com/BananaSoundStudio</a><br>เป็นเพจของสตูดิโอ ไม่ใช่เพจของแอปปากตลาด</dd>
+            </dl>
+          </div>
+
+          <div class="card">
+            <h3>เอกสารที่เกี่ยวข้อง</h3>
+            <p style="color:var(--ink-soft);margin:10px 0 16px">หน้าที่มีอยู่จริงในตอนนี้</p>
+            <div class="legal-links">
+              <a href="https://paktalad-api.toysakie-1da.workers.dev/privacy" rel="noopener noreferrer" target="_blank">นโยบายความเป็นส่วนตัว</a>
+              <a href="https://paktalad-api.toysakie-1da.workers.dev/delete-account" rel="noopener noreferrer" target="_blank">หน้าขอลบบัญชี</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>ปากตลาด · Banana Sound Studio · ห้างหุ้นส่วนจำกัด บานาน่าเรคคอร์ด</p>
+    </div>
+  </footer>
+</body>
+</html>
