@@ -1,0 +1,6 @@
+/* v11 addition: TH/EN toggle inside the top strip (layout otherwise untouched) */
+.demo{position:relative;padding-left:88px;padding-right:88px}
+.mfb-lang{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:inline-flex;gap:2px;padding:2px;border-radius:999px;background:rgba(255,255,255,.14)}
+.mfb-lang button{min-height:0;height:auto;min-width:0;box-shadow:none;font:inherit;font-size:11px;font-weight:800;letter-spacing:.5px;line-height:1;color:#fff;background:transparent;border:0;border-radius:999px;padding:5px 9px;cursor:pointer}
+.mfb-lang button.active{background:#ffd84d;color:#411323}
+@media(max-width:640px){.demo{padding-left:10px;padding-right:86px;text-align:left}}
